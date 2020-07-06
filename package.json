@@ -1,0 +1,11 @@
+{
+  "name": "fsd-task-2",
+  "version": "1.0.0",
+  "description": "The second task (creating a site for room search in a hotel)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Grigory",
+  "license": "ISC"
+}
