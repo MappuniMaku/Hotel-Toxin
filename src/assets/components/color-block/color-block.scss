@@ -1,0 +1,30 @@
+.color-block {
+    display: flex;
+//    justify-content: space-between;
+    align-items: center;
+//    border: 1px solid black;
+    height: 70px;
+}
+
+.color-block__color-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+}
+
+.color-block__description {
+    font-family: $font-quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 40px;
+}
+
+.color-block__description p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}

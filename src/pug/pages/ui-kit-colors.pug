@@ -1,0 +1,17 @@
+extends ../layout/main
+include ../../assets/components/color-block/color-block.pug
+
+block variables
+    -var title = 'UI kit Colors & Type'
+    -var description = 'Description for Webpack + Pug'
+    -var pageClass = 'ui-colors-and-type'
+
+block content
+    .color-blocks-container
+        +color-block('dark-shade-100', 'Dark Shade 100%', '#1F2041')
+        +color-block('dark-shade-75', 'Dark Shade 75%', '#1F2041')
+        +color-block('dark-shade-50', 'Dark Shade 50%', '#1F2041')
+        +color-block('dark-shade-25', 'Dark Shade 25%', '#1F2041')
+        +color-block('dark-shade-5', 'Dark Shade 5%', '#1F2041')
+        +color-block('color-purple', 'Purple', '#BC9CFF')
+        +color-block('color-green', 'Green', '#6FCF97')
