@@ -24,7 +24,7 @@ body {
   padding: 0;
   font-family: $mainFont;
   font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
+ // font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -106,8 +106,3 @@ section,
 
 @import "modules/wrapper.scss";
 @import "modules/header.scss";
-  
-@import "utils/libs";
-@import "utils/vars";
-@import "utils/mixins";
-@import "utils/fonts";

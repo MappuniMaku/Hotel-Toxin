@@ -5,9 +5,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PATHS = {
-    src: path.join(__dirname, '../src'),
-    dist: path.join(__dirname, '../dist'),
-    assets: 'assets/',
+    src: path.resolve(__dirname, '../src'),
+    dist: path.resolve(__dirname, '../dist'),
+    assets: 'assets',
 };
 
 const PAGES_DIR = `${PATHS.src}/pug/pages`;
@@ -23,9 +23,9 @@ module.exports = {
         app: PATHS.src,
     },
     output: {
-        filename: `${PATHS.assets}js/[name].js`,
+        filename: `[name].js`,
         path: PATHS.dist,
-        publicPath: '', //removed '/' in brackets here
+        publicPath: './', //removed '/' in brackets here
     },
     module: {
         rules: [
@@ -49,7 +49,7 @@ module.exports = {
                     },
                     {
                         loader: 'postcss-loader',
-                        options: { sourceMap: true, config: {path: `${PATHS.src}/js/postcss.config.js`}, },
+                        options: { sourceMap: true, config: {path: `./postcss.config.js`}, },
                     },
                     {
                         loader: 'sass-loader',
@@ -68,7 +68,7 @@ module.exports = {
                     },
                     {
                         loader: 'postcss-loader',
-                        options: { sourceMap: true, config: {path: `${PATHS.src}/js/postcss.config.js`}, },
+                        options: { sourceMap: true, config: {path: `./postcss.config.js`}, },
                     },
                     {
                         loader: 'sass-loader',
@@ -80,18 +80,26 @@ module.exports = {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]'
+                    name: `[name].[ext]`
                 }
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]',
+                },
             },
         ],
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `${PATHS.assets}css/[name].css`,
+            filename: `[name].css`,
         }),
         new CopyWebpackPlugin({
             patterns: [
-                {from: `${PATHS.src}/img`, to: `${PATHS.assets}img`},
+                {from: `${PATHS.src}/${PATHS.assets}/img`, to: ``},
+                {from: `${PATHS.src}/${PATHS.assets}/fonts`, to: ``},
                 {from: `${PATHS.src}/static`, to: ''},
             ],
         }),
