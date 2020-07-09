@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PATHS = {
     src: path.resolve(__dirname, '../src'),
     dist: path.resolve(__dirname, '../dist'),
-    assets: 'assets',
+    assets: 'assets/',
 };
 
 const PAGES_DIR = `${PATHS.src}/pug/pages`;
@@ -23,9 +23,8 @@ module.exports = {
         app: PATHS.src,
     },
     output: {
-        filename: `[name].js`,
+        filename: `${PATHS.assets}js/[name].js`,
         path: PATHS.dist,
-        publicPath: './', //removed '/' in brackets here
     },
     module: {
         rules: [
@@ -42,7 +41,10 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     'style-loader',
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {publicPath: '../../'},
+                    },
                     {
                         loader: 'css-loader',
                         options: { sourceMap: true }
@@ -61,7 +63,10 @@ module.exports = {
                 test: /\.scss$/,
                     use: [
                     'style-loader',
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {publicPath: '../../'},
+                    },
                     {
                         loader: 'css-loader',
                         options: { sourceMap: true }
@@ -80,26 +85,28 @@ module.exports = {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: `[name].[ext]`
+                		name: '[name].[ext]',
+                    outputPath: 'assets/img/',
                 }
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
                 options: {
-                  name: '[name].[ext]',
+                	name: '[name].[ext]',
+                  outputPath: 'assets/fonts/',
                 },
             },
         ],
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `[name].css`,
+            filename: `${PATHS.assets}css/[name].css`,
         }),
         new CopyWebpackPlugin({
             patterns: [
-                {from: `${PATHS.src}/${PATHS.assets}/img`, to: ``},
-                {from: `${PATHS.src}/${PATHS.assets}/fonts`, to: ``},
+                {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
+                {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
                 {from: `${PATHS.src}/static`, to: ''},
             ],
         }),
