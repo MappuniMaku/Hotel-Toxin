@@ -1,3 +1,9 @@
+.ui-colors-and-type .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .color-blocks-container {
 //    border: 1px solid black;
     width: 270px;
@@ -5,5 +11,13 @@
     flex-direction: column;
     justify-content: space-between;
     height: 600px;
-    margin-left: 50px;
+}
+
+.sample-text-container {
+//    border: 1px solid black;
+    height: 321px;
+    width: 403px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
