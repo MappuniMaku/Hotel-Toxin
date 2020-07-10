@@ -1,5 +1,6 @@
 .sample-text_body .sample-text__used-tag {
     font-size: 14px;
+    line-height: 24px;
 }
 
 .sample-text_body .sample-text__description {
@@ -7,5 +8,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-//    width: 336px;
+    line-height: 24px;
+    width: 301px;
+    color: $dark-shade-75;
 }
