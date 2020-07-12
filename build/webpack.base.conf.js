@@ -10,7 +10,7 @@ const PATHS = {
     assets: 'assets/',
 };
 
-const PAGES_DIR = `${PATHS.src}/pug/pages`;
+const PAGES_DIR = `${PATHS.src}/pages`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
   .filter(fileName => fileName.endsWith(".pug"));
@@ -85,7 +85,7 @@ module.exports = {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                		name: '[name].[hash].[ext]',
+                		name: '[name].[ext]',
                     outputPath: 'assets/img/',
                 }
             },
@@ -110,12 +110,22 @@ module.exports = {
                 {from: `${PATHS.src}/static`, to: ''},
             ],
         }),
-        ...PAGES.map(
-            page =>
-              new HtmlWebpackPlugin({
-                template: `${PAGES_DIR}/${page}`,
-                filename: `./${page.replace(/\.pug/,'.html')}`
-              })
-          )
+//        ...PAGES.map(
+//            page =>
+//              new HtmlWebpackPlugin({
+//                template: `${PAGES_DIR}/${page}`,
+//                filename: `./${page.replace(/\.pug/,'.html')}`
+//              })
+//         ),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/index/index.pug`,
+            filename: './index.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/ui-kit-colors/ui-kit-colors.pug`,
+            filename: './ui-kit-colors.html',
+            inject: true
+        }),
     ]
 }
