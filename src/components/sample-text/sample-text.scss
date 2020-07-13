@@ -1,0 +1,42 @@
+@import '../../scss/utils/vars.scss';
+
+.sample-text {
+//    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.sample-text__used-tag {
+    font-family: $font-montserrat;
+    font-style: normal;
+    font-weight: normal;
+//    border: 1px solid black;
+    color: $dark-shade-25;
+    margin: 0;
+    padding: 0;
+}
+
+.sample-text__used-tag p {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+//    border: 1px solid black;
+    width: 50px;
+}
+
+.sample-text__description {
+    font-style: normal;
+//    border: 1px solid black;
+    margin: 0 0 0 30px;
+}
+
+.sample-text__description p {
+    margin: 0;
+    padding: 0;
+}
+
+@import "sample-text_h1/sample-text_h1.scss";
+@import "sample-text_h2/sample-text_h2.scss";
+@import "sample-text_h3/sample-text_h3.scss";
+@import "sample-text_body/sample-text_body.scss";
