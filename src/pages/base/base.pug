@@ -1,21 +1,4 @@
-include ../utils/mixins
-include ../utils/header-mixin
-
-block variables
-
-doctype html
-html(lang="en")
-    head
-        meta(charset="utf-8")
-        meta(name="viewport" content="initial-scale=1.0, width=device-width")
-        title #{title}
-        meta(name="description", content=description)
-        link(rel="icon", href="favicon.ico", type="image/ico")
-    body(class=pageClass)
-        .wrapper
-            #main
-                include ../includes/modules/header
-                .content-wrapper
-                    block content
-                include ../includes/modules/footer
-        block script
+mixin item (title, descr)
+    .item
+        h2.item-title=title
+        p.item-descr=descr
