@@ -1,7 +1,6 @@
 mixin header-item (href, descr)
-    .header-link
-        li
-            a(href=href)=descr
+    li.header-link
+        a(href=href)=descr
 
 header.header
     .container
@@ -9,3 +8,4 @@ header.header
             +header-item('ui-kit-colors.html', 'UI kit Colors & Type')
             +header-item('#', 'About')
             +header-item('#', 'Contact Us')
+    

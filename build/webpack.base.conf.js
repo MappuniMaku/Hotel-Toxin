@@ -37,28 +37,28 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: '/node_modules/'
             },
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {publicPath: '../../'},
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: { sourceMap: true }
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: { sourceMap: true, config: {path: `./postcss.config.js`}, },
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: { sourceMap: true }
-                    },
-                ],
-            },
+//            {
+//                test: /\.css$/,
+//                use: [
+//                    'style-loader',
+//                    {
+//                        loader: MiniCssExtractPlugin.loader,
+//                        options: {publicPath: '../../'},
+//                    },
+//                    {
+//                        loader: 'css-loader',
+//                        options: { sourceMap: true }
+//                    },
+//                    {
+//                        loader: 'postcss-loader',
+//                        options: { sourceMap: true, config: {path: `./postcss.config.js`}, },
+//                    },
+//                    {
+//                        loader: 'sass-loader',
+//                        options: { sourceMap: true }
+//                    },
+//                ],
+//            },
             {
                 test: /\.scss$/,
                     use: [
@@ -99,6 +99,11 @@ module.exports = {
             },
         ],
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
+    },
     plugins: [
         new MiniCssExtractPlugin({
             filename: `${PATHS.assets}css/[name].[hash].css`,
@@ -107,7 +112,7 @@ module.exports = {
             patterns: [
                 {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
                 {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
-                {from: `${PATHS.src}/theme`, to: ''},
+                {from: `${PATHS.src}/theme/favicon.ico`, to: ''},
             ],
         }),
 //        ...PAGES.map(
