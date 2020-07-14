@@ -3,6 +3,7 @@ const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 const PATHS = {
     src: path.resolve(__dirname, '../src'),
@@ -131,6 +132,13 @@ module.exports = {
             template: `${PAGES_DIR}/ui-kit-colors/ui-kit-colors.pug`,
             filename: './ui-kit-colors.html',
             inject: true
+        }),
+        // Used the ProvidePlugin constructor to inject jquery implicit globals
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery'",
+            "window.$": "jquery",
         }),
     ]
 }

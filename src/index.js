@@ -1,4 +1,4 @@
-import * as $ from 'jquery';
+//import * as $ from 'jquery';
 import './js/common.js';
 //import './css/main.css';
 import './theme/global.scss'
