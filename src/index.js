@@ -1,3 +1,6 @@
+require('webpack-jquery-ui');
+require('webpack-jquery-ui/css');
+
 //import * as $ from 'jquery';
 import './js/common.js';
 //import './css/main.css';

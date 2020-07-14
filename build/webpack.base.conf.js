@@ -61,7 +61,7 @@ module.exports = {
 //                ],
 //            },
             {
-                test: /\.scss$/,
+                test: /\.s?css$/,
                     use: [
                     'style-loader',
                     {
@@ -81,6 +81,7 @@ module.exports = {
                         options: { sourceMap: true }
                     },
                 ],
+                exclude: '/node_modules/',
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
