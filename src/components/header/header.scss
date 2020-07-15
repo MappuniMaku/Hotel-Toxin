@@ -1,5 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
 .header--links-list {
     display: flex;
     justify-content: space-around;
     height: 31px;
+}
+
+.header-logo-container {
+    flex-grow: 1;
+}
+
+.header-links-list-container {
+    flex-grow: 30;
 }
