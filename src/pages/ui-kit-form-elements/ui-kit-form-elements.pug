@@ -4,7 +4,8 @@ include ../../components/calendar/calendar.pug
 block variables
     -var title = 'UI kit Form Elements'
     -var description = 'Description for Webpack + Pug'
-    -var pageClass = 'ui-form-elements'
+    -var pageClass = 'ui-kit-form-elements'
 
 block content
-    +calendar()
+    .date-dropdowns-container
+        +calendar("date dropdown", "date dropdown", "", "19.08.2019")

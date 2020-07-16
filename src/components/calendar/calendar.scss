@@ -1,0 +1,159 @@
+@import '../../theme/variables.scss';
+
+.calendar--input-field {
+    font-family: $font-montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    width: 150px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 15px;
+    color: $dark-shade-75;
+    box-sizing: border-box;
+}
+
+.calendar--description {
+    font-family: $font-montserrat-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 15px;
+    color: $dark-shade-100;
+//    border: 1px solid black;
+    margin: 0;
+}
+.calendar-description-container {
+    margin-bottom: 5px;
+}
+
+.calendar-input-field-container .material-icons {
+    color: $dark-shade-50;
+    position: relative;
+    left: 116px;
+    top: -33px;
+}
+
+.datepicker--nav-title {
+    font-family: $font-quicksand-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: $dark-shade-100;
+}
+
+.first-calendar-input-container {
+    height: 65px;
+    width: 150px;
+//    border: 1px solid black;
+}
+
+.second-calendar-input-container {
+    height: 65px;
+    width: 150px;
+//    border: 1px solid black;
+}
+
+.datepicker {
+    width: 320px;
+    height: 369px;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px $dark-shade-5;
+    border-radius: 4px;
+}
+
+.datepicker--pointer {
+    display: none;
+}
+
+.datepicker--nav-action {
+    color: $color-purple;
+}
+
+.datepicker--nav {
+    border: none;
+}
+
+.datepicker--content {
+    width: 279.39px;
+    height: 240px;
+    margin: 23px auto 7px auto;
+}
+
+.datepicker--days-names {
+    margin-bottom: 10px;
+}
+
+.datepicker--day-name {
+    color: $color-purple;
+}
+
+.datepicker--cells-days .datepicker--cell-day {
+    color: $dark-shade-50;
+    width: 39.88px;
+    height: 40px;
+}
+
+.datepicker--cells-days .-other-month- {
+    color: $dark-shade-25;
+}
+
+.datepicker--buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: $font-montserrat-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 15px;
+    color: $dark-shade-100;
+//    border: 1px solid black;
+    justify-content: space-between;
+    height: 15px;
+    padding: 4px 8px 4px 7px;
+    border: none;
+}
+
+.datepicker--button {
+    display: block;
+    height: 15px;
+}
+
+.datepicker--button:hover {
+    background-color: #FFFFFF;
+}
+
+.datepicker--buttons [data-action="today"] {
+    color: $color-purple;
+    text-align: right;
+}
+
+.datepicker--buttons [data-action="clear"] {
+    color: $dark-shade-50;
+    text-align: left;
+}
+
+.datepicker--cell.-current- {
+    color: #FFFFFF;
+    border-radius: 22px;
+    background: $gradient-green;
+}
+
+.datepicker--cell.-selected-.-focus-,
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current-,
+.datepicker--cell.-focus- {
+    color: #FFFFFF;
+    border-radius: 22px;
+    background: $gradient-purple;
+}

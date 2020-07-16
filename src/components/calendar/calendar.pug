@@ -1,3 +1,13 @@
-mixin calendar()
-    .calendar-container
-        input(type="text" class="input-calendar" value="ДД.ММ.ГГГГ")
+mixin calendar(desc1, desc2, value1, value2)
+    .first-calendar-input-container
+        .calendar-description-container
+            p.calendar--description=desc1
+        .calendar-input-field-container
+            input(type="text" id="calendar-input-1" class="calendar--input-field" placeholder="ДД.ММ.ГГГГ" value=value1)
+            label(for="calendar-input-1").material-icons expand_more
+    .second-calendar-input-container
+        .calendar-description-container
+            p.calendar--description=desc2
+        .calendar-input-field-container
+            input(type="text" id="calendar-input-2" class="calendar--input-field" placeholder="ДД.ММ.ГГГГ" value=value2)
+            label(for="calendar-input-2").material-icons expand_more
