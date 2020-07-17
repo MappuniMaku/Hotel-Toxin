@@ -1,4 +1,4 @@
-import './calendar.scss';
+import './date-dropdown.scss';
 
 require("air-datepicker/dist/js/datepicker.min.js");
 require("air-datepicker/dist/css/datepicker.min.css");

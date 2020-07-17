@@ -1,1 +1,1 @@
-import './color-block.scss'
+import './color-block.scss';

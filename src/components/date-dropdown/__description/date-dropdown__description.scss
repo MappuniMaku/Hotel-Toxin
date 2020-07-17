@@ -1,9 +1,6 @@
-.text-block_text-style_h3 .text-block__tag {
-    font-size: 12px;
-    line-height: 15px;
-}
+@import '../../../theme/variables.scss';
 
-.text-block_text-style_h3 {
+.date-dropdown__description {
     font-family: $font-montserrat-bold;
     font-style: normal;
     font-weight: bold;
@@ -11,5 +8,10 @@
     text-transform: uppercase;
     line-height: 15px;
     color: $dark-shade-100;
-//    width: 336px;
+//    border: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.date-dropdown__description p {
+    margin: 0px;
 }

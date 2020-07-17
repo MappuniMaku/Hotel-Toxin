@@ -1,0 +1,17 @@
+@import '../../theme/variables.scss';
+
+.date-dropdown {
+    //    border: 1px solid black;
+        box-sizing: content-box;
+        height: fit-content;
+        display: flex;
+        justify-content: space-around;
+        width: 380px;
+    }
+
+.date-dropdown .material-icons {
+    color: $dark-shade-50;
+    position: relative;
+    left: 116px;
+    top: -33px;
+}

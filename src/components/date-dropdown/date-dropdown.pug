@@ -1,0 +1,14 @@
+mixin date-dropdown(desc1, desc2, value1, value2)
+    .date-dropdown
+        .date-dropdown__content
+            .date-dropdown__description
+                p=desc1
+            .date-dropdown__input
+                input(type="text" id="calendar-input-1" class="date-dropdown__input-field" placeholder="ДД.ММ.ГГГГ" value=value1)
+                label(for="calendar-input-1").material-icons expand_more
+        .date-dropdown__content
+            .date-dropdown__description
+                p=desc2
+            .date-dropdown__input
+                input(type="text" id="calendar-input-2" class="date-dropdown__input-field" placeholder="ДД.ММ.ГГГГ" value=value2)
+                label(for="calendar-input-2").material-icons expand_more
