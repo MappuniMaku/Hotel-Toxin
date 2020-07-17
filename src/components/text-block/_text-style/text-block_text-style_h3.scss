@@ -1,9 +1,11 @@
-.sample-text_h3 .sample-text__used-tag {
+@import '../../../theme/variables.scss';
+
+.text-block_text-style_h3 .text-block__tag {
     font-size: 12px;
     line-height: 15px;
 }
 
-.sample-text_h3 .sample-text__description {
+.text-block_text-style_h3 {
     font-family: $font-montserrat-bold;
     font-style: normal;
     font-weight: bold;

@@ -1,14 +1,19 @@
-.sample-text_body .sample-text__used-tag {
+@import '../../../theme/variables.scss';
+
+.text-block_text-style_body .text-block__tag {
     font-size: 14px;
     line-height: 24px;
 }
 
-.sample-text_body .sample-text__description {
+.text-block_text-style_body {
     font-family: $font-montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    width: 301px;
     color: $dark-shade-75;
+}
+
+.text-block_text-style_body .text-block__description {
+    width: 301px;
 }

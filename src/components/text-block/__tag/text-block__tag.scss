@@ -1,0 +1,15 @@
+@import '../../../theme/variables.scss';
+
+.text-block__tag {
+    font-family: $font-montserrat;
+    font-style: normal;
+    font-weight: normal;
+//    border: 1px solid black;
+    color: $dark-shade-25;
+}
+
+.text-block__tag p {
+    text-align: right;
+//    border: 1px solid black;
+    width: 50px;
+}

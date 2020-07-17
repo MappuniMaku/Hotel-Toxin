@@ -1,0 +1,18 @@
+@import '../../theme/variables.scss';
+
+.text-block {
+//    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.text-block p {
+    margin: 0;
+    padding: 0;
+}
+
+@import "./_text-style/text-block_text-style_h1.scss";
+@import "./_text-style/text-block_text-style_h2.scss";
+@import "./_text-style/text-block_text-style_h3.scss";
+@import "./_text-style/text-block_text-style_body.scss";

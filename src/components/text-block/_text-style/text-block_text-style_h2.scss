@@ -1,9 +1,11 @@
-.sample-text_h2 .sample-text__used-tag {
+@import '../../../theme/variables.scss';
+
+.text-block_text-style_h2 .text-block__tag {
     font-size: 19px;
     line-height: 23px;
 }
 
-.sample-text_h2 .sample-text__description {
+.text-block_text-style_h2 {
     font-family: $font-quicksand-bold;
     font-style: normal;
     font-weight: bold;

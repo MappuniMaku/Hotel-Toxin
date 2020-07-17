@@ -1,6 +1,6 @@
 extends ../../components/layout/layout.pug
 include ../../components/color-block/color-block.pug
-include ../../components/sample-text/sample-text.pug
+include ../../components/text-block/text-block.pug
 
 block variables
     -var title = 'UI kit Colors & Type'
@@ -16,10 +16,10 @@ block content
         +color-block('dark-shade-5', 'Dark Shade 5%', '#1F2041')
         +color-block('color-purple', 'Purple', '#BC9CFF')
         +color-block('color-green', 'Green', '#6FCF97')
-    .sample-text-container
-        +sample-text('h1', 'H1', 'This one is the sub-section or widget title')
-        +sample-text('h2', 'H2', 'Next one is the item title inside widgets')
-        +sample-text('h3', 'H3', 'This is a label or CTA text')
-        +sample-text('body', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
+    .text-blocks-container
+        +text-block('h1', 'H1', 'This one is the sub-section or widget title')
+        +text-block('h2', 'H2', 'Next one is the item title inside widgets')
+        +text-block('h3', 'H3', 'This is a label or CTA text')
+        +text-block('body', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
 
     //input(type="text", id="datepicker")
