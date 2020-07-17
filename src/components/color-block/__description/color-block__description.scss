@@ -1,0 +1,19 @@
+@import '../../../theme/variables.scss';
+
+.color-block__description {
+    font-family: $font-quicksand-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 40px;
+    line-height: 29px;
+}
+
+.color-block__description p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
