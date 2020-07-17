@@ -1,14 +1,14 @@
-mixin date-dropdown(desc1, desc2, value1, value2)
+include ../element-name/element-name.pug
+
+mixin date-dropdown(name1, name2, value1, value2)
     .date-dropdown
         .date-dropdown__content
-            .date-dropdown__description
-                p=desc1
+            +element-name(name1)
             .date-dropdown__input
-                input(type="text" id="calendar-input-1" class="date-dropdown__input-field" placeholder="ДД.ММ.ГГГГ" value=value1)
+                input(type="text" id="calendar-input-1" class="date-dropdown__input-field" placeholder="ДД.ММ.ГГГГ" value=value1).text-field__input-field
                 label(for="calendar-input-1").material-icons expand_more
         .date-dropdown__content
-            .date-dropdown__description
-                p=desc2
+            +element-name(name2)
             .date-dropdown__input
-                input(type="text" id="calendar-input-2" class="date-dropdown__input-field" placeholder="ДД.ММ.ГГГГ" value=value2)
+                input(type="text" id="calendar-input-2" class="date-dropdown__input-field" placeholder="ДД.ММ.ГГГГ" value=value2).text-field__input-field
                 label(for="calendar-input-2").material-icons expand_more

@@ -1,5 +1,6 @@
 extends ../../components/layout/layout.pug
 include ../../components/date-dropdown/date-dropdown.pug
+include ../../components/text-field/text-field.pug
 
 block variables
     -var title = 'UI kit Form Elements'
@@ -7,4 +8,6 @@ block variables
     -var pageClass = 'ui-kit-form-elements'
 
 block content
+    +text-field("text field", "default")
+    +text-field("text field", "hover / focus", "This is pretty awesome")
     +date-dropdown("date dropdown", "date dropdown", "", "19.08.2019")

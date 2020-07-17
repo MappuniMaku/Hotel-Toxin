@@ -1,0 +1,8 @@
+include ../element-name/element-name.pug
+
+mixin text-field(desc, comment, value)
+    .text-field
+        +element-name(desc, comment)
+            
+        .text-field__input
+            input(type="text" placeholder="Email" value=value).text-field__input-field

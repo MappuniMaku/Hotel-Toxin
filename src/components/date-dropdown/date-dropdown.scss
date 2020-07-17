@@ -5,9 +5,9 @@
         box-sizing: content-box;
         height: fit-content;
         display: flex;
-        justify-content: space-around;
-        width: 380px;
-    }
+        justify-content: space-between;
+        width: 320px;
+}
 
 .date-dropdown .material-icons {
     color: $dark-shade-50;
