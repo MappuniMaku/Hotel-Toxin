@@ -146,5 +146,12 @@ module.exports = {
             "window.jQuery": "jquery'",
             "window.$": "jquery",
         }),
-    ]
+    ],
+    resolve: {
+		//extensions: [],
+		alias: {
+		//	'@styles': path.resolve(__dirname, `${PATHS.src}/styles`),
+			'~': PATHS.src,
+		}
+	},
 }
