@@ -1,7 +1,7 @@
 //import * as $ from 'jquery';
 import './js/common.js';
 //import './css/main.css';
-import './theme/global.scss'
+import './theme/global.scss';
 
 function requireAll(requireContext) {
     return requireContext.keys().map(requireContext);
@@ -13,3 +13,6 @@ requireAll(require.context('./pages', true, /^\.\/(?!.*(?:__tests__)).*\.(jsx?)$
 $(document).ready(function() {
     console.log('jQuery loaded');
 });
+
+require.context('./components', true, /\.(png|jpg|gif|svg)$/);
+require.context('./pages', true, /\.(png|jpg|gif|svg)$/);
