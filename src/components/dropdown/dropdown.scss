@@ -1,24 +1,22 @@
 @import '~/theme/variables.scss';
 
-.date-dropdown {
+.dropdown {
     //    border: 1px solid black;
         box-sizing: content-box;
         height: fit-content;
-        display: flex;
-        justify-content: space-between;
         width: 320px;
 }
 
-.date-dropdown .input-field {
-    width: 150px;
+.dropdown .input-field {
+    width: 320px;
 }
 
-.date-dropdown .input-field::placeholder {
+.dropdown .input-field::placeholder {
     color: $dark-shade-75;
 }
 
-.date-dropdown .input-field + .material-icons {
+.dropdown .input-field + .material-icons {
     color: $dark-shade-50;
     position: relative;
-    left: 116px;
+    left: 286px;
 }

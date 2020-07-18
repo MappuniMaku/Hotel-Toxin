@@ -1,0 +1,7 @@
+include ../element-name/element-name.pug
+include ../input-field/input-field.pug
+
+mixin date-picker(desc, comment, value)
+    label.date-picker
+        +element-name(desc, comment)
+        +input-field("text", "", "ДД.ММ.ГГГГ", value, "")

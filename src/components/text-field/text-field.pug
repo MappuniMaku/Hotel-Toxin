@@ -1,8 +1,7 @@
 include ../element-name/element-name.pug
+include ../input-field/input-field.pug
 
 mixin text-field(desc, comment, value)
-    .text-field
+    label.text-field
         +element-name(desc, comment)
-            
-        .text-field__input
-            input(type="text" placeholder="Email" value=value).text-field__input-field
+        +input-field("text", "", "Email", value)

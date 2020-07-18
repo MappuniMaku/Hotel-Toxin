@@ -1,6 +1,6 @@
 @import '~/theme/variables.scss';
 
-.text-field__input-field {
+.input-field {
     font-family: $font-montserrat;
     font-style: normal;
     font-weight: normal;
@@ -16,16 +16,18 @@
     box-sizing: border-box;
 }
 
-.text-field__input-field::placeholder {
+.input-field::placeholder {
     color: $dark-shade-25;
 }
 
-.text-field__input-field:hover,
-.text-field__input-field:focus {
+.input-field:hover,
+.input-field:focus {
     border: 1px solid $dark-shade-50;
     color: $dark-shade-75;
 }
 
-.text-field__input .text-field__input-field {
-    width: 320px;
+.input-field + .material-icons {
+    color: $dark-shade-50;
+    position: relative;
+    top: -34px;
 }
