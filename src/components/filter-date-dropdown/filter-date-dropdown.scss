@@ -1,0 +1,26 @@
+@import '~/theme/variables.scss';
+
+.filter-date-dropdown {
+    //    border: 1px solid black;
+        box-sizing: content-box;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        width: 266px;
+}
+
+.filter-date-dropdown .input-field {
+    width: 266px;
+    text-transform: lowercase;
+}
+
+.filter-date-dropdown .input-field::placeholder {
+    color: $dark-shade-75;
+    text-transform: uppercase;
+}
+
+.filter-date-dropdown .input-field + .material-icons {
+    color: $dark-shade-50;
+    position: relative;
+    left: 232px;
+}

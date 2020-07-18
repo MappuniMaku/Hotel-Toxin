@@ -1,4 +1,4 @@
-mixin input-field(type, id, placeholder, value, material_icon)
-    input(type=type, id=id, placeholder=placeholder, value=value).input-field
+mixin input-field(type, id, placeholder, value, material_icon, preselectedDates)
+    input(type=type, id=id, placeholder=placeholder, value=value, data-preselecteddates=preselectedDates).input-field
     if material_icon
         label(for=id).material-icons=material_icon

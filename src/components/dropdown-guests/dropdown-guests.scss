@@ -1,21 +1,21 @@
 @import '~/theme/variables.scss';
 
-.dropdown {
+.dropdown-guests {
     //    border: 1px solid black;
         box-sizing: content-box;
         height: fit-content;
         width: 320px;
 }
 
-.dropdown .input-field {
+.dropdown-guests .input-field {
     width: 320px;
 }
 
-.dropdown .input-field::placeholder {
+.dropdown-guests .input-field::placeholder {
     color: $dark-shade-75;
 }
 
-.dropdown .input-field + .material-icons {
+.dropdown-guests .input-field + .material-icons {
     color: $dark-shade-50;
     position: relative;
     left: 286px;

@@ -1,4 +1,4 @@
-import './date-dropdown.scss';
+import './filter-date-dropdown.scss';
 
 require("air-datepicker/dist/js/datepicker.min.js");
 require("air-datepicker/dist/css/datepicker.min.css");
@@ -17,7 +17,7 @@ $.fn.datepicker.language['ru'] =  {
 };
 
 $(document).ready(function() {
-    $("#date-dropdown-1").datepicker({
+    $("#filter-date-dropdown").datepicker({
         clearButton: true,
         todayButton: true,
         navTitles: {
@@ -28,25 +28,19 @@ $(document).ready(function() {
         minDate: new Date(),
         range: true,
         disableNavWhenOutOfRange: false,
-        onSelect: function(formattedDate) {
-            $("#date-dropdown-1").val(formattedDate.split(',')[0]);
-            $("#date-dropdown-2").val(formattedDate.split(',')[1]);
-        },
+        multipleDatesSeparator: " - ",
+        dateFormat: "d M",
         //inline: true,
     });
 
-    var datepicker = $("#date-dropdown-1").datepicker().data('datepicker');
+    var datepicker = $("#filter-date-dropdown").datepicker().data('datepicker');
 
-    let inputField = document.getElementById("date-dropdown-1");
+    let inputField = document.getElementById("filter-date-dropdown");
     let preselectedDates = inputField.dataset.preselecteddates;
-    
+
     if(preselectedDates) {
         datepicker.selectDate([new Date(preselectedDates.split(',')[0]), new Date(preselectedDates.split(',')[1])]);
-    };
-
-    $("#date-dropdown-2").click(function() {
-        datepicker.show();
-    });
+    }
 
     $(".datepicker--buttons [data-action='today']").click(function() {
         datepicker.hide();

@@ -1,11 +1,11 @@
 include ../element-name/element-name.pug
 include ../input-field/input-field.pug
 
-mixin date-dropdown(name1, name2, value1, value2)
+mixin date-dropdown(name1, name2, value1, value2, preselectedDates)
     .date-dropdown
         label.date-dropdown__content
             +element-name(name1)
-            +input-field("text", "calendar-input-1", "ДД.ММ.ГГГГ", value1, "expand_more")
+            +input-field("text", "date-dropdown-1", "ДД.ММ.ГГГГ", value1, "expand_more", preselectedDates)
         label.date-dropdown__content
             +element-name(name2)
-            +input-field("text", "calendar-input-2", "ДД.ММ.ГГГГ", value2, "expand_more")
+            +input-field("text", "date-dropdown-2", "ДД.ММ.ГГГГ", value2, "expand_more")
