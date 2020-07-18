@@ -13,7 +13,7 @@ $.fn.datepicker.language['ru'] =  {
     clear: 'Очистить',
     dateFormat: 'dd.mm.yyyy',
     timeFormat: 'hh:ii',
-    firstDay: 1
+    firstDay: 1,
 };
 
 $(document).ready(function() {

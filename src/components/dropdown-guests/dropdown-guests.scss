@@ -1,10 +1,14 @@
 @import '~/theme/variables.scss';
 
 .dropdown-guests {
-    //    border: 1px solid black;
+        //border: 1px solid black;
         box-sizing: content-box;
-        height: fit-content;
+        height: 64.44px;
         width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
 }
 
 .dropdown-guests .input-field {
@@ -15,8 +19,6 @@
     color: $dark-shade-75;
 }
 
-.dropdown-guests .input-field + .material-icons {
-    color: $dark-shade-50;
-    position: relative;
+.dropdown-guests .input-field ~ .material-icons {
     left: 286px;
 }

@@ -11,7 +11,7 @@
     border: 1px solid $dark-shade-25;
     box-sizing: border-box;
     border-radius: 4px;
-    padding: 15px;
+    padding: 15px 15px 15px 14px;
     color: $dark-shade-75;
     box-sizing: border-box;
 }
@@ -26,8 +26,8 @@
     color: $dark-shade-75;
 }
 
-.input-field + .material-icons {
+.input-field ~ .material-icons {
     color: $dark-shade-50;
     position: relative;
-    top: -34px;
+    top: -33px;
 }

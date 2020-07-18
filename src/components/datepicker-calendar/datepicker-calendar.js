@@ -1,1 +1,1 @@
-import './datepicker.scss';
+import './datepicker-calendar.scss';

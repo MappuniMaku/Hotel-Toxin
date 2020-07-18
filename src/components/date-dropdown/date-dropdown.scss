@@ -17,8 +17,6 @@
     color: $dark-shade-75;
 }
 
-.date-dropdown .input-field + .material-icons {
-    color: $dark-shade-50;
-    position: relative;
+.date-dropdown .input-field ~ .material-icons {
     left: 116px;
 }
