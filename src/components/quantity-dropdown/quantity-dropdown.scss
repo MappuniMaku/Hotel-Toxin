@@ -1,6 +1,6 @@
 @import '~/theme/variables.scss';
 
-.dropdown-guests {
+.quantity-dropdown {
         //border: 1px solid black;
         box-sizing: content-box;
         height: 64.44px;
@@ -11,14 +11,14 @@
         
 }
 
-.dropdown-guests .input-field {
+.quantity-dropdown .input-field {
     width: 320px;
 }
 
-.dropdown-guests .input-field::placeholder {
+.quantity-dropdown .input-field::placeholder {
     color: $dark-shade-75;
 }
 
-.dropdown-guests .input-field ~ .material-icons {
+.quantity-dropdown .input-field ~ .material-icons {
     left: 286px;
 }
