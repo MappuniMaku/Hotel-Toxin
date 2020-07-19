@@ -1,0 +1,19 @@
+include ../element-name/element-name.pug
+
+mixin guests-quantity-dropdown(desc, comment, placeholder, value)
+    .guests-quantity-dropdown
+        +element-name(desc, comment)
+        .iqdropdown
+            p.iqdropdown-selection
+            .iqdropdown-menu
+                .iqdropdown-menu-option(data-id="adults")
+                div
+                    +element-name("взрослые").iqdropdown-item
+
+                .iqdropdown-menu-option(data-id="children")
+                div
+                    +element-name("дети").iqdropdown-item
+
+                .iqdropdown-menu-option(data-id="infants")
+                div
+                    +element-name("младенцы").iqdropdown-item

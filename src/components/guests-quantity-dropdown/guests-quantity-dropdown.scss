@@ -1,6 +1,6 @@
 @import '~/theme/variables.scss';
 
-.quantity-dropdown {
+.guests-quantity-dropdown {
         //border: 1px solid black;
         box-sizing: content-box;
         height: 64.44px;
@@ -9,16 +9,4 @@
         flex-direction: column;
         justify-content: space-between;
         
-}
-
-.quantity-dropdown .input-field {
-    width: 320px;
-}
-
-.quantity-dropdown .input-field::placeholder {
-    color: $dark-shade-75;
-}
-
-.quantity-dropdown .input-field ~ .material-icons {
-    left: 286px;
 }
