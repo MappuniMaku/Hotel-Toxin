@@ -18,6 +18,24 @@ $(document).ready(() => {
         //const $this = $(this);
         //const $selection = $this.find('p.iqdropdown-selection').last();
         //return itemCount.item1 + " гостей";
+        if(itemCount.adults == 0) {
+          $(".iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement").css("opacity", "0.38");
+        } else {
+          $(".iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement").css("opacity", "1");
+        };
+
+        if(itemCount.children == 0) {
+          $(".iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls button.button-decrement").css("opacity", "0.38");
+        } else {
+          $(".iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls button.button-decrement").css("opacity", "1");
+        }
+
+        if(itemCount.infants == 0) {
+          $(".iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls button.button-decrement").css("opacity", "0.38");
+        } else {
+          $(".iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls button.button-decrement").css("opacity", "1");
+        }
+
         if (totalItems == 0) {
           return "Сколько гостей"
         } else if (totalItems == 1) {
