@@ -4,6 +4,10 @@ require ('item-quantity-dropdown/lib/item-quantity-dropdown.min.js');
 require ('item-quantity-dropdown/lib/item-quantity-dropdown.min.css');
 
 $(document).ready(() => {
+//    $(".guests-quantity-dropdown .iqdropdown .iqdropdown-menu").append(
+//      '<div class="action-buttons"><button class="clear-button">Очистить</button><button class="apply-button">Применить</button></div>'
+//    );
+
     $('.guests-quantity-dropdown .iqdropdown').iqDropdown({
       // max total items
       maxItems: Infinity,
@@ -15,25 +19,42 @@ $(document).ready(() => {
       //textPlural: 'гостей',
       // optionally can use setSelectionText function to override selectionText
       setSelectionText: (itemCount, totalItems) => { /* return string */ 
+        
+        $(".guests-quantity-dropdown .iqdropdown button.clear-button").click(function() {
+        //  alert(itemCount.adults);
+          for(let i = 0; i < itemCount.children; i++) {
+            $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls button.button-decrement").click();
+          }
+
+          for(let i = 0; i < itemCount.infants; i++) {
+            $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls button.button-decrement").click();
+          }
+
+          for(let i = 0; i < itemCount.adults; i++) {
+            $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement").click();
+          }
+
+          //$(".guests-quantity-dropdown .iqdropdown").click();
+        });
         //const $this = $(this);
         //const $selection = $this.find('p.iqdropdown-selection').last();
         //return itemCount.item1 + " гостей";
         if(itemCount.adults == 0) {
-          $(".iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement").css("opacity", "0.38");
+          $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement").css("opacity", "0.38");
         } else {
-          $(".iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement").css("opacity", "1");
+          $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement").css("opacity", "1");
         };
 
         if(itemCount.children == 0) {
-          $(".iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls button.button-decrement").css("opacity", "0.38");
+          $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls button.button-decrement").css("opacity", "0.38");
         } else {
-          $(".iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls button.button-decrement").css("opacity", "1");
+          $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls button.button-decrement").css("opacity", "1");
         }
 
         if(itemCount.infants == 0) {
-          $(".iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls button.button-decrement").css("opacity", "0.38");
+          $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls button.button-decrement").css("opacity", "0.38");
         } else {
-          $(".iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls button.button-decrement").css("opacity", "1");
+          $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls button.button-decrement").css("opacity", "1");
         }
 
         if (totalItems == 0) {
@@ -87,7 +108,7 @@ $(document).ready(() => {
       beforeDecrement: (id, itemCount) => {
         if (id == "adults") {
           if (itemCount.adults == 1 && itemCount.children > 0 || itemCount.adults == 1 && itemCount.infants > 0) {
-            alert('Дети не могут заселиться без взрослого!');
+            //alert('Дети не могут заселиться без взрослого!');
             return false;
           };
         };
@@ -98,11 +119,36 @@ $(document).ready(() => {
       beforeIncrement: (id, itemCount) => {
         if (id == "children" || id == "infants") {
           if (itemCount.adults == 0) {
-            alert('Дети не могут заселиться без взрослого!');
+            //alert('Дети не могут заселиться без взрослого!');
             return false;
           };
         };
-
-        return true},
+        
+        return true
+      },
     });
+
+    $("html").click(function(e) {
+      let quantityDropdown = $(".guests-quantity-dropdown .iqdropdown.menu-open");
+      
+
+          if ( !(quantityDropdown.is(e.target) || quantityDropdown.children().is(e.target) ) ) {
+            quantityDropdown.toggleClass("menu-open");
+          }
+
+          /*if (clearButton.is(e.target)) {
+            quantityDropdown.addClass("menu-open");
+          }*/
+        //  alert(clearButton.is(e.target))
+    });
+
+    $(".guests-quantity-dropdown .iqdropdown-menu-option .action-buttons .apply-button").click(function(e) {
+      //let applyButton = $(".guests-quantity-dropdown .iqdropdown-menu-option .action-buttons .apply-button");
+      //if (applyButton.is(e.target)) {
+        $(".guests-quantity-dropdown .iqdropdown.menu-open").toggleClass("menu-open");
+      //}
+      //alert(applyButton.is(e.target))
+    });
+
+  //  $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(4) .iqdropdown-item-controls").css("display", "none");
   });

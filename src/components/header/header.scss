@@ -21,3 +21,9 @@
 .header-links-list-container {
     flex-grow: 30;
 }
+
+.header-link {
+    display: inline-block;
+    width: 87%;
+    box-sizing: content-box;
+}

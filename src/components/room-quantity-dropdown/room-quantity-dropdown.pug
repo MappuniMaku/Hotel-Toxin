@@ -1,0 +1,16 @@
+include ../element-name/element-name.pug
+
+mixin room-quantity-dropdown(desc, comment)
+    .room-quantity-dropdown
+        +element-name(desc, comment)
+        .iqdropdown
+            p.iqdropdown-selection
+            .iqdropdown-menu
+                .iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
+                    +element-name("спальни").iqdropdown-item
+
+                .iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
+                    +element-name("кровати").iqdropdown-item
+
+                .iqdropdown-menu-option(data-id="bathrooms")
+                    +element-name("ванные комнаты").iqdropdown-item

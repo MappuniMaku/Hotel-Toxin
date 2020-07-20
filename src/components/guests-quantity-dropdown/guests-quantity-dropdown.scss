@@ -10,3 +10,36 @@
         justify-content: space-between;
         
 }
+
+.guests-quantity-dropdown .iqdropdown .iqdropdown-menu .action-buttons {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 7px 0 14px;
+        margin-top: 18px;
+        margin-bottom: 5px;
+        //border: 1px solid black;
+}
+
+.guests-quantity-dropdown .iqdropdown .iqdropdown-menu .action-buttons .clear-button {
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $dark-shade-50;
+}
+
+.guests-quantity-dropdown .iqdropdown .iqdropdown-menu .action-buttons .apply-button {
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $color-purple;
+}
+
+.guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(4) .iqdropdown-item-controls {
+        display: none;
+}

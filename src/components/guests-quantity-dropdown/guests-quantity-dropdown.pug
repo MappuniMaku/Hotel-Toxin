@@ -1,6 +1,6 @@
 include ../element-name/element-name.pug
 
-mixin guests-quantity-dropdown(desc, comment, placeholder, value)
+mixin guests-quantity-dropdown(desc, comment)
     .guests-quantity-dropdown
         +element-name(desc, comment)
         .iqdropdown
@@ -14,3 +14,7 @@ mixin guests-quantity-dropdown(desc, comment, placeholder, value)
 
                 .iqdropdown-menu-option(data-id="infants")
                     +element-name("младенцы").iqdropdown-item
+                .iqdropdown-menu-option    
+                    .action-buttons
+                        button.clear-button Очистить
+                        button.apply-button Применить

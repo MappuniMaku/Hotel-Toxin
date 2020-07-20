@@ -1,7 +1,6 @@
 mixin header-item (href, descr)
-    li.header-link
-        div
-            a(href=href)=descr
+    li.header-item
+        a(href=href).header-link=descr
 
 header.header
     .header-logo-container
