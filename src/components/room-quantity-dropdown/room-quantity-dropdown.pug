@@ -1,7 +1,7 @@
 include ../element-name/element-name.pug
 
-mixin room-quantity-dropdown(desc, comment)
-    .room-quantity-dropdown
+mixin room-quantity-dropdown(desc, comment, id, expanded, bedrooms, beds, bathrooms)
+    div(data-id=id, data-expanded=expanded).room-quantity-dropdown
         +element-name(desc, comment)
         .iqdropdown
             p.iqdropdown-selection

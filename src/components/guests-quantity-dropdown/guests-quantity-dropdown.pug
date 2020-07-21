@@ -1,20 +1,24 @@
 include ../element-name/element-name.pug
 
-mixin guests-quantity-dropdown(desc, comment)
-    .guests-quantity-dropdown
+mixin guests-quantity-dropdown(desc, comment, id, expanded, adults, children, infants)
+    div(data-id=id, data-expanded=expanded).guests-quantity-dropdown
         +element-name(desc, comment)
         .iqdropdown
+            -if(!adults) adults = "";
+            -if(!children) children = "";
+            -if(!infants) infants = "";
             p.iqdropdown-selection
             .iqdropdown-menu
-                .iqdropdown-menu-option(data-id="adults"/* data-defaultcount="2"*/)
+                .iqdropdown-menu-option(data-id="adults" data-defaultcount=`${adults}`)
                     +element-name("взрослые").iqdropdown-item
 
-                .iqdropdown-menu-option(data-id="children"/* data-defaultcount="1"*/)
+                .iqdropdown-menu-option(data-id="children" data-defaultcount=`${children}`)
                     +element-name("дети").iqdropdown-item
 
-                .iqdropdown-menu-option(data-id="infants")
+                .iqdropdown-menu-option(data-id="infants" data-defaultcount=`${infants}`)
                     +element-name("младенцы").iqdropdown-item
+
                 .iqdropdown-menu-option    
                     .action-buttons
-                        button.clear-button Очистить
-                        button.apply-button Применить
+                        button(data-id=id).clear-button Очистить
+                        button(data-id=id).apply-button Применить
