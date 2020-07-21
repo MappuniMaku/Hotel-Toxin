@@ -7,6 +7,11 @@
     border-radius: 2px;
 }
 
+.iqdropdown:hover,
+.iqdropdown:focus {
+    border: 1px solid $dark-shade-50;
+}
+
 .iqdropdown .iqdropdown-selection {
     font-family: $font-montserrat;
     font-style: normal;
