@@ -1,0 +1,23 @@
+@import '~/theme/variables.scss';
+
+.subscription-text-field {
+        //border: 1px solid black;
+        box-sizing: content-box;
+        height: fit-content;
+        width: 266px;
+        height: 64.44px;
+}
+
+.subscription-text-field .input-field {
+    width: 266px;
+}
+
+.subscription-text-field .material-icons {
+    position: relative;
+    top: -36px;
+    left: 228px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: $color-purple;
+}

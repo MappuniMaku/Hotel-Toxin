@@ -1,0 +1,9 @@
+include ../element-name/element-name.pug
+include ../input-field/input-field.pug
+
+mixin subscription-text-field(desc, value)
+    form.subscription-text-field
+        label
+            +element-name(desc)
+            +input-field("text", "", "Email", value)
+            input(type="submit" value="arrow_forward").material-icons
