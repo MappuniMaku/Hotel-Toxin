@@ -14,7 +14,7 @@
 .guests-quantity-dropdown .iqdropdown .iqdropdown-menu .action-buttons {
         display: flex;
         justify-content: space-between;
-        padding: 0 7px 0 14px;
+        //padding: 0 7px 0 14px;
         margin-top: 18px;
         margin-bottom: 5px;
         //border: 1px solid black;
@@ -42,4 +42,9 @@
 
 .guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(4) .iqdropdown-item-controls {
         display: none;
+}
+
+.guests-quantity-dropdown .iqdropdown .iqdropdown-menu .action-buttons .clear-button.hidden {
+        opacity: 0;
+        cursor: unset;
 }

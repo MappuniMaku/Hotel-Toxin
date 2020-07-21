@@ -6,10 +6,10 @@ mixin guests-quantity-dropdown(desc, comment)
         .iqdropdown
             p.iqdropdown-selection
             .iqdropdown-menu
-                .iqdropdown-menu-option(data-id="adults")
+                .iqdropdown-menu-option(data-id="adults" data-defaultcount="2")
                     +element-name("взрослые").iqdropdown-item
 
-                .iqdropdown-menu-option(data-id="children")
+                .iqdropdown-menu-option(data-id="children" data-defaultcount="1")
                     +element-name("дети").iqdropdown-item
 
                 .iqdropdown-menu-option(data-id="infants")

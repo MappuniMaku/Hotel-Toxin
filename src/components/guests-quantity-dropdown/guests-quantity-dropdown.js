@@ -34,11 +34,8 @@ $(document).ready(() => {
             $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement").click();
           }
 
-          //$(".guests-quantity-dropdown .iqdropdown").click();
         });
-        //const $this = $(this);
-        //const $selection = $this.find('p.iqdropdown-selection').last();
-        //return itemCount.item1 + " гостей";
+
         if(itemCount.adults == 0) {
           $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement").css("opacity", "0.38");
         } else {
@@ -56,6 +53,14 @@ $(document).ready(() => {
         } else {
           $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls button.button-decrement").css("opacity", "1");
         }
+
+
+        if (totalItems == 0) {
+          $(".guests-quantity-dropdown .iqdropdown button.clear-button").addClass("hidden");
+        } else {
+          $(".guests-quantity-dropdown .iqdropdown button.clear-button").removeClass("hidden");
+        }
+
 
         if (totalItems == 0) {
           return "Сколько гостей"
@@ -149,6 +154,8 @@ $(document).ready(() => {
       //}
       //alert(applyButton.is(e.target))
     });
+
+    $(".guests-quantity-dropdown .iqdropdown").click();
 
   //  $(".guests-quantity-dropdown .iqdropdown-menu-option:nth-of-type(4) .iqdropdown-item-controls").css("display", "none");
   });
