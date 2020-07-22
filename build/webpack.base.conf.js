@@ -4,10 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const PATHS = {
     src: path.resolve(__dirname, '../src'),
-    dist: path.resolve(__dirname, '../dist'),
+    dist: path.resolve(__dirname, '../docs'),
     assets: 'assets/',
 };
 
@@ -117,6 +118,7 @@ module.exports = {
                 {from: `${PATHS.src}/theme/favicon.ico`, to: ''},
             ],
         }),
+        new CleanWebpackPlugin(),
 //        ...PAGES.map(
 //            page =>
 //              new HtmlWebpackPlugin({
