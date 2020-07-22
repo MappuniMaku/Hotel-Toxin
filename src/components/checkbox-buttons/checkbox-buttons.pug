@@ -1,17 +1,8 @@
 include ../element-name/element-name.pug
+include ../checkbox-items-list/checkbox-items-list.pug
 
-mixin checkbox-button-item(desc, value, checked)
-    -for(let i = 0; i < desc.length; i++)
-        label.checkbox-buttons__checkbox-button-item
-            -if(checked[i])
-                input(type="checkbox", value=value[i], checked).checkbox-buttons__checkbox-input
-                p.checkbox-buttons__description= desc[i]
-            -else
-                input(type="checkbox", value=value[i]).checkbox-buttons__checkbox-input
-                p.checkbox-buttons__description= desc[i]
-
-mixin checkbox-buttons(name, descarr, valuearr, selectedarr)
+mixin checkbox-buttons(name, descarr, valuearr, checkedarr)
     .checkbox-buttons
         -if(name)
             +element-name(name)
-        +checkbox-button-item(descarr, valuearr, selectedarr)
+        +checkbox-items-list(descarr, valuearr, checkedarr)

@@ -1,0 +1,9 @@
+mixin checkbox-items-list(descarr, valuearr, checkedarr)
+    -for(let i = 0; i < descarr.length; i++)
+        label.checkbox-items-list
+            -if(checkedarr[i])
+                input(type="checkbox", value=valuearr[i], checked).checkbox-items-list__checkbox-input
+                p.checkbox-items-list__description= descarr[i]
+            -else
+                input(type="checkbox", value=valuearr[i]).checkbox-items-list__checkbox-input
+                p.checkbox-items-list__description= descarr[i]
