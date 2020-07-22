@@ -6,6 +6,7 @@ include ../../components/date-picker/date-picker.pug
 include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/room-quantity-dropdown/room-quantity-dropdown.pug
 include ../../components/subscription-text-field/subscription-text-field.pug
+include ../../components/checkbox-buttons/checkbox-buttons.pug
 
 block variables
     -var title = 'UI kit Form Elements'
@@ -28,3 +29,5 @@ block content
         +guests-quantity-dropdown("dropdown", "", "2", "true")
     section.section4
         +guests-quantity-dropdown("dropdown", "", "3", "true", "2", "1")
+    section.section5
+        +checkbox-buttons("checkbox buttons", ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], ["smoking", "pets", "guests"], [false, true , true])
