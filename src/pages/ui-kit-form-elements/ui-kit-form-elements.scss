@@ -10,7 +10,12 @@
     width: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
+}
+
+.ui-kit-form-elements section > div,
+.ui-kit-form-elements section > label {
+    margin-bottom: 20px;
 }
 
 .ui-kit-form-elements .section1 {

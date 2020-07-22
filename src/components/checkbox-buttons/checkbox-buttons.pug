@@ -1,8 +1,13 @@
 include ../element-name/element-name.pug
 include ../checkbox-items-list/checkbox-items-list.pug
 
-mixin checkbox-buttons(name, descarr, valuearr, checkedarr)
-    .checkbox-buttons
-        -if(name)
+mixin checkbox-buttons(name, descarr, valuearr, checkedarr, expandable, expanded)
+    -if(expandable)
+        div(data-expanded=`${expanded}`).checkbox-buttons.checkbox-buttons_expandable
+            //- .checkbox-buttons_expandable__backdrop
+            +element-name(name, "expand_more")
+            +checkbox-items-list(descarr, valuearr, checkedarr)
+    -else
+        div.checkbox-buttons
             +element-name(name)
-        +checkbox-items-list(descarr, valuearr, checkedarr)
+            +checkbox-items-list(descarr, valuearr, checkedarr)
