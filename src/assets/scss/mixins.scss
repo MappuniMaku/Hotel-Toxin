@@ -2,37 +2,37 @@
    ========================================================================== */
 
 // px to rem
-@function rem($pixels, $context: $mainFontSize) {
-    @if (unitless($pixels)) {
-      $pixels: $pixels * 1px;
-    }
-    @if (unitless($context)) {
-      $context: $context * 1px;
-    }
-    @return $pixels / $context * 1rem;
-  }
+// @function rem($pixels, $context: $mainFontSize) {
+//     @if (unitless($pixels)) {
+//       $pixels: $pixels * 1px;
+//     }
+//     @if (unitless($context)) {
+//       $context: $context * 1px;
+//     }
+//     @return $pixels / $context * 1rem;
+//   }
   
-  // size to one line
-  @mixin size($width, $height: $width) {
-    width: $width;
-    height: $height;
-  }
+//   // size to one line
+//   @mixin size($width, $height: $width) {
+//     width: $width;
+//     height: $height;
+//   }
   
-  // placeholder helper
-  @mixin placeholder {
-    ::-webkit-input-placeholder {
-      @content;
-    }
-    :-moz-placeholder {
-      @content;
-    }
-    ::-moz-placeholder {
-      @content;
-    }
-    :-ms-input-placeholder {
-      @content;
-    }
-  }
+//   // placeholder helper
+//   @mixin placeholder {
+//     ::-webkit-input-placeholder {
+//       @content;
+//     }
+//     :-moz-placeholder {
+//       @content;
+//     }
+//     ::-moz-placeholder {
+//       @content;
+//     }
+//     :-ms-input-placeholder {
+//       @content;
+//     }
+//   }
   
   /* Fonts Helpers:
      Read more: https://github.com/vedees/webpack-template/blob/master/README.md#add-fonts
