@@ -1,0 +1,82 @@
+@import '~/theme/variables.scss';
+
+.toggle-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    width: 260px;
+
+    &__item {
+        // border: 1px solid black;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: fit-content;
+        // width: 240px;
+        margin: 12px 0 0 0;
+        cursor: pointer;
+    }
+
+    &__switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+    }
+
+    &__description {
+        // border: 1px solid black;
+        padding: 0;
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark-shade-50;
+        margin: 0 0 0 10px;
+        display: inline-block;
+        max-width: 210px;
+    }
+
+    &__toggle-input {
+        display: none;
+    }
+
+    &__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        border: 1px solid $dark-shade-25;
+        width: 40px;
+        height: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        // transition: 0.3s;
+    }
+
+    &__slider::before {
+        position: absolute;
+        content: "";
+        width: 12px;
+        height: 12px;
+        left: 4px;
+        bottom: 3px;
+        background: $dark-shade-25;
+        border-radius: 10px;
+        transition: transform .3s;
+    }
+
+    &__toggle-input:checked + &__slider::before {
+        transform: translateX(18px);
+        background: $gradient-purple;
+    }
+
+    &__item:hover &__slider,
+    &__toggle-input:checked + &__slider {
+        border: 1px solid $color-purple;
+    }
+}

@@ -1,0 +1,18 @@
+include ../element-name/element-name.pug
+
+mixin toggle-buttons(name, descarr, valuearr, checkedarr)
+    .toggle-buttons
+        -if(name)
+            +element-name(name)
+        -for(let i = 0; i < descarr.length; i++)
+            label.toggle-buttons__item
+                -if(checkedarr[i])
+                    .toggle-buttons__switch
+                        input(type="checkbox", value=valuearr[i], checked).toggle-buttons__toggle-input
+                        span.toggle-buttons__slider
+                    p.toggle-buttons__description= descarr[i]
+                -else
+                    .toggle-buttons__switch
+                        input(type="checkbox", value=valuearr[i]).toggle-buttons__toggle-input
+                        span.toggle-buttons__slider
+                    p.toggle-buttons__description= descarr[i]
