@@ -7,6 +7,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/room-quantity-dropdown/room-quantity-dropdown.pug
 include ../../components/subscription-text-field/subscription-text-field.pug
 include ../../components/checkbox-buttons/checkbox-buttons.pug
+include ../../components/radio-buttons/radio-buttons.pug
 
 block variables
     -var title = 'UI kit Form Elements'
@@ -24,6 +25,7 @@ block content
         +subscription-text-field("subscription text field")
     section.section2
         +checkbox-buttons("checkbox buttons", ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], ["smoking", "pets", "guests"], [false, true , true])
+        +radio-buttons("radio buttons", ["Мужчина", "Женщина"], "sex", ["man", "woman"], [true, false])
     section.section4
         +room-quantity-dropdown("dropdown", "default", "1", "false", "2", "2")
         +room-quantity-dropdown("dropdown", "expanded", "2", "true", "2", "2")

@@ -1,0 +1,119 @@
+@import '~/theme/variables.scss';
+
+.radio-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    width: 220px;
+
+    & .radio-buttons-items-container {
+        display: flex;
+        justify-content: space-between;
+        height: fit-content;
+        // border: 1px solid black;
+    }
+
+    &__item {
+        // border: 1px solid black;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: fit-content;
+        // width: 240px;
+        margin: 11px 0 0 0;
+    }
+
+    &__description {
+        // border: 1px solid black;
+        padding: 0;
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark-shade-50;
+        margin: 0 0 0 10px;
+        display: inline-block;
+        max-width: 210px;
+    }
+
+
+    & .ui-button {
+        // border: 1px solid black;
+        border: none;
+        border-radius: 0px;
+        background: none;
+        box-shadow: unset;
+        padding: 0;
+        text-align: left;
+    }
+
+    & .ui-button:hover {
+        border: none;
+        background: none;
+    }
+
+    // & .ui-button.ui-state-active:hover {
+    //     border: none;
+    //     background: none;
+    // }
+
+    // & .ui-button .ui-icon.ui-state-checked {
+    //     background-image: url("./img/Check.png");
+    //     background-repeat: no-repeat;
+    // }
+
+    // & .ui-icon-check {
+    //     background-position: center;
+    // }
+
+
+    // & .ui-checkboxradio-label .ui-icon-background {
+    //     background-color: #FFFFFF;
+    //     border: 1px solid $dark-shade-25;
+    //     box-sizing: border-box;
+    //     border-radius: 4px;
+    //     box-shadow: unset;
+    // }
+
+    // & .ui-state-active .ui-icon-background,
+    // & .ui-checkboxradio-label:hover .ui-icon-background,
+    // & .ui-checkboxradio-label .ui-icon-background:hover {
+    //     border: 1px solid $color-purple;
+    // }
+
+    // & .ui-state-checked {
+    //     background-color: #FFFFFF;
+    // }
+
+    & .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+    & .ui-checkboxradio-radio-label .ui-icon-background {
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        // margin: -0.7px 0 0 0;
+        margin: 0 0 0 0;
+        border: 1px solid $dark-shade-25;
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    & .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: $gradient-purple;
+        border-radius: 10px;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        // z-index: 10000;
+    }
+
+    & .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+    & .ui-checkboxradio-radio-label:hover .ui-icon-background {
+        border: 1px solid $color-purple;
+    }
+}
