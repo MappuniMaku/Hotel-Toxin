@@ -1,0 +1,109 @@
+@import '~/theme/variables.scss';
+
+.like-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    width: 260px;
+
+    &__item {
+        // border: 1px solid black;
+        display: flex;
+        width: 40px;
+        height: 20px;
+        // width: 240px;
+        margin: 0;
+        cursor: pointer;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: white;
+        border: 1px solid $dark-shade-25;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__like-icon {
+        font-family: $font-material-icons;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 10px;
+        line-height: 9px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+      
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+      
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+        // width: 20px;
+        // height: 20px;
+        // border: 1px solid black;
+        margin-top: 1px;
+        margin-left: 2px;
+    }
+
+    &__likes-number {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        /* identical to box height */
+        display: flex;
+        align-items: center;
+
+        text-align: center;
+        // border: 1px solid black;
+        margin-right: 7px;
+    }
+
+    &__like-icon, &__likes-number {
+        color: $dark-shade-25;
+    }
+
+    &__input:checked + &__like-icon,
+    &__input:checked ~ &__likes-number {
+        color: $color-purple;
+    }
+
+    &__item:hover {
+        border: 1px solid $color-purple;
+    }
+
+    &__item:hover &__like-icon,
+    &__item:hover &__likes-number {
+        color: $color-purple;
+    }
+
+    &__item-checked {
+        border-color: $color-purple;
+    }
+}
+
+.like-buttons-container {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.like-button .element-name {
+    margin-bottom: 11px;
+}

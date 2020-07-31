@@ -9,6 +9,7 @@ include ../../components/subscription-text-field/subscription-text-field.pug
 include ../../components/checkbox-buttons/checkbox-buttons.pug
 include ../../components/radio-buttons/radio-buttons.pug
 include ../../components/toggle-buttons/toggle-buttons.pug
+include ../../components/like-button/like-button.pug
 
 block variables
     -var title = 'UI kit Form Elements'
@@ -28,6 +29,7 @@ block content
         +checkbox-buttons("checkbox buttons", ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], ["smoking", "pets", "guests"], [false, true , true])
         +radio-buttons("radio buttons", ["Мужчина", "Женщина"], "sex", ["man", "woman"], [true, false])
         +toggle-buttons("toggle", ["Получать спецпредложения", "Получать спецпредложения"], ["specialOffers", "specialOffers"], [true, false])
+        +like-button("like button", ["2", "12"], [false, true], ["like-button__item-1", "like-button__item-2"])
     section.section4
         +room-quantity-dropdown("dropdown", "default", "1", "false", "2", "2")
         +room-quantity-dropdown("dropdown", "expanded", "2", "true", "2", "2")
