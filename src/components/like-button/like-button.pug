@@ -6,7 +6,7 @@ mixin like-button(name, likesarr, checkedarr, idarr)
             +element-name(name)
         .like-buttons-container
             -for(let i = 0; i < likesarr.length; i++)
-                label(class=idarr[i]).like-button__item
+                label(data-id=idarr[i]).like-button__item
                     -if(checkedarr[i])
                         input(type="checkbox", checked).like-button__input
                         span.like-button__like-icon favorite_border
