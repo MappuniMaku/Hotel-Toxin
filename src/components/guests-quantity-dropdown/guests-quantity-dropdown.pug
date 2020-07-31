@@ -1,7 +1,7 @@
 include ../element-name/element-name.pug
 
-mixin guests-quantity-dropdown(desc, comment, id, expanded, adults, children, infants)
-    div(data-id=id, data-expanded=expanded).guests-quantity-dropdown
+mixin guests-quantity-dropdown(desc, comment, expanded, adults, children, infants)
+    div(data-expanded=expanded).guests-quantity-dropdown
         +element-name(desc, comment)
         .iqdropdown
             -if(!adults) adults = "";

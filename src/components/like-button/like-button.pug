@@ -1,12 +1,12 @@
 include ../element-name/element-name.pug
 
-mixin like-button(name, likesarr, checkedarr, idarr)
+mixin like-button(name, likesarr, checkedarr)
     .like-button
         -if(name)
             +element-name(name)
         .like-buttons-container
             -for(let i = 0; i < likesarr.length; i++)
-                label(data-id=idarr[i]).like-button__item
+                label.like-button__item
                     -if(checkedarr[i])
                         input(type="checkbox", checked).like-button__input
                         span.like-button__like-icon favorite_border
@@ -15,9 +15,3 @@ mixin like-button(name, likesarr, checkedarr, idarr)
                         input(type="checkbox").like-button__input
                         span.like-button__like-icon favorite_border
                         span.like-button__likes-number= likesarr[i]
-
-        //- li.asd 1
-        //- li.asd 1
-        //- li.asd 1
-        //- li.asd 1
-        //- li.asd 1

@@ -21,7 +21,7 @@ block content
     section.section1
         +text-field("text field", "default")
         +text-field("text field", "hover / focus", "This is pretty awesome")
-        +guests-quantity-dropdown("dropdown", "default", "1", "false")
+        +guests-quantity-dropdown("dropdown", "default", "false")
         +date-picker("masked text field", "default")
         +date-dropdown("date dropdown", "date dropdown", "", "19.08.2019")
         +filter-date-dropdown("filter date dropdown", "", "'2020-08-19','2020-08-23'")
@@ -36,9 +36,9 @@ block content
         +room-quantity-dropdown("dropdown", "default", "1", "false", "2", "2")
         +room-quantity-dropdown("dropdown", "expanded", "2", "true", "2", "2")
     section.section5
-        +guests-quantity-dropdown("dropdown", "", "2", "true")
+        +guests-quantity-dropdown("dropdown", "", "true")
     section.section6
-        +guests-quantity-dropdown("dropdown", "", "3", "true", "2", "1")
+        +guests-quantity-dropdown("dropdown", "", "true", "2", "1")
     section.section7
         +checkbox-buttons("expandable checkbox list", ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"], ["breakfast", "worktable", "childchair", "childbed", "tv", "shampoo"], [false, true , true, true, false, false], true, false)
         +checkbox-buttons("expandable checkbox list", ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"], ["breakfast", "worktable", "childchair", "childbed", "tv", "shampoo"], [false, true , true, true, false, false], true, true)
