@@ -4,8 +4,10 @@ include ../input-field/input-field.pug
 mixin date-dropdown(name1, name2, value1, value2, preselectedDates)
     .date-dropdown
         label.date-dropdown__content
-            +element-name(name1)
+            -if(name1)
+                +element-name(name1)
             +input-field("text", "date-dropdown-1", "ДД.ММ.ГГГГ", value1, "expand_more", preselectedDates)
         label.date-dropdown__content
-            +element-name(name2)
+            -if(name2)
+                +element-name(name2)
             +input-field("text", "date-dropdown-2", "ДД.ММ.ГГГГ", value2, "expand_more")

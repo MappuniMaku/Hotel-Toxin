@@ -1,0 +1,6 @@
+include ../element-name/element-name.pug
+
+mixin range-slider(name, presetRange, min, max, step)
+    .range-slider
+        +element-name(name, " ")
+        div(data-presetrange=presetRange, data-min=min, data-max=max, data-step=step).range-slider__slider-object

@@ -37,12 +37,18 @@ $(document).ready(function() {
 
     var datepicker = $("#date-dropdown-1").datepicker().data('datepicker');
 
-    let inputField = document.getElementById("date-dropdown-1");
-    let preselectedDates = inputField.dataset.preselecteddates;
+    // let inputField = document.getElementById("date-dropdown-1");
+    // let preselectedDates = inputField.dataset.preselecteddates;
+
+    // if(preselectedDates) {
+    //     datepicker.selectDate([new Date(preselectedDates.split(',')[0]), new Date(preselectedDates.split(',')[1])]);
+    // };
+
+    let preselectedDates = $("#date-dropdown-1").data("preselecteddates");
 
     if(preselectedDates) {
-        datepicker.selectDate([new Date(preselectedDates.split(',')[0]), new Date(preselectedDates.split(',')[1])]);
-    };
+        datepicker.selectDate([new Date(preselectedDates[0]), new Date(preselectedDates[1])]);
+    }
 
     $("#date-dropdown-2").click(function() {
         datepicker.show();
