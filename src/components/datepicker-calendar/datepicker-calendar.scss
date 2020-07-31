@@ -12,6 +12,7 @@
 
 .datepicker.active {
     transform: translateY(-6px);
+    z-index: 1000000;
 }
 
 .datepicker--nav-title {
