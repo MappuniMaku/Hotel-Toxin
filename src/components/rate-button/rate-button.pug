@@ -1,0 +1,14 @@
+include ../element-name/element-name.pug
+
+mixin rate-button(name, ratingarr)
+    .rate-button
+        -if(name)
+            +element-name(name)
+        .rate-buttons-container
+            -for(let i = 0; i < ratingarr.length; i++)
+                div(data-rating=ratingarr[i]).rate-button__item
+                    span.rate-button__star star_border
+                    span.rate-button__star star_border
+                    span.rate-button__star star_border
+                    span.rate-button__star star_border
+                    span.rate-button__star star_border

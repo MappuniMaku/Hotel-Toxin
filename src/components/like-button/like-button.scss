@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: fit-content;
-    width: 260px;
+    // width: 260px;
 
     &__item {
         // border: 1px solid black;
@@ -99,7 +99,7 @@
 }
 
 .like-buttons-container {
-    width: 90px;
+    max-width: 90px;
     display: flex;
     justify-content: space-between;
 }

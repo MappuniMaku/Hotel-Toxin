@@ -1,0 +1,52 @@
+@import '~/theme/variables.scss';
+
+.rate-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        height: fit-content;
+        width: 120px;
+    }
+
+    &__star {
+        font-family: $font-material-icons;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;  /* Preferred icon size */
+        display: inline-block;
+        line-height: 20px;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        width: 24px;
+        height: 24px;
+      
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+
+        color: $color-purple;
+    }
+}
+
+.rate-buttons-container {
+    max-width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rate-button .element-name {
+    margin-bottom: 11px;
+}
