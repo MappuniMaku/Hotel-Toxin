@@ -15,6 +15,8 @@ include ../../components/range-slider/range-slider.pug
 include ../../components/button/button.pug
 include ../../components/link-button/link-button.pug
 include ../../components/element-name/element-name.pug
+include ../../components/submit-button/submit-button.pug
+include ../../components/pagination/pagination.pug
 
 block variables
     -var title = 'UI kit Form Elements'
@@ -49,6 +51,10 @@ block content
             .simple-buttons-container
                 +button("click me", "purple")
                 +button("click me", "dark-shade-50")
+        +submit-button("перейти к оплате")
+        .pagination-element-name-container
+            +element-name("pagination")
+        +pagination(180, 15, 12, 1)
     section.section4
         +room-quantity-dropdown("dropdown", "default", false, 2, 2)
         +room-quantity-dropdown("dropdown", "expanded", true, 2, 2)
