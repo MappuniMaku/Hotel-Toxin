@@ -33,6 +33,13 @@
     grid-row-end: 3;
 }
 
+.ui-kit-form-elements .section3 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-column-end: 4;
+    grid-row-end: 3;
+}
+
 .ui-kit-form-elements .section4 {
     grid-column-start: 1;
     grid-row-start: 3;
@@ -73,4 +80,24 @@
     grid-row-start: 4;
     grid-column-end: 4;
     grid-row-end: 5;
+}
+
+.buttons-container {
+    height: 195px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.simple-buttons-container {
+    width: 142px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-buttons-container {
+    width: 217px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }

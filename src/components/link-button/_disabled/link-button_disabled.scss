@@ -1,0 +1,9 @@
+.link-button[disabled] {
+    // opacity: 0.5;
+    cursor: default;
+    border-color: transparentize($color: $color-purple, $amount: 0.5);
+}
+
+.link-button[disabled].link-button_color_purple {
+    opacity: 0.5;
+}

@@ -1,7 +1,8 @@
 include ../element-name/element-name.pug
+include ../button/button.pug
 
 mixin guests-quantity-dropdown(desc, comment, expanded, adults, children, infants)
-    div(data-expanded=expanded).guests-quantity-dropdown
+    div(data-expanded=`${expanded}`).guests-quantity-dropdown
         +element-name(desc, comment)
         .iqdropdown
             -if(!adults) adults = "";
@@ -18,7 +19,9 @@ mixin guests-quantity-dropdown(desc, comment, expanded, adults, children, infant
                 .iqdropdown-menu-option(data-id="infants" data-defaultcount=`${infants}`)
                     +element-name("младенцы").iqdropdown-item
 
-                .iqdropdown-menu-option    
+                .iqdropdown-menu-option
                     .action-buttons
-                        button(data-id=id).clear-button Очистить
-                        button(data-id=id).apply-button Применить
+                        +button("Очистить", "dark-shade-50", id, "clear-button")
+                        +button("Применить", "purple", id, "apply-button")
+                        //- button(data-id=id).clear-button Очистить
+                        //- button(data-id=id).apply-button Применить

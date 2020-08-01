@@ -1,0 +1,19 @@
+@import '~/theme/variables.scss';
+
+.button {
+    font-family: $font-montserrat-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+}
+
+@import './_color/button_color_dark-shade-50.scss';
+@import './_color/button_color_purple.scss';
