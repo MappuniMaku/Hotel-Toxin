@@ -11,6 +11,7 @@
 
 .date-dropdown .input-field {
     width: 150px;
+    cursor: pointer;
 }
 
 .date-dropdown .input-field::placeholder {
@@ -19,4 +20,5 @@
 
 .date-dropdown .input-field ~ .material-icons {
     left: 116px;
+    cursor: pointer;
 }

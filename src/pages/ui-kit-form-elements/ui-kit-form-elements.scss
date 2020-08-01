@@ -1,7 +1,7 @@
 .ui-kit-form-elements .content-wrapper {
     display: grid;
     grid-template-rows: 20% 20% 20% 20% 20%;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 31% 27.3% 30%;
     height: 1853px;
 }
 
@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: flex-start;
     // align-items: center;
+    margin-left: 120px;
 }
 
 .ui-kit-form-elements section > div,

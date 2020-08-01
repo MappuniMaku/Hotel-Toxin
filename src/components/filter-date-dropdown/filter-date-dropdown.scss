@@ -13,6 +13,7 @@
 .filter-date-dropdown .input-field {
     width: 266px;
     text-transform: lowercase;
+    cursor: pointer;
 }
 
 .filter-date-dropdown .input-field::placeholder {
@@ -22,4 +23,5 @@
 
 .filter-date-dropdown .input-field ~ .material-icons {
     left: 232px;
+    cursor: pointer;
 }
