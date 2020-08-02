@@ -18,6 +18,7 @@ include ../../components/element-name/element-name.pug
 include ../../components/submit-button/submit-button.pug
 include ../../components/pagination/pagination.pug
 include ../../components/bullet-list/bullet-list.pug
+include ../../components/facilities-list/facilities-list.pug
 
 block variables
     -var title = 'UI kit Form Elements'
@@ -72,3 +73,6 @@ block content
         .bullet-list-element-name-container
             +element-name("bullet list")
         +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
+    section.section10
+        +facilities-list(["insert_emoticon", "location_city"], ["Комфорт", "Удобство"], ["Шумопоглощающие стены", "Окно в каждой из спален"])
+    section.section11

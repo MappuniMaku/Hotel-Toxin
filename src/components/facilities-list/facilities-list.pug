@@ -1,0 +1,9 @@
+mixin facilities-list(iconsArr, namesArr, descriptionArr)
+    .facilities-list
+        -for(let i = 0; i < iconsArr.length; i++)
+            .facilities-list__item
+                .facilities-list__icon.material-icons=iconsArr[i]
+                .facilities-list__text-container
+                    p.facilities-list__name=namesArr[i]
+                    p.facilities-list__description=descriptionArr[i]
+        
