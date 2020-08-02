@@ -8,7 +8,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         height: fit-content;
-        width: 240px;
+        min-width: 240px;
         margin: 10px 0 0 0;
     }
 
@@ -24,6 +24,36 @@
         margin: 0 0 0 10px;
         display: inline-block;
         max-width: 210px;
+    }
+
+    &__rich-title {
+        // border: 1px solid black;
+        padding: 0;
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark-shade-75;
+        margin: 0 0 5px 0px;
+        display: inline-block;
+        max-width: 230px;
+        position: relative;
+    }
+
+    &__rich-description {
+        position: relative;
+        // top: 30px;
+        left: 0px;
+        padding: 0;
+        margin: 0;
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: $dark-shade-50;
+        max-width: 230px;
     }
 
 
@@ -82,4 +112,9 @@
         // margin: -0.7px 0 0 0;
         margin: 0 0 0 0;
     }
+}
+
+.rich-text-container {
+    margin-left: 10px;
+    min-width: 240px;
 }
