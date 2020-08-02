@@ -17,6 +17,7 @@ include ../../components/link-button/link-button.pug
 include ../../components/element-name/element-name.pug
 include ../../components/submit-button/submit-button.pug
 include ../../components/pagination/pagination.pug
+include ../../components/bullet-list/bullet-list.pug
 
 block variables
     -var title = 'UI kit Form Elements'
@@ -38,7 +39,6 @@ block content
         +toggle-buttons("toggle", ["Получать спецпредложения", "Получать спецпредложения"], ["specialOffers", "specialOffers"], [true, false])
         +like-button("like button", [2, 12], [false, true], ["item-1", "item-2"])
         +rate-button("rate button", [4, 5])
-        +checkbox-buttons("Rich Checkbox Buttons", ["Широкий коридор", "Помощник для инвалидов"], ["wideHall", "disabledAssistant"], [false, false], false, false, ["Ширина коридоров в номере &nbsp; &nbsp; &nbsp; &nbsp; не менее 91 см.", "На 1 этаже вас встретит специалист и проводит до номера."])
     section.section3
         +range-slider("range slider", [5000, 10000], 0, 15500, 500)
         .buttons-container
@@ -66,3 +66,9 @@ block content
     section.section7
         +checkbox-buttons("expandable checkbox list", ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"], ["breakfast", "worktable", "childchair", "childbed", "tv", "shampoo"], [false, true , true, true, false, false], true, false)
         +checkbox-buttons("expandable checkbox list", ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"], ["breakfast", "worktable", "childchair", "childbed", "tv", "shampoo"], [false, true , true, true, false, false], true, true)
+    section.section8
+        +checkbox-buttons("Rich Checkbox Buttons", ["Широкий коридор", "Помощник для инвалидов"], ["wideHall", "disabledAssistant"], [false, false], false, false, ["Ширина коридоров в номере &nbsp; &nbsp; &nbsp; &nbsp; не менее 91 см.", "На 1 этаже вас встретит специалист и проводит до номера."])
+    section.section9
+        .bullet-list-element-name-container
+            +element-name("bullet list")
+        +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])

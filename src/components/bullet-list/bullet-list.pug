@@ -1,0 +1,5 @@
+mixin bullet-list(contentArr)
+    ul.bullet-list
+        -for(let i = 0; i < contentArr.length; i++)
+            li.bullet-list__item
+                p.bullet-list__text=contentArr[i]

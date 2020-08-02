@@ -1,0 +1,34 @@
+@import '~/theme/variables.scss';
+
+.bullet-list {
+    // border: 1px solid black;
+    padding-left: 19px;
+    &__item {
+        position: relative;
+        // border: 1px solid black;
+        max-width: 240px;
+        height: fit-content;
+
+        &::before {
+            display: block;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $dark-shade-25;
+            position: relative;
+            left: -20px;
+            top: 17px;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark-shade-75;
+    }
+}

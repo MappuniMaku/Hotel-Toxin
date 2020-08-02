@@ -11,7 +11,7 @@ mixin checkbox-items-list(descArr, valueArr, checkedArr, richDescArr)
                 -if(richDescArr && richDescArr[i])
                     -var richDesc = richDescArr[i]
                     input(type="checkbox", value=valueArr[i], checked=checkedArr[i]).checkbox-items-list__checkbox-input
-                    .rich-text-container
+                    .checkbox-items-list__rich-text-container
                         p.checkbox-items-list__rich-title=descArr[i]
                         p.checkbox-items-list__rich-description !{richDesc}
                 -else
