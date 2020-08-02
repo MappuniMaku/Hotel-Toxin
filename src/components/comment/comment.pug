@@ -1,0 +1,15 @@
+include ../like-button/like-button.pug
+
+mixin comment(name, date, text, likes, isLiked, image)
+    //- -for(let i = 0; i < namesArr.length)
+    .comment
+        .comment__profile
+            .comment__photo-container
+                img(src=`assets/img/${image}`, alt=`${name}`).comment__photo
+            .comment__info
+                p.comment__name=name
+                p.comment__date=date
+        .comment__body
+            .comment__like-button
+                +like-button(likes, isLiked)
+            p.comment__text=text

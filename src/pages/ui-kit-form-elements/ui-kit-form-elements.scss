@@ -124,3 +124,13 @@
 .ui-kit-form-elements .bullet-list-element-name-container {
     margin-bottom: -2px;
 }
+
+.ui-kit-form-elements .like-buttons-container {
+    max-width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ui-kit-form-elements .like-buttons-name-container {
+    margin-bottom: 11px;
+}

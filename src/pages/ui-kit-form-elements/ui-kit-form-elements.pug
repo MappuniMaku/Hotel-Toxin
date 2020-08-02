@@ -19,6 +19,7 @@ include ../../components/submit-button/submit-button.pug
 include ../../components/pagination/pagination.pug
 include ../../components/bullet-list/bullet-list.pug
 include ../../components/facilities-list/facilities-list.pug
+include ../../components/comment/comment.pug
 
 block variables
     -var title = 'UI kit Form Elements'
@@ -38,7 +39,11 @@ block content
         +checkbox-buttons("checkbox buttons", ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], ["smoking", "pets", "guests"], [false, true , true])
         +radio-buttons("radio buttons", ["Мужчина", "Женщина"], "gender", ["man", "woman"], [true, false])
         +toggle-buttons("toggle", ["Получать спецпредложения", "Получать спецпредложения"], ["specialOffers", "specialOffers"], [true, false])
-        +like-button("like button", [2, 12], [false, true], ["item-1", "item-2"])
+        .like-buttons-name-container
+            +element-name("like button")
+        .like-buttons-container
+            +like-button(2, false, "item-1")
+            +like-button(12, true, "item-2")
         +rate-button("rate button", [4, 5])
     section.section3
         +range-slider("range slider", [5000, 10000], 0, 15500, 500)
@@ -76,3 +81,4 @@ block content
     section.section10
         +facilities-list(["insert_emoticon", "location_city"], ["Комфорт", "Удобство"], ["Шумопоглощающие стены", "Окно в каждой из спален"])
     section.section11
+        +comment(["Мурад Сарафанов"], ["5 дней назад"], ["Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."], [12], [true], ["murad_sarafanov.png"])
