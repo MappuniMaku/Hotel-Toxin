@@ -1,6 +1,5 @@
 mixin like-button(likes, isChecked)
-    .like-button
-        label.like-button__item
-            input(type="checkbox", checked=isChecked).like-button__input
-            span.like-button__like-icon favorite_border
-            span.like-button__likes-number= likes
+    label.like-button
+        input(type="checkbox", checked=isChecked).like-button__input
+        span.like-button__like-icon.material-icons favorite_border
+        span.like-button__likes-number= likes

@@ -1,4 +1,5 @@
 @import '~/theme/variables.scss';
+@import '~/components/material-icons/material-icons.scss';
 
 .rate-button {
     display: flex;
@@ -15,30 +16,31 @@
     }
 
     &__star {
-        font-family: $font-material-icons;
-        font-weight: normal;
-        font-style: normal;
-        font-size: 24px;  /* Preferred icon size */
-        display: inline-block;
-        line-height: 20px;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap: normal;
-        white-space: nowrap;
-        direction: ltr;
+        // font-family: $font-material-icons;
+        // font-weight: normal;
+        // font-style: normal;
+        // font-size: 24px;  /* Preferred icon size */
+        // display: inline-block;
+        // line-height: 20px;
+        // text-transform: none;
+        // letter-spacing: normal;
+        // word-wrap: normal;
+        // white-space: nowrap;
+        // direction: ltr;
         width: 24px;
         height: 24px;
       
-        /* Support for all WebKit browsers. */
-        -webkit-font-smoothing: antialiased;
-        /* Support for Safari and Chrome. */
-        text-rendering: optimizeLegibility;
-        /* Support for Firefox. */
-        -moz-osx-font-smoothing: grayscale;
-        /* Support for IE. */
-        font-feature-settings: 'liga';
+        // /* Support for all WebKit browsers. */
+        // -webkit-font-smoothing: antialiased;
+        // /* Support for Safari and Chrome. */
+        // text-rendering: optimizeLegibility;
+        // /* Support for Firefox. */
+        // -moz-osx-font-smoothing: grayscale;
+        // /* Support for IE. */
+        // font-feature-settings: 'liga';
 
         color: $color-purple;
+        font-size: 24px;
     }
 }
 

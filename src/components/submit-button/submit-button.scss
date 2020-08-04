@@ -1,4 +1,5 @@
 @import '~/theme/variables.scss';
+@import '~/components/material-icons/material-icons.scss';
 
 .submit-button {
     height: 44px;
@@ -33,5 +34,6 @@
         width: 44px;
         height: 44px;
         cursor: pointer;
+        font-size: 24px;
     }
 }
