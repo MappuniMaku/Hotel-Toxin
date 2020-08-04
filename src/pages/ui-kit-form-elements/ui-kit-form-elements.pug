@@ -37,8 +37,12 @@ block content
         +subscription-text-field("subscription text field")
     section.ui-kit-form-elements__section.section2
         +checkbox-buttons("checkbox buttons", ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], ["smoking", "pets", "guests"], [false, true , true])
-        +radio-buttons("radio buttons", ["Мужчина", "Женщина"], "gender", ["man", "woman"], [true, false])
-        +toggle-buttons("toggle", ["Получать спецпредложения", "Получать спецпредложения"], ["specialOffers", "specialOffers"], [true, false])
+        .radio-buttons-name-container
+            +element-name("radio buttons")
+        +radio-buttons(["Мужчина", "Женщина"], "gender", ["man", "woman"], [true, false])
+        .name-container
+            +element-name("toggle buttons")
+        +toggle-buttons(["Получать спецпредложения", "Получать спецпредложения"], ["specialOffers", "specialOffers"], [true, false])
         .like-buttons-name-container
             +element-name("like button")
         .like-buttons-container

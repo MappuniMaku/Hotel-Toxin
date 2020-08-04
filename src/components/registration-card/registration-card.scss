@@ -1,13 +1,14 @@
 @import '~/theme/variables.scss';
 @import '~/components/text-block/text-block.scss';
 
-.room-search-card {
+.registration-card {
     // border: 1px solid black;
     padding: 40px 30px 30px 30px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    min-height: 374px;
+    // justify-content: flex-start;
+    justify-content: space-between;
+    min-height: 646px;
     width: 380px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -30,15 +31,25 @@
     &__form {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        // justify-content: flex-start;
+        justify-content: space-between;
         // height: 100%;
     }
 
-    & .date-dropdown {
-        margin-bottom: 20px;
-    }
+    & .sing-in-block {
+        display: flex;
+        justify-content: space-between;
 
-    & .guests-quantity-dropdown {
-        margin-bottom: 30px;
+        &__text {
+            font-family: $font-montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #000000;
+        }
     }
 }

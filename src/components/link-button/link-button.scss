@@ -13,10 +13,11 @@
     border: 0;
     cursor: pointer;
     margin: 0;
-    width: fit-content;
+    min-width: 99px;
     height: 44px;
     border-radius: 22px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 @import './_color/link-button_color_purple.scss';

@@ -15,8 +15,12 @@
         align-items: flex-start;
         height: fit-content;
         // width: 240px;
-        margin: 12px 0 0 0;
+        margin: 0 0 12px 0;
         cursor: pointer;
+    }
+
+    &__item:last-of-type {
+        margin: 0;
     }
 
     &__switch {

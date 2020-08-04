@@ -2,20 +2,13 @@
 // @import '~/components/text-block/text-block.scss';
 
 .radio-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: fit-content;
     // width: 221px;
-
-    &__items-container {
-        display: flex;
-        justify-content: flex-start;
-        height: fit-content;
-        // align-items: center;
-        // border: 1px solid black;
-        margin: 11px 0 0 0;
-    }
+    display: flex;
+    justify-content: flex-start;
+    height: fit-content;
+    // align-items: center;
+    // border: 1px solid black;
+    // margin: 11px 0 0 0;
 
     &__item {
         // border: 1px solid black;

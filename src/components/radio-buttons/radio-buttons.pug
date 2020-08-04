@@ -1,10 +1,8 @@
 include ../element-name/element-name.pug
 
-mixin radio-buttons(name, descarr, group_name, valuearr, checkedarr)
+mixin radio-buttons(descarr, group_name, valuearr, checkedarr)
     .radio-buttons
-        +element-name(name)
-        .radio-buttons__items-container
-            -for(let i = 0; i < descarr.length; i++)
-                label.radio-buttons__item
-                    input(type="radio", name=group_name, value=valuearr[i], checked=checkedarr[i]).radio-buttons__radio-input
-                    p.radio-buttons__description=descarr[i]
+        -for(let i = 0; i < descarr.length; i++)
+            label.radio-buttons__item
+                input(type="radio", name=group_name, value=valuearr[i], checked=checkedarr[i]).radio-buttons__radio-input
+                p.radio-buttons__description=descarr[i]
