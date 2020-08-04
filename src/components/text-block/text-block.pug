@@ -1,7 +1,4 @@
 mixin text-block(modificator, tag, description)
-
     .text-block(class=`text-block_text-style_${modificator}`)
-        .text-block__tag
-            p=tag
-        .text-block__description
-            p=description
+        p.text-block__tag=tag
+        p.text-block__description=description
