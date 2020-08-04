@@ -1,18 +1,19 @@
 @import '~/theme/variables.scss';
+@import '~/components/text-block/text-block.scss';
 
 .input-field {
-    font-family: $font-montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    // font-family: $font-montserrat;
+    // font-style: normal;
+    // font-weight: normal;
+    // font-size: 14px;
+    // line-height: 24px;
     height: 44px;
     background: #FFFFFF;
     border: 1px solid $dark-shade-25;
     box-sizing: border-box;
     border-radius: 4px;
     padding: 15px 15px 15px 14px;
-    color: $dark-shade-75;
+    // color: $dark-shade-75;
     box-sizing: border-box;
 }
 

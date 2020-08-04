@@ -8,8 +8,8 @@ mixin comment(name, date, text, likes, isLiked, image)
                 img(src=`assets/img/${image}`, alt=`${name}`).comment__photo
             .comment__info
                 p.comment__name=name
-                p.comment__date=date
+                p.comment__date.text-block_text-style_body=date
         .comment__body
             .comment__like-button
                 +like-button(likes, isLiked)
-            p.comment__text=text
+            p.comment__text.text-block_text-style_body=text

@@ -1,4 +1,5 @@
 @import '~/theme/variables.scss';
+@import '~/components/text-block/text-block.scss';
 
 .room-search-card {
     // border: 1px solid black;
@@ -15,12 +16,12 @@
     border-radius: 4px;
 
     &__title {
-        font-family: $font-opensans-bold;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
-        color: $dark-shade-100;
+        // font-family: $font-opensans-bold;
+        // font-style: normal;
+        // font-weight: bold;
+        // font-size: 24px;
+        // line-height: 30px;
+        // color: $dark-shade-100;
         // height: 60px;
         // width: 320px;
         margin-bottom: 20px;

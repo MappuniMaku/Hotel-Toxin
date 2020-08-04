@@ -3,7 +3,7 @@ include ../guests-quantity-dropdown/guests-quantity-dropdown.pug
 include ../submit-button/submit-button.pug
 
 .room-search-card
-    h1.room-search-card__title Найдём номера под ваши пожелания
+    h1.room-search-card__title.text-block_text-style_h1-title Найдём номера под ваши пожелания
     form.room-search-card__form
         +date-dropdown("прибытие", "выезд")
         +guests-quantity-dropdown("гости", "", false)

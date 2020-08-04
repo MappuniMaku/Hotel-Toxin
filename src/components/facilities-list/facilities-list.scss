@@ -1,5 +1,6 @@
 @import '~/theme/variables.scss';
 @import '~/components/material-icons/material-icons.scss';
+@import '~/components/text-block/text-block.scss';
 
 .facilities-list {
     display: flex;
@@ -48,12 +49,12 @@
         left: 0px;
         padding: 0;
         margin: 0;
-        font-family: $font-montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
-        color: $dark-shade-50;
+        // font-family: $font-montserrat;
+        // font-style: normal;
+        // font-weight: normal;
+        // font-size: 14px;
+        // line-height: 24px;
+        // color: $dark-shade-75;
         max-width: 230px;
     }
 

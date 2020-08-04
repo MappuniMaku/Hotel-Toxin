@@ -6,7 +6,7 @@
     min-height: 1850px;
 }
 
-.ui-kit-form-elements .section {
+.ui-kit-form-elements__section {
     // border: 1px solid black;
     width: fit-content;
     display: flex;
@@ -16,8 +16,8 @@
     margin-left: 120px;
 }
 
-.ui-kit-form-elements .section > div,
-.ui-kit-form-elements .section > label {
+.ui-kit-form-elements__section > div,
+.ui-kit-form-elements__section > label {
     margin-bottom: 20px;
 }
 

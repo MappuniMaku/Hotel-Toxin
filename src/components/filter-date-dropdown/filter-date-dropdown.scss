@@ -1,5 +1,6 @@
 @import '~/theme/variables.scss';
 @import '~/components/material-icons/material-icons.scss';
+// @import '~/components/text-block/text-block.scss';
 
 .filter-date-dropdown {
         //border: 1px solid black;
@@ -22,7 +23,7 @@
     text-transform: uppercase;
 }
 
-.filter-date-dropdown .input-field ~ .material-icons {
+.filter-date-dropdown .input-field__icon {
     left: 232px;
     cursor: pointer;
     width: 24px;

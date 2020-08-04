@@ -27,7 +27,7 @@ block variables
     -var pageClass = 'ui-kit-form-elements'
 
 block content
-    section.section.section1
+    section.ui-kit-form-elements__section.section1
         +text-field("text field", "default")
         +text-field("text field", "hover / focus", "This is pretty awesome")
         +guests-quantity-dropdown("dropdown", "default", false)
@@ -35,7 +35,7 @@ block content
         +date-dropdown("date dropdown", "date dropdown", "", "19.08.2019")
         +filter-date-dropdown("filter date dropdown", ['2020-08-19','2020-08-23'])
         +subscription-text-field("subscription text field")
-    section.section.section2
+    section.ui-kit-form-elements__section.section2
         +checkbox-buttons("checkbox buttons", ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], ["smoking", "pets", "guests"], [false, true , true])
         +radio-buttons("radio buttons", ["Мужчина", "Женщина"], "gender", ["man", "woman"], [true, false])
         +toggle-buttons("toggle", ["Получать спецпредложения", "Получать спецпредложения"], ["specialOffers", "specialOffers"], [true, false])
@@ -45,7 +45,7 @@ block content
             +like-button(2, false, "item-1")
             +like-button(12, true, "item-2")
         +rate-button("rate button", [4, 5])
-    section.section.section3
+    section.ui-kit-form-elements__section.section3
         +range-slider("range slider", [5000, 10000], 0, 15500, 500)
         .buttons-container
             +element-name("buttons")
@@ -62,23 +62,23 @@ block content
         .pagination-element-name-container
             +element-name("pagination")
         +pagination(180, 15, 12, 1)
-    section.section.section4
+    section.ui-kit-form-elements__section.section4
         +room-quantity-dropdown("dropdown", "default", false, 2, 2)
         +room-quantity-dropdown("dropdown", "expanded", true, 2, 2)
-    section.section.section5
+    section.ui-kit-form-elements__section.section5
         +guests-quantity-dropdown("dropdown", "", true)
-    section.section.section6
+    section.ui-kit-form-elements__section.section6
         +guests-quantity-dropdown("dropdown", "", true, 2, 1)
-    section.section.section7
+    section.ui-kit-form-elements__section.section7
         +checkbox-buttons("expandable checkbox list", ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"], ["breakfast", "worktable", "childchair", "childbed", "tv", "shampoo"], [false, true , true, true, false, false], true, false)
         +checkbox-buttons("expandable checkbox list", ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"], ["breakfast", "worktable", "childchair", "childbed", "tv", "shampoo"], [false, true , true, true, false, false], true, true)
-    section.section.section8
+    section.ui-kit-form-elements__section.section8
         +checkbox-buttons("Rich Checkbox Buttons", ["Широкий коридор", "Помощник для инвалидов"], ["wideHall", "disabledAssistant"], [false, false], false, false, ["Ширина коридоров в номере &nbsp; &nbsp; &nbsp; &nbsp; не менее 91 см.", "На 1 этаже вас встретит специалист и проводит до номера."])
-    section.section.section9
+    section.ui-kit-form-elements__section.section9
         .bullet-list-element-name-container
             +element-name("bullet list")
         +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
-    section.section.section10
+    section.ui-kit-form-elements__section.section10
         +facilities-list(["insert_emoticon", "location_city"], ["Комфорт", "Удобство"], ["Шумопоглощающие стены", "Окно в каждой из спален"])
-    section.section.section11
+    section.ui-kit-form-elements__section.section11
         +comment(["Мурад Сарафанов"], ["5 дней назад"], ["Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."], [12], [true], ["murad_sarafanov.png"])
