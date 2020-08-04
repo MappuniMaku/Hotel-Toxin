@@ -145,6 +145,11 @@ module.exports = {
             filename: './ui-kit-form-elements.html',
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/ui-kit-cards/ui-kit-cards.pug`,
+            filename: './ui-kit-cards.html',
+            inject: true
+        }),
         // Used the ProvidePlugin constructor to inject jquery implicit globals
         new webpack.ProvidePlugin({
             $: "jquery",

@@ -2,10 +2,11 @@
     display: grid;
     grid-template-rows: 20% 20% 20% 20% 20%;
     grid-template-columns: 31% 27.3% 30%;
-    height: 1853px;
+    // height: 1853px;
+    min-height: 1850px;
 }
 
-.ui-kit-form-elements section {
+.ui-kit-form-elements .section {
     // border: 1px solid black;
     width: fit-content;
     display: flex;
@@ -15,8 +16,8 @@
     margin-left: 120px;
 }
 
-.ui-kit-form-elements section > div,
-.ui-kit-form-elements section > label {
+.ui-kit-form-elements .section > div,
+.ui-kit-form-elements .section > label {
     margin-bottom: 20px;
 }
 

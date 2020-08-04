@@ -1,6 +1,8 @@
 @import '~/theme/variables.scss';
 
 .submit-button {
+    height: 44px;
+    
     &__input {
         display: inline-block;
         text-decoration: none;
