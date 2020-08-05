@@ -2,7 +2,8 @@
 
 .datepicker {
     width: 320px;
-    padding: 11px 11px 15px 11px;
+    // padding: 11px 11px 15px 11px;
+    padding: 15px 15px 23px 15px;
     background: #FFFFFF;
     border: 1px solid $dark-shade-25;
     box-sizing: border-box;
@@ -16,7 +17,7 @@
 }
 
 .datepicker--nav-title {
-    font-family: $font-quicksand-bold;
+    font-family: $font-opensans-bold;
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
@@ -30,6 +31,8 @@
 
 .datepicker--nav-action {
     color: $color-purple;
+    font-size: 24px;
+    width: 24px;
 }
 
 .datepicker--nav {
@@ -39,15 +42,16 @@
 .datepicker--content {
     width: 279.39px;
 //    height: 240px;
-    margin: 23px auto 14px auto;
+    margin: 27px auto 14px auto;
 }
 
 .datepicker--days-names {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .datepicker--day-name {
     color: $color-purple;
+    text-transform: unset;
 }
 
 .datepicker--cells-days .datepicker--cell-day {
@@ -75,7 +79,7 @@
 //    border: 1px solid black;
     justify-content: space-between;
     height: 15px;
-    padding: 4px 8px 4px 7px;
+    padding: 4px 6px 4px 6px;
     border: none;
 }
 

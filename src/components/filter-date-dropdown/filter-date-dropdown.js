@@ -17,35 +17,38 @@ $.fn.datepicker.language['ru'] =  {
 };
 
 $(document).ready(function() {
-    $("#filter-date-dropdown").datepicker({
-        clearButton: true,
-        todayButton: true,
-        navTitles: {
-            days: 'MM yyyy',
-        },
-        prevHtml: '<span class="material-icons">arrow_back</span>',
-        nextHtml: '<span class="material-icons">arrow_forward</span>',
-        minDate: new Date(),
-        range: true,
-        disableNavWhenOutOfRange: false,
-        multipleDatesSeparator: " - ",
-        dateFormat: "d M",
-        //inline: true,
+    $(".filter-date-dropdown .input-field__input").each(function(i, elem) {
+        let isOpen = $(elem).closest(".filter-date-dropdown").data("isopen");
+
+        $(elem).datepicker({
+            clearButton: true,
+            todayButton: true,
+            navTitles: {
+                days: 'MM yyyy',
+            },
+            prevHtml: '<span class="material-icons">arrow_back</span>',
+            nextHtml: '<span class="material-icons">arrow_forward</span>',
+            minDate: new Date(),
+            range: true,
+            disableNavWhenOutOfRange: false,
+            multipleDatesSeparator: " - ",
+            dateFormat: "d M",
+            inline: (isOpen == true),
+        });
+
+        let datepicker = $(elem).datepicker().data('datepicker');
+
+        // let inputField = document.getElementById("filter-date-dropdown");
+        // let preselectedDates = inputField.dataset.preselecteddates;
+        let preselectedDates = $(elem).data("preselecteddates");
+
+        if(preselectedDates) {
+            // datepicker.selectDate([new Date(preselectedDates.split(',')[0]), new Date(preselectedDates.split(',')[1])]);
+            datepicker.selectDate([new Date(preselectedDates[0]), new Date(preselectedDates[1])]);
+        }
+
+        $(".datepicker--buttons [data-action='today']").click(function() {
+            datepicker.hide();
+        });
     });
-
-    var datepicker = $("#filter-date-dropdown").datepicker().data('datepicker');
-
-    // let inputField = document.getElementById("filter-date-dropdown");
-    // let preselectedDates = inputField.dataset.preselecteddates;
-    let preselectedDates = $("#filter-date-dropdown").data("preselecteddates");
-
-    if(preselectedDates) {
-        // datepicker.selectDate([new Date(preselectedDates.split(',')[0]), new Date(preselectedDates.split(',')[1])]);
-        datepicker.selectDate([new Date(preselectedDates[0]), new Date(preselectedDates[1])]);
-    }
-
-    $(".datepicker--buttons [data-action='today']").click(function() {
-        datepicker.hide();
-    });
-
 });

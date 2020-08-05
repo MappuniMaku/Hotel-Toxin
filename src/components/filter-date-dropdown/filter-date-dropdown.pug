@@ -1,8 +1,8 @@
 include ../element-name/element-name.pug
 include ../input-field/input-field.pug
 
-mixin filter-date-dropdown(name, preselectedDates)
-    label.filter-date-dropdown
-        -if(name)
-            +element-name(name)
-        +input-field("text", "filter-date-dropdown", "ДД.ММ.ГГГГ - ДД.ММ.ГГГГ", "", "expand_more", preselectedDates)
+mixin filter-date-dropdown(label, input_name, preselectedDates, isOpen)
+    label.filter-date-dropdown(data-isopen=`${isOpen}`)
+        -if(label)
+            +element-name(label)
+        +input-field("text", input_name, "ДД.ММ.ГГГГ - ДД.ММ.ГГГГ", "", "expand_more", preselectedDates)

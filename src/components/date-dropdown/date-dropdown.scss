@@ -8,20 +8,30 @@
         display: flex;
         justify-content: space-between;
         width: 320px;
-}
 
-.date-dropdown .input-field {
-    width: 150px;
-    cursor: pointer;
-}
+        &__first-input,
+        &__second-input {
+            height: 65px;
+            width: 150px;
+        //    border: 1px solid black;
+        }
 
-.date-dropdown .input-field::placeholder {
-    color: $dark-shade-75;
-}
+    & .input-field {
+        width: 150px;
 
-.date-dropdown .input-field__icon {
-    left: 116px;
-    cursor: pointer;
-    width: 24px;
-    font-size: 24px;
+        &__input {
+            cursor: pointer;
+        }
+
+        &__input::placeholder {
+            color: $dark-shade-75;
+        }
+
+        &__icon {
+            left: 116px;
+            cursor: pointer;
+            width: 24px;
+            font-size: 24px;
+        }
+    }
 }

@@ -14,3 +14,9 @@
     // align-items: center;
     margin-left: 120px;
 }
+
+.ui-kit-cards .filter-date-dropdown .input-field__input,
+.ui-kit-cards .filter-date-dropdown .input-field__icon,
+.ui-kit-cards .filter-date-dropdown .element-name {
+    display: none;
+}

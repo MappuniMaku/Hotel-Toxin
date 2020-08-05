@@ -14,18 +14,22 @@
 
 .filter-date-dropdown .input-field {
     width: 266px;
-    text-transform: lowercase;
-    cursor: pointer;
-}
 
-.filter-date-dropdown .input-field::placeholder {
-    color: $dark-shade-75;
-    text-transform: uppercase;
-}
+    &__input {
+        text-transform: lowercase;
+        cursor: pointer;
+    }
 
-.filter-date-dropdown .input-field__icon {
-    left: 232px;
-    cursor: pointer;
-    width: 24px;
-    font-size: 24px;
+
+    &__input::placeholder {
+        color: $dark-shade-75;
+        text-transform: uppercase;
+    }
+
+    &__icon {
+        left: 232px;
+        cursor: pointer;
+        width: 24px;
+        font-size: 24px;
+    }
 }
