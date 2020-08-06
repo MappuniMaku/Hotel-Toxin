@@ -145,4 +145,10 @@
     & .name-container {
         margin-bottom: 11px;
     }
+
+    & .rate-buttons-container {
+        max-width: 260px;
+        display: flex;
+        justify-content: space-between;
+    }
 }

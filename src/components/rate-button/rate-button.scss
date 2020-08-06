@@ -3,17 +3,10 @@
 
 .rate-button {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     height: fit-content;
-
-    &__item {
-        display: flex;
-        justify-content: space-between;
-        height: fit-content;
-        width: 120px;
-        cursor: default;
-    }
+    width: 120px;
+    cursor: default;
 
     &__star {
         // font-family: $font-material-icons;
@@ -42,14 +35,4 @@
         color: $color-purple;
         font-size: 24px;
     }
-}
-
-.rate-buttons-container {
-    max-width: 260px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.rate-button .element-name {
-    margin-bottom: 11px;
 }

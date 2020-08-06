@@ -49,7 +49,11 @@ block content
         .like-buttons-container
             +like-button(2, false, "item-1")
             +like-button(12, true, "item-2")
-        +rate-button("rate button", [4, 5])
+        .name-container
+            +element-name("rate button")
+        .rate-buttons-container
+            +rate-button(4)
+            +rate-button(5)
     section.ui-kit-form-elements__section.section3
         +range-slider("range slider", [5000, 10000], 0, 15500, 500)
         .buttons-container

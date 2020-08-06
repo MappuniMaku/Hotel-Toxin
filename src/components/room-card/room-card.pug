@@ -1,0 +1,21 @@
+include ../../components/rate-button/rate-button.pug
+
+mixin room-card(number, price, deluxe, rating, reviews, imagearr)
+    .room-card
+        .room-card__gallery
+            img(src=`assets/img/${imagearr}`, alt=`Фото номера ${number}`)
+        .room-card__body
+            .room-card__room-description
+                .room-card__room-info
+                    p.room-card__room-number-sign №
+                    p.room-card__room-number=number
+                    -if(deluxe)
+                        p.room-card__room-deluxe=deluxe
+                .room-card__room-price
+                    p.room-card__room-price-number(data-roomprice=price)
+                    p.room-card__room-price-per-period в сутки
+            .room-card__feedback
+                +rate-button(rating)
+                .room-card__reviews
+                    p.room-card__reviews-number(data-reviews=reviews)=reviews
+                    p.room-card__reviews-text
