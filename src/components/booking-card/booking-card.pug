@@ -14,7 +14,8 @@ mixin booking-card(number, deluxe, price)
             .booking-card__room-price
                 p.booking-card__room-price-number(data-roomprice=price)
                 p.booking-card__room-price-per-period в сутки
-        +date-dropdown("прибытие", "выезд", "arrival_date", "leaving_date", "", "", ['2020-08-19','2020-08-23'])
-        +guests-quantity-dropdown("гости", "", false, 2, 1)
-        //- +submit-button("подобрать номер")
-        p.booking-card__days.text-block_text-style_body
+        form(method="get").booking-card__form
+            +date-dropdown("прибытие", "выезд", "arrival_date", "leaving_date", "", "", ['2020-08-19','2020-08-23'])
+            +guests-quantity-dropdown("гости", "", false, 2, 1)
+            //- +submit-button("подобрать номер")
+            p.booking-card__days.text-block_text-style_body

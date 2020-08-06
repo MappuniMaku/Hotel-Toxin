@@ -8,7 +8,7 @@ include ../../components/link-button/link-button.pug
 
 .registration-card
     h1.registration-card__title.text-block_text-style_h1-title Регистрация аккаунта
-    form.registration-card__form
+    form(method="post").registration-card__form
         +input-field("text", "user_name", "Имя")
         +input-field("text", "user_surname", "Фамилия")
         +radio-buttons(["Мужчина", "Женщина"], "gender", ["man", "woman"], [true, false])
