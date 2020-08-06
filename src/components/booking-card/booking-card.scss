@@ -1,0 +1,102 @@
+@import '~/theme/variables.scss';
+@import '~/components/text-block/text-block.scss';
+
+.booking-card {
+    // border: 1px solid black;
+    padding: 42px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 511px;
+    width: 380px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    &__room-description {
+        display: flex;
+        justify-content: space-between;
+        // border: 1px solid black;
+        margin-bottom: 20px;
+    }
+
+    &__room {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    &__room-number-sign {
+        font-family: $font-quicksand-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 15px;
+        color: $dark-shade-100;
+        margin: 0 4px 0 0;
+    }
+
+    &__room-number {
+        font-family: $font-quicksand-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 1;
+        color: $dark-shade-100;
+        margin: 0 4px 0 0;
+    }
+
+    &__room-deluxe {
+        margin: 0;
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $color-purple;
+    }
+
+    &__room-price {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    &__room-price-number {
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: $dark-shade-50;
+        margin: 0 4px 0 0;
+    }
+
+    &__room-price-per-period {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: $dark-shade-50;
+        margin: 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        // height: 100%;
+    }
+
+    & .date-dropdown {
+        margin-bottom: 20px;
+    }
+
+    & .guests-quantity-dropdown {
+        margin-bottom: 30px;
+    }
+}

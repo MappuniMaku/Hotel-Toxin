@@ -19,6 +19,8 @@ $.fn.datepicker.language['ru'] =  {
 $(document).ready(function() {
     $(".date-dropdown__first-input .input-field__input").each(function(i, elem) {
         let secondInput = $(elem).closest(".date-dropdown").find(".date-dropdown__second-input .input-field__input");
+        let today = new Date();
+        today.setHours(0, 0, 0, 0);
 
         $(elem).datepicker({
             clearButton: true,
@@ -28,18 +30,19 @@ $(document).ready(function() {
             },
             prevHtml: '<span class="material-icons">arrow_back</span>',
             nextHtml: '<span class="material-icons">arrow_forward</span>',
-            minDate: new Date(),
+            minDate: today,
             range: true,
             disableNavWhenOutOfRange: false,
-            onSelect: function(formattedDate) {
+            onSelect: function(formattedDate, date) {
                 $(elem).val(formattedDate.split(',')[0]);
                 $(secondInput).val(formattedDate.split(',')[1]);
+                $(elem).html(date);
             },
             //inline: true,
         });
   
 
-        let datepicker = $(elem).datepicker().data('datepicker');
+        let datepicker = $(elem).data('datepicker');
 
         // let inputField = document.getElementById("date-dropdown-1");
         // let preselectedDates = inputField.dataset.preselecteddates;
@@ -51,7 +54,12 @@ $(document).ready(function() {
         let preselectedDates = $(elem).data("preselecteddates");
 
         if(preselectedDates) {
-            datepicker.selectDate([new Date(preselectedDates[0]), new Date(preselectedDates[1])]);
+            let firstDate = new Date(preselectedDates[0]);
+            firstDate.setHours(0, 0, 0, 0);
+            let secondDate = new Date(preselectedDates[1]);
+            secondDate.setHours(0, 0, 0, 0);
+
+            datepicker.selectDate([firstDate, secondDate]);
         }
 
         $(secondInput).click(function() {

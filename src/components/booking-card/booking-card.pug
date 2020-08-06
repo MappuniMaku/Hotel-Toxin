@@ -1,0 +1,20 @@
+include ../date-dropdown/date-dropdown.pug
+include ../guests-quantity-dropdown/guests-quantity-dropdown.pug
+include ../submit-button/submit-button.pug
+
+mixin booking-card(number, deluxe, price)
+
+    .booking-card
+        .booking-card__room-description
+            .booking-card__room
+                p.booking-card__room-number-sign №
+                p.booking-card__room-number=number
+                -if(deluxe)
+                    p.booking-card__room-deluxe=deluxe
+            .booking-card__room-price
+                p.booking-card__room-price-number(data-roomprice=price)
+                p.booking-card__room-price-per-period в сутки
+        +date-dropdown("прибытие", "выезд", "arrival_date", "leaving_date", "", "", ['2020-08-19','2020-08-23'])
+        +guests-quantity-dropdown("гости", "", false, 2, 1)
+        //- +submit-button("подобрать номер")
+        p.booking-card__days.text-block_text-style_body
