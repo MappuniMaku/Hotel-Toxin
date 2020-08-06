@@ -19,18 +19,18 @@ mixin booking-card(number, deluxe, price, discount, additional_services_cost)
             +guests-quantity-dropdown("гости", "", false, 2, 1)
             //- +submit-button("подобрать номер")
             .booking-card__intermediate-calculations
-                p.booking-card__price-and-days-expression.text-block_text-style_body
-                p.booking-card__intermediate-result.text-block_text-style_body
+                p.booking-card__price-and-days-expression
+                p.booking-card__intermediate-result
             .booking-card__discount-calculations
-                p.booking-card__discount-size(data-discount=discount).text-block_text-style_body
+                p.booking-card__discount-size(data-discount=discount)
                 span.booking-card__discount-info-icon i
                 span.booking-card__discount-info-description Здесь объясняется, откуда взялась эта скидка
-                p.booking-card__additional-payment-after-discount.text-block_text-style_body 0₽
+                p.booking-card__additional-payment-after-discount 0₽
             .booking-card__additional-services-calculations
-                p.booking-card__additional-services-text.text-block_text-style_body Сбор за дополнительные услуги
+                p.booking-card__additional-services-text Сбор за дополнительные услуги
                 span.booking-card__additional-services-info-icon i
                 span.booking-card__additional-services-info-description Здесь объясняется, какие именно это услуги
-                p(data-services=additional_services_cost).booking-card__additional-services-cost.text-block_text-style_body
+                p(data-services=additional_services_cost).booking-card__additional-services-cost
             .booking-card__total
                 p.booking-card__total-text.text-block_text-style_item-title Итого
                 p.booking-card__total-line

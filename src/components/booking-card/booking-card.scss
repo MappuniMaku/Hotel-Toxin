@@ -19,7 +19,7 @@
         display: flex;
         justify-content: space-between;
         // border: 1px solid black;
-        margin-bottom: 20px;
+        margin-bottom: 23px;
     }
 
     &__room {
@@ -90,18 +90,23 @@
         flex-direction: column;
         justify-content: flex-start;
         // height: 100%;
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark-shade-75;
     }
 
     &__intermediate-calculations {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
     }
 
     &__price-and-days-expression {
         margin: 0;
         width: 214px;
-        line-height: 18px !important;
     }
 
     &__intermediate-result {
@@ -112,13 +117,12 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
     }
 
     &__discount-size {
         margin: 0;
         width: 214px;
-        line-height: 18px !important;
     }
 
     &__discount-info-icon {
@@ -179,7 +183,6 @@
     &__additional-services-text {
         margin: 0;
         width: 214px;
-        line-height: 18px !important;
     }
 
     &__additional-services-info-icon {
@@ -233,7 +236,7 @@
         display: flex;
         justify-content: space-between;
         // height: 24px;
-        margin-bottom: 20px;
+        margin-bottom: 19px;
     }
 
     &__total-text {
@@ -260,6 +263,6 @@
     }
 
     & .guests-quantity-dropdown {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 }
