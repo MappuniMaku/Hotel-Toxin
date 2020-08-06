@@ -2,7 +2,7 @@ include ../date-dropdown/date-dropdown.pug
 include ../guests-quantity-dropdown/guests-quantity-dropdown.pug
 include ../submit-button/submit-button.pug
 
-mixin booking-card(number, deluxe, price)
+mixin booking-card(number, deluxe, price, discount, additional_services_cost)
 
     .booking-card
         .booking-card__room-description
@@ -18,4 +18,21 @@ mixin booking-card(number, deluxe, price)
             +date-dropdown("прибытие", "выезд", "arrival_date", "leaving_date", "", "", ['2020-08-19','2020-08-23'])
             +guests-quantity-dropdown("гости", "", false, 2, 1)
             //- +submit-button("подобрать номер")
-            p.booking-card__days.text-block_text-style_body
+            .booking-card__intermediate-calculations
+                p.booking-card__price-and-days-expression.text-block_text-style_body
+                p.booking-card__intermediate-result.text-block_text-style_body
+            .booking-card__discount-calculations
+                p.booking-card__discount-size(data-discount=discount).text-block_text-style_body
+                span.booking-card__discount-info-icon i
+                span.booking-card__discount-info-description Здесь объясняется, откуда взялась эта скидка
+                p.booking-card__additional-payment-after-discount.text-block_text-style_body 0₽
+            .booking-card__additional-services-calculations
+                p.booking-card__additional-services-text.text-block_text-style_body Сбор за дополнительные услуги
+                span.booking-card__additional-services-info-icon i
+                span.booking-card__additional-services-info-description Здесь объясняется, какие именно это услуги
+                p(data-services=additional_services_cost).booking-card__additional-services-cost.text-block_text-style_body
+            .booking-card__total
+                p.booking-card__total-text.text-block_text-style_item-title Итого
+                p.booking-card__total-line
+                p.booking-card__total-price.text-block_text-style_item-title
+            +submit-button("забронировать")
