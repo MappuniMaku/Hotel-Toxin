@@ -8,7 +8,7 @@ include ../../components/room-quantity-dropdown/room-quantity-dropdown.pug
 include ../../components/subscription-text-field/subscription-text-field.pug
 include ../../components/checkbox-buttons/checkbox-buttons.pug
 include ../../components/radio-buttons/radio-buttons.pug
-include ../../components/toggle-buttons/toggle-buttons.pug
+include ../../components/toggle-button/toggle-button.pug
 include ../../components/like-button/like-button.pug
 include ../../components/rate-button/rate-button.pug
 include ../../components/range-slider/range-slider.pug
@@ -42,7 +42,8 @@ block content
         +radio-buttons(["Мужчина", "Женщина"], "gender", ["man", "woman"], [true, false])
         .name-container
             +element-name("toggle buttons")
-        +toggle-buttons(["Получать спецпредложения", "Получать спецпредложения"], ["specialOffers", "specialOffers"], [true, false])
+        +toggle-button("Получать спецпредложения", "special_offers", "get", true)
+        +toggle-button("Получать спецпредложения", "special_offers", "get", false)
         .like-buttons-name-container
             +element-name("like button")
         .like-buttons-container

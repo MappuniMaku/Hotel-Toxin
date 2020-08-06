@@ -2,21 +2,21 @@ include ../element-name/element-name.pug
 include ../input-field/input-field.pug
 include ../../components/radio-buttons/radio-buttons.pug
 include ../../components/date-picker/date-picker.pug
-include ../../components/toggle-buttons/toggle-buttons.pug
+include ../../components/toggle-button/toggle-button.pug
 include ../submit-button/submit-button.pug
 include ../../components/link-button/link-button.pug
 
 .registration-card
     h1.registration-card__title.text-block_text-style_h1-title Регистрация аккаунта
     form.registration-card__form
-        +input-field("text", "", "Имя")
-        +input-field("text", "", "Фамилия")
+        +input-field("text", "user_name", "Имя")
+        +input-field("text", "user_surname", "Фамилия")
         +radio-buttons(["Мужчина", "Женщина"], "gender", ["man", "woman"], [true, false])
-        +date-picker("Дата рождения")
+        +date-picker("Дата рождения", "", "birth_date")
         +element-name("Данные для входа в сервис")
-        +input-field("text", "", "Email")
-        +input-field("password", "", "Пароль")
-        +toggle-buttons(["Получать спецпредложения"], ["specialOffers"], [false])
+        +input-field("text", "user_email", "Email")
+        +input-field("password", "user_password", "Пароль")
+        +toggle-button("Получать спецпредложения", "special_offers", "get", false)
         +submit-button("перейти к оплате")
     .sing-in-block
         p.sing-in-block__text Уже есть аккаунт на Toxin

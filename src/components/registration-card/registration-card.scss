@@ -34,11 +34,13 @@
         // justify-content: flex-start;
         justify-content: space-between;
         // height: 100%;
+        margin-bottom: 30px;
     }
 
     & .sing-in-block {
         display: flex;
         justify-content: space-between;
+        // border: 1px solid black;
 
         &__text {
             font-family: $font-montserrat;
@@ -50,6 +52,23 @@
             align-items: center;
             text-align: center;
             color: #000000;
+            margin: 0;
         }
+    }
+
+    & .input-field {
+        margin-bottom: 10px;
+    }
+
+    & .element-name {
+        margin-top: 20px;
+    }
+
+    & .submit-button {
+        margin-top: 24px;
+    }
+
+    & .radio-buttons {
+        margin-bottom: 4px;
     }
 }

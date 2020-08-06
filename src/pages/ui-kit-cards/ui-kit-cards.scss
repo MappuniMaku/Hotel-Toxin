@@ -13,6 +13,14 @@
     justify-content: flex-start;
     // align-items: center;
     margin-left: 120px;
+
+    & > div {
+        margin-bottom: 40px;
+    }
+
+    & > div:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 .ui-kit-cards .filter-date-dropdown .input-field__input,
