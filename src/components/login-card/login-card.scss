@@ -1,14 +1,14 @@
 @import '~/theme/variables.scss';
 @import '~/components/text-block/text-block.scss';
 
-.registration-card {
+.login-card {
     // border: 1px solid black;
     padding: 40px 30px 30px 30px;
     display: flex;
     flex-direction: column;
     // justify-content: flex-start;
     justify-content: space-between;
-    min-height: 646px;
+    min-height: 358px;
     width: 380px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -37,7 +37,7 @@
         margin-bottom: 30px;
     }
 
-    & .login-block {
+    & .signup-block {
         display: flex;
         justify-content: space-between;
         // border: 1px solid black;
@@ -60,15 +60,15 @@
         margin-bottom: 10px;
     }
 
-    & .element-name {
-        margin-top: 20px;
-    }
+    // & .element-name {
+    //     margin-top: 20px;
+    // }
 
     & .submit-button {
-        margin-top: 24px;
+        margin-top: 10px;
     }
 
-    & .radio-buttons {
-        margin-bottom: 4px;
-    }
+    // & .radio-buttons {
+    //     margin-bottom: 4px;
+    // }
 }
