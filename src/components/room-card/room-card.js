@@ -43,4 +43,54 @@ $(document).ready(() => {
     } else {
         reviewsTextField.html("Отзывов");
     };
+
+    let input1 = $(".room-card__gallery-navigation-first-input");
+    let input2 = $(".room-card__gallery-navigation-second-input");
+    let input3 = $(".room-card__gallery-navigation-third-input");
+    let input4 = $(".room-card__gallery-navigation-fourth-input");
+
+    let imageContainer = $(".room-card__gallery-images-container");
+
+    input1.change(function() {
+        $(this).closest(".room-card__gallery").find(imageContainer).css("transform", "translate(0)");
+    });
+
+    input2.change(function() {
+        $(this).closest(".room-card__gallery").find(imageContainer).css("transform", "translate(-270px)");
+    });
+
+    input3.change(function() {
+        $(this).closest(".room-card__gallery").find(imageContainer).css("transform", "translate(-540px)");
+    });
+
+    input4.change(function() {
+        $(this).closest(".room-card__gallery").find(imageContainer).css("transform", "translate(-810px)");
+    });
+
+    let leftArrow = $(".room-card__gallery-left-margin");
+    let rightArrow = $(".room-card__gallery-right-margin");
+
+    leftArrow.click(function() {
+        if($(this).parent().find(input1).prop("checked")) {
+            $(this).parent().find(input4).trigger("click");
+        } else if($(this).parent().find(input2).prop("checked")) {
+            $(this).parent().find(input1).trigger("click");
+        } else if($(this).parent().find(input3).prop("checked")) {
+            $(this).parent().find(input2).trigger("click");
+        } else if($(this).parent().find(input4).prop("checked")) {
+            $(this).parent().find(input3).trigger("click");
+        };
+    });
+
+    rightArrow.click(function() {
+        if($(this).parent().find(input1).prop("checked")) {
+            $(this).parent().find(input2).trigger("click");
+        } else if($(this).parent().find(input2).prop("checked")) {
+            $(this).parent().find(input3).trigger("click");
+        } else if($(this).parent().find(input3).prop("checked")) {
+            $(this).parent().find(input4).trigger("click");
+        } else if($(this).parent().find(input4).prop("checked")) {
+            $(this).parent().find(input1).trigger("click");
+        };
+    });
 });

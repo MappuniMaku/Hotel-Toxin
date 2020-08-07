@@ -1,4 +1,5 @@
 @import '~/theme/variables.scss';
+@import '~/components/material-icons/material-icons.scss';
 
 .room-card {
     width: 270px;
@@ -8,8 +9,114 @@
     border-radius: 4px;
 
     &__gallery {
+        width: 270px;
         height: 152px;
         overflow: hidden;
+        position: relative;
+    }
+
+    &__gallery-left-margin {
+        width: 42px;
+        height: 100%;
+        position: absolute;
+        // background: white;
+        left: 0;
+        top: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        // background: white;
+        display: flex;
+        align-items: center;
+        // text-align: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__gallery-right-margin {
+        width: 42px;
+        height: 100%;
+        position: absolute;
+        background: white;
+        right: 0;
+        top: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        // background: white;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        display: flex;
+        align-items: center;
+        // text-align: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__gallery-left-margin,
+    &__gallery-right-margin {
+        display: none;
+    }
+
+    &__gallery:hover &__gallery-left-margin,
+    &__gallery:hover &__gallery-right-margin {
+        display: flex;
+    }
+
+    &__gallery-left-arrow {
+        font-size: 24px;
+        line-height: 24px;
+        color: #FFFFFF;
+        transform: rotate(90deg);
+    }
+
+    &__gallery-right-arrow {
+        font-size: 24px;
+        line-height: 24px;
+        color: #FFFFFF;
+        transform: rotate(90deg);
+    }
+
+    &__gallery-images-container {
+        width: 400%;
+        display: flex;
+        transition: transform 0.8s ease;
+    }
+
+    &__gallery-image {
+        width: 270px;
+    }
+
+    &__gallery-navigation {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        height: 8px;
+        width: 42px;
+        // background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__gallery-navigation-option {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    &__gallery-navigation-input {
+        display: none;
+    }
+
+    &__gallery-navigation-circle {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid #FFFFFF;
+        display: block;
+        box-sizing: border-box;
+        cursor: pointer;
+        filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+        // margin-right: 3px;
+    }
+
+    &__gallery-navigation-input:checked + &__gallery-navigation-circle {
+        background: #FFFFFF;
     }
 
     &__body {
@@ -21,7 +128,7 @@
         display: flex;
         justify-content: space-between;
         // border: 1px solid black;
-        margin-bottom: 13.5px;
+        margin-bottom: 13px;
     }
 
     &__room-info {
@@ -109,7 +216,7 @@
         font-size: 14px;
         line-height: 14px;
         color: $dark-shade-50;
-        margin: 0 4px 0 0;
+        margin: 2.5px 4px 0 0;
     }
 
     &__reviews-text {
@@ -119,6 +226,6 @@
         font-size: 14px;
         line-height: 14px;
         color: $dark-shade-50;
-        margin: 0;
+        margin: 2.5px 0 0 0;
     }
 }

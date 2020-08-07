@@ -3,7 +3,26 @@ include ../../components/rate-button/rate-button.pug
 mixin room-card(number, price, deluxe, rating, reviews, imagearr)
     .room-card
         .room-card__gallery
-            img(src=`assets/img/${imagearr}`, alt=`Фото номера ${number}`)
+            .room-card__gallery-images-container
+                -for(let i = 0; i < imagearr.length; i++)
+                    img(src=`assets/img/${imagearr[i]}`, alt=`Фото номера ${number}`).room-card__gallery-image
+            .room-card__gallery-left-margin
+                span.room-card__gallery-left-arrow.material-icons expand_more
+            .room-card__gallery-right-margin
+                span.room-card__gallery-right-arrow.material-icons expand_more
+            .room-card__gallery-navigation
+                label.room-card__gallery-navigation-option.room-card__gallery-navigation-first-option
+                    input(type="radio", name=`navigation_toggle_room_${number}`, checked).room-card__gallery-navigation-input.room-card__gallery-navigation-first-input
+                    span.room-card__gallery-navigation-circle.room-card__gallery-navigation-first-circle
+                label.room-card__gallery-navigation-option.room-card__gallery-navigation-second-option
+                    input(type="radio", name=`navigation_toggle_room_${number}`).room-card__gallery-navigation-input.room-card__gallery-navigation-second-input
+                    span.room-card__gallery-navigation-circle.room-card__gallery-navigation-second-circle
+                label.room-card__gallery-navigation-option.room-card__gallery-navigation-third-option
+                    input(type="radio", name=`navigation_toggle_room_${number}`).room-card__gallery-navigation-input.room-card__gallery-navigation-third-input
+                    span.room-card__gallery-navigation-circle.room-card__gallery-navigation-third-circle
+                label.room-card__gallery-navigation-option.room-card__gallery-navigation-fourth-option
+                    input(type="radio", name=`navigation_toggle_room_${number}`).room-card__gallery-navigation-input.room-card__gallery-navigation-fourth-input
+                    span.room-card__gallery-navigation-circle.room-card__gallery-navigation-forth-circle
         .room-card__body
             .room-card__room-description
                 .room-card__room-info
