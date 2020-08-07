@@ -1,17 +1,5 @@
-include ../element-name/element-name.pug
-
-mixin like-button(name, likesarr, checkedarr)
-    .like-button
-        -if(name)
-            +element-name(name)
-        .like-buttons-container
-            -for(let i = 0; i < likesarr.length; i++)
-                label.like-button__item
-                    -if(checkedarr[i])
-                        input(type="checkbox", checked).like-button__input
-                        span.like-button__like-icon favorite_border
-                        span.like-button__likes-number= likesarr[i]
-                    -else
-                        input(type="checkbox").like-button__input
-                        span.like-button__like-icon favorite_border
-                        span.like-button__likes-number= likesarr[i]
+mixin like-button(likes, isChecked)
+    label.like-button
+        input(type="checkbox", checked=isChecked).like-button__input
+        span.like-button__like-icon.material-icons favorite_border
+        span.like-button__likes-number= likes

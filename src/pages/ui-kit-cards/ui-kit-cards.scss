@@ -1,0 +1,58 @@
+.ui-kit-cards {
+
+    & .content-wrapper {
+        display: grid;
+        grid-template-rows: 100%;
+        grid-template-columns: 29% 29% 30%;
+        // height: 1853px;
+    }
+
+    & .section {
+        // border: 1px solid black;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        // align-items: center;
+        margin-left: 120px;
+
+        & > div {
+            margin-bottom: 40px;
+        }
+
+        & > div:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    & .filter-date-dropdown {
+        margin-bottom: 380px;
+    }
+
+    & .filter-date-dropdown .input-field__input,
+    & .filter-date-dropdown .input-field__icon,
+    & .filter-date-dropdown .element-name {
+        display: none;
+    }
+
+    & .section1 {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-column-end: 2;
+        grid-row-end: 2;
+    }
+
+    & .section2 {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-column-end: 3;
+        grid-row-end: 2;
+    }
+
+    & .section3 {
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-column-end: 4;
+        grid-row-end: 2;
+    }
+}

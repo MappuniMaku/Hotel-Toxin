@@ -11,71 +11,92 @@
 //     }
 // }
 
-.checkbox-buttons_expandable{
-    z-index: 99;
+.checkbox-buttons.checkbox-buttons_expandable{
+    // z-index: 1;
+    position: relative;
+
+    // & .element-name,
+    // & .element-name p {
+    //     z-index: 1;
+    //     position: relative;
+    // }
 
     & .checkbox-items-list {
-        margin-top: 2.5px;
+        // margin-top: 0;
+        position: absolute;
+        top: 21.5px;
+        left: 0;
+        right: 0;
+        // display: block;
+        background: #FFFFFF;
+        z-index: 100;
+        // opacity: 0.99;
+        // opacity: 1;
+        // overflow: visible;
+        // border: 1px solid black;
     }
-}
 
-.checkbox-buttons_expandable .element-name__description {
-    font-family: $font-material-icons;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    // line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
+    & .element-name__description {
+        font-family: $font-material-icons;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;  /* Preferred icon size */
+        display: inline-block;
+        // line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
 
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
 
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
 
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-    width: 24px;
-    // border: 1px solid black;
-}
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+        width: 24px;
+        // border: 1px solid black;
+    }
 
-.checkbox-buttons.checkbox-buttons_expandable .element-name {
-    width: 256px;
-    cursor: pointer;
-}
+    & .element-name {
+        width: 256px;
+        cursor: pointer;
+    }
 
-.checkbox-buttons_expandable .checkbox-items-list {
-     display: none;
-    // background-color: #ffffff;
-    // z-index: 99;
-}
+    & .checkbox-items-list {
+        display: none;
+        // background-color: #ffffff;
+        // z-index: 99;
+    }
 
-.checkbox-buttons_expanded .checkbox-items-list {
-    display: block;
-}
+    &__backdrop {
+        position: fixed;
+        top: 0;
+        display: none;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
 
-.checkbox-buttons_expanded .element-name__description {
-    transform: rotate(180deg);
-}
+    // &.checkbox-buttons_expanded .checkbox-buttons_expandable__backdrop {
+    //     display: block;
+    // }
 
-.checkbox-buttons_expandable__backdrop {
-    position: fixed;
-    top: 0;
-    display: none;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
+    &.checkbox-buttons_expanded {
 
-.checkbox-buttons_expanded .checkbox-buttons_expandable__backdrop {
-    display: block;
+        & .checkbox-items-list {
+            display: block;
+        }
+
+        & .element-name__description {
+            transform: rotate(180deg);
+        }
+    }
 }

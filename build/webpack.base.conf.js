@@ -90,18 +90,28 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file-loader',
-                options: {
-                		name: '[name].[ext]',
-                    outputPath: 'assets/img/',
-                }
+                exclude: [
+                    path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}fonts`),
+                ],
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                            name: '[name].[ext]',
+                        outputPath: 'assets/img/',
+                    }
+                },
             },
             {
-                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/, //removed .svg here so that images are not damaged
-                loader: 'file-loader',
-                options: {
-                	name: '[name].[ext]',
-                  outputPath: 'assets/fonts/',
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/, //removed .svg here so that images are not damaged
+                include: [
+                    path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}fonts`),
+                ],
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                    outputPath: 'assets/fonts/',
+                    },
                 },
             },
         ],
@@ -118,7 +128,7 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
             //    {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
-                {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
+                // {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
                 {from: `${PATHS.src}/theme/favicon.ico`, to: ''},
             ],
         }),
@@ -143,6 +153,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/ui-kit-form-elements/ui-kit-form-elements.pug`,
             filename: './ui-kit-form-elements.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/ui-kit-cards/ui-kit-cards.pug`,
+            filename: './ui-kit-cards.html',
             inject: true
         }),
         // Used the ProvidePlugin constructor to inject jquery implicit globals

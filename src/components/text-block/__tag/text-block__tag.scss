@@ -8,8 +8,9 @@
     color: $dark-shade-25;
 }
 
-.text-block__tag p {
+.text-block__tag {
     text-align: right;
 //    border: 1px solid black;
     width: 50px;
+    margin: 0;
 }

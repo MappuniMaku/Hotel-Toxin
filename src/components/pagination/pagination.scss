@@ -1,0 +1,90 @@
+@import '~/theme/variables.scss';
+@import '~/components/text-block/text-block.scss';
+
+.pagination {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    // border: 1px solid black;
+    align-items: center;
+
+    &__description {
+        height: 24px;
+        // font-family: $font-montserrat;
+        // font-style: normal;
+        // font-weight: normal;
+        // font-size: 14px;
+        // line-height: 24px;
+        // color: $dark-shade-75;
+        margin-top: 8.3px;
+    }
+
+    &__placeholder {
+
+        & ul {
+            display: flex;
+        }
+
+        & ul li {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        & ul li,
+        & ul li .page-link {
+            font-family: $font-montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: $dark-shade-50;
+        }
+
+        & ul li .next,
+        & ul li .prev {
+            font-family: $font-material-icons;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;  /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering: optimizeLegibility;
+        
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+        
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+            width: 40px;
+            height: 40px;
+            background: $gradient-green;
+            border-radius: 22px;
+            padding: 8px 8px;
+            color: #FFFFFF;
+        }
+
+        & ul .active {
+            background: $gradient-purple;
+            border-radius: 22px;
+            color: #FFFFFF;
+        }
+
+        & ul .disabled {
+            display: none;
+        }
+    }
+}

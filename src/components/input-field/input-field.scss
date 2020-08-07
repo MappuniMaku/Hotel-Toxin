@@ -1,33 +1,41 @@
 @import '~/theme/variables.scss';
+@import '~/components/text-block/text-block.scss';
 
 .input-field {
-    font-family: $font-montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    height: 44px;
-    background: #FFFFFF;
-    border: 1px solid $dark-shade-25;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 15px 15px 15px 14px;
-    color: $dark-shade-75;
-    box-sizing: border-box;
-}
+    // font-family: $font-montserrat;
+    // font-style: normal;
+    // font-weight: normal;
+    // font-size: 14px;
+    // line-height: 24px;
+    &__input {
+        height: 44px;
+        background: #FFFFFF;
+        border: 1px solid $dark-shade-25;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 15px 15px 15px 14px;
+        // color: $dark-shade-75;
+        box-sizing: border-box;
+        width: 100%;
 
-.input-field::placeholder {
-    color: $dark-shade-25;
-}
+        &::placeholder {
+            color: $dark-shade-25;
+        }
 
-.input-field:hover,
-.input-field:focus {
-    border: 1px solid $dark-shade-50;
-    color: $dark-shade-75;
-}
+        // &:hover,
+        &:focus {
+            border: 1px solid $dark-shade-50;
+            // color: $dark-shade-75;
+        }
+    }
 
-.input-field ~ .material-icons {
-    color: $dark-shade-50;
-    position: relative;
-    top: -33px;
+    &:hover &__input {
+        border: 1px solid $dark-shade-50;
+    }
+
+    &__icon {
+        color: $dark-shade-50;
+        position: relative;
+        top: -33px;
+    }
 }

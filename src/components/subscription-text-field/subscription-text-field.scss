@@ -1,23 +1,26 @@
 @import '~/theme/variables.scss';
+@import '~/components/material-icons/material-icons.scss';
 
 .subscription-text-field {
         //border: 1px solid black;
         box-sizing: content-box;
-        height: fit-content;
+        // height: fit-content;
         width: 266px;
         height: 64.44px;
-}
 
-.subscription-text-field .input-field {
-    width: 266px;
-}
+    & .input-field {
+        width: 266px;
+    }
 
-.subscription-text-field .material-icons {
-    position: relative;
-    top: -35px;
-    left: 227px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: $color-purple;
+    &__submit-button {
+        position: relative;
+        top: -35px;
+        left: 227px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: $color-purple;
+        width: 24px;
+        font-size: 24px;
+    }
 }

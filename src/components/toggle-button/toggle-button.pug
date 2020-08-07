@@ -1,0 +1,8 @@
+include ../element-name/element-name.pug
+
+mixin toggle-button(desc, name, value, checked)
+    label.toggle-button
+        .toggle-button__switch
+            input(type="checkbox", name=name, value=value, checked=checked).toggle-button__toggle-input
+            span.toggle-button__slider
+        p.toggle-button__description= desc

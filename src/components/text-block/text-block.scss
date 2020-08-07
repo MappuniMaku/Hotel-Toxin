@@ -5,14 +5,16 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
+    width: 500px;
+
+    // &__tag,
+    // &__description {
+    //     margin: 0;
+    //     padding: 0;
+    // }
 }
 
-.text-block p {
-    margin: 0;
-    padding: 0;
-}
-
-@import "./_text-style/text-block_text-style_h1.scss";
-@import "./_text-style/text-block_text-style_h2.scss";
-@import "./_text-style/text-block_text-style_h3.scss";
+@import "./_text-style/text-block_text-style_h1-title.scss";
+@import "./_text-style/text-block_text-style_item-title.scss";
+@import "./_text-style/text-block_text-style_label.scss";
 @import "./_text-style/text-block_text-style_body.scss";

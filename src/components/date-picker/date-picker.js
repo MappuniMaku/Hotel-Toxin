@@ -11,5 +11,9 @@ Inputmask.extendAliases({
   });
 
 $(document).ready(function() {
-    Inputmask("date-ru").mask(".date-picker .input-field");
+
+    $(".date-picker .input-field__input").each(function(i, elem) {
+        Inputmask("date-ru").mask(elem);
+    });
+
 });

@@ -1,0 +1,12 @@
+include ../input-field/input-field.pug
+include ../../components/link-button/link-button.pug
+
+.login-card
+    h1.login-card__title.text-block_text-style_h1-title Войти
+    form(method="post").login-card__form
+        +input-field("text", "user_email", "Email")
+        +input-field("password", "user_password", "Пароль")
+        +submit-button("войти")
+    .signup-block
+        p.signup-block__text Нет аккаунта на Toxin?
+        +link-button("создать", "#", "white", false)

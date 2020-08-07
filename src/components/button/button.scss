@@ -1,12 +1,13 @@
 @import '~/theme/variables.scss';
+@import '~/components/text-block/text-block.scss';
 
 .button {
-    font-family: $font-montserrat-bold;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
+    // font-family: $font-montserrat-bold;
+    // font-style: normal;
+    // font-weight: bold;
+    // font-size: 12px;
+    // line-height: 15px;
+    // text-transform: uppercase;
     background: none;
     border: 0;
     cursor: pointer;

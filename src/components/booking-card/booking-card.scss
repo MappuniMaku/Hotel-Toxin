@@ -1,0 +1,268 @@
+@import '~/theme/variables.scss';
+@import '~/components/text-block/text-block.scss';
+
+.booking-card {
+    // border: 1px solid black;
+    padding: 42px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 511px;
+    width: 380px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    &__room-description {
+        display: flex;
+        justify-content: space-between;
+        // border: 1px solid black;
+        margin-bottom: 23px;
+    }
+
+    &__room {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    &__room-number-sign {
+        font-family: $font-quicksand-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 15px;
+        color: $dark-shade-100;
+        margin: 0 4px 0 0;
+    }
+
+    &__room-number {
+        font-family: $font-quicksand-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 1;
+        color: $dark-shade-100;
+        margin: 0 4px 0 0;
+    }
+
+    &__room-deluxe {
+        margin: 0;
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $color-purple;
+    }
+
+    &__room-price {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    &__room-price-number {
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: $dark-shade-50;
+        margin: 0 4px 0 0;
+    }
+
+    &__room-price-per-period {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: $dark-shade-50;
+        margin: 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        // height: 100%;
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark-shade-75;
+    }
+
+    &__intermediate-calculations {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+
+    &__price-and-days-expression {
+        margin: 0;
+        width: 214px;
+    }
+
+    &__intermediate-result {
+        margin: 0;
+    }
+
+    &__discount-calculations {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 16px;
+    }
+
+    &__discount-size {
+        margin: 0;
+        width: 214px;
+    }
+
+    &__discount-info-icon {
+        position: absolute;
+        left: 220px;
+        top: -2px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $dark-shade-25;
+        box-sizing: border-box;
+        border-radius: 50%;
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        color: $dark-shade-25;
+        cursor: pointer;
+    }
+
+    &__discount-info-description {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: left;
+        color: $dark-shade-75;
+        width: 150px;
+        height: fit-content;
+        background: white;
+        position: absolute;
+        border: 1px solid $dark-shade-50;
+        left: 155px;
+        top: -62px;
+        padding: 5px 5px;
+        border-radius: 4px;
+        display: none;
+    }
+
+    &__discount-info-icon:hover ~ &__discount-info-description {
+        display: block;
+    }
+
+    &__additional-payment-after-discount {
+        margin: 0;
+    }
+
+    &__additional-services-calculations {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        // height: 24px;
+        margin-bottom: 30px;
+    }
+
+    &__additional-services-text {
+        margin: 0;
+        width: 214px;
+    }
+
+    &__additional-services-info-icon {
+        position: absolute;
+        left: 220px;
+        top: -2px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $dark-shade-25;
+        box-sizing: border-box;
+        border-radius: 50%;
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        color: $dark-shade-25;
+        cursor: pointer;
+    }
+
+    &__additional-services-info-description {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: left;
+        color: $dark-shade-75;
+        width: 150px;
+        height: fit-content;
+        background: white;
+        position: absolute;
+        border: 1px solid $dark-shade-50;
+        left: 155px;
+        top: -62px;
+        padding: 5px 5px;
+        border-radius: 4px;
+        display: none;
+    }
+
+    &__additional-services-info-icon:hover ~ &__additional-services-info-description {
+        display: block;
+    }
+
+    &__additional-services-cost {
+        margin: 0;
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        // height: 24px;
+        margin-bottom: 19px;
+    }
+
+    &__total-text {
+        margin-right: 5px;
+        margin: 0 5px 0 0;
+    }
+
+    &__total-line {
+        border-bottom: 1px dotted $dark-shade-25;
+        width: 100%;
+        height: 20px;
+        margin: 0;
+    }
+
+    &__total-price {
+        margin: 0 0 0 5px;
+        // height: 24px;
+        // width: fit-content;
+        white-space: nowrap;
+    }
+
+    & .date-dropdown {
+        margin-bottom: 20px;
+    }
+
+    & .guests-quantity-dropdown {
+        margin-bottom: 20px;
+    }
+}

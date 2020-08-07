@@ -1,4 +1,6 @@
 @import '~/theme/variables.scss';
+@import '~/components/material-icons/material-icons.scss';
+// @import '~/components/text-block/text-block.scss';
 
 .filter-date-dropdown {
         //border: 1px solid black;
@@ -12,14 +14,22 @@
 
 .filter-date-dropdown .input-field {
     width: 266px;
-    text-transform: lowercase;
-}
 
-.filter-date-dropdown .input-field::placeholder {
-    color: $dark-shade-75;
-    text-transform: uppercase;
-}
+    &__input {
+        text-transform: lowercase;
+        cursor: pointer;
+    }
 
-.filter-date-dropdown .input-field ~ .material-icons {
-    left: 232px;
+
+    &__input::placeholder {
+        color: $dark-shade-75;
+        text-transform: uppercase;
+    }
+
+    &__icon {
+        left: 232px;
+        cursor: pointer;
+        width: 24px;
+        font-size: 24px;
+    }
 }

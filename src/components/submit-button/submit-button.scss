@@ -1,0 +1,40 @@
+@import '~/theme/variables.scss';
+@import '~/components/material-icons/material-icons.scss';
+// @import '~/components/text-block/text-block.scss';
+
+.submit-button {
+    height: 44px;
+    
+    &__input {
+        display: inline-block;
+        text-decoration: none;
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        border: 0;
+        cursor: pointer;
+        margin: 0;
+        width: 320px;
+        height: 44px;
+        border-radius: 22px;
+        box-sizing: border-box;
+        background: $gradient-purple;
+        color: #FFFFFF;
+        padding: 16px 0;
+        position: relative;
+    }
+
+    &__icon-arrow {
+        position: relative;
+        color: #FFFFFF;
+        left: 286px;
+        top: -34px;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
