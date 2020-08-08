@@ -26,18 +26,18 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }
-
-    &__links-list {
-        display: flex;
-        justify-content: flex-end;
-        height: 100%;
         font-family: $font-montserrat;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
         line-height: 17px;
         color: $dark-shade-50;
+    }
+
+    &__links-list {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
     }
 
     &__link-container {
@@ -62,6 +62,25 @@
         color: $dark-shade-50;
         transform: rotate(0);
         transition: transform 0.8s ease;
+    }
+
+    &__user-name {
+        margin: 0 0 0 20px;
+        padding-left: 20px;
+        border-left: 1px solid $dark-shade-10;
+        height: 100%;
+        // vertical-align: middle;
+        display: flex;
+        align-items: center;
+        color: $dark-shade-50;
+    }
+
+    &__user-name:hover {
+        color: $dark-shade-75;
+    }
+
+    & .link-button {
+        margin-left: 20px;
     }
 
     & .ui-state-active ~ &__link-arrow-icon {
@@ -92,9 +111,13 @@
         margin-right: 20px;
     }
 
+    & .ui-menu > .ui-menu-item:last-of-type {
+        margin-right: 0;
+    }
+
     & .ui-menu .ui-menu-item .ui-menu-item {
         margin-right: 0;
-        padding: 5px 5px;
+        padding: 7px 10px;
     }
 
     & .ui-widget.ui-widget-content {

@@ -4,36 +4,44 @@
 //-         -if(expandable)
 //-             span.material-icons.header__link-arrow-icon expand_more
 //-             ul.header__inside-links-list
+include ../../components/link-button/link-button.pug
 
-.header
-    .header__content
-        a(href="index.html").header__main-page-link
-            img(src="assets/img/header-logo.png").header__logo
-        .header__navigation
-            ul.header__links-list
-                li.header__link-container
-                    a(href="#").header__link.header__about-link О нас
-                li.header__link-container
-                    a(href="#").header__link.header__services-link Услуги
-                    span.material-icons.header__link-arrow-icon expand_more
-                    ul.header__inside-links-list
-                        li.header__link-container
-                            a(href="#").header__link Услуга 1
-                        li.header__link-container
-                            a(href="#").header__link Услуга 2
-                        li.header__link-container
-                            a(href="#").header__link Очень длинное наименование услуги 3
-                li.header__link-container
-                    a(href="#").header__link.header__jobs-link Вакансии
-                li.header__link-container
-                    a(href="#").header__link.header__news-link Новости
-                li.header__link-container
-                    a(href="#").header__link.header__aggreements-link Соглашения
-                    span.material-icons.header__link-arrow-icon expand_more
-                    ul.header__inside-links-list
-                        li.header__link-container
-                            a(href="#").header__link Соглашение 1
-                        li.header__link-container
-                            a(href="#").header__link Соглашение 2
-                        li.header__link-container
-                            a(href="#").header__link Очень длинное наименование соглашения 3
+mixin header(userName)
+    .header
+        .header__content
+            a(href="index.html").header__main-page-link
+                img(src="assets/img/header-logo.png").header__logo
+            .header__navigation
+                ul.header__links-list
+                    li.header__link-container
+                        a(href="#").header__link.header__about-link О нас
+                    li.header__link-container
+                        a(href="#").header__link.header__services-link Услуги
+                        span.material-icons.header__link-arrow-icon expand_more
+                        ul.header__inside-links-list
+                            li.header__link-container
+                                a(href="#").header__link Услуга 1
+                            li.header__link-container
+                                a(href="#").header__link Услуга 2
+                            li.header__link-container
+                                a(href="#").header__link Очень длинное наименование услуги 3
+                    li.header__link-container
+                        a(href="#").header__link.header__jobs-link Вакансии
+                    li.header__link-container
+                        a(href="#").header__link.header__news-link Новости
+                    li.header__link-container
+                        a(href="#").header__link.header__aggreements-link Соглашения
+                        span.material-icons.header__link-arrow-icon expand_more
+                        ul.header__inside-links-list
+                            li.header__link-container
+                                a(href="#").header__link Соглашение 1
+                            li.header__link-container
+                                a(href="#").header__link Соглашение 2
+                            li.header__link-container
+                                a(href="#").header__link Очень длинное наименование соглашения 3
+                -if(userName)
+                    a(href="#").header__user-name=userName
+                -else
+                    +link-button("войти", "#", "white", false)
+                    +link-button("зарегистрироваться", "#", "purple", false)
+
