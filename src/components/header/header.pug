@@ -1,20 +1,39 @@
-mixin header-item (href, descr)
-    li.header-item
-        a(href=href).header-link=descr
+//- mixin header-item(content, link, expandable, class_name)
+//-     li.header__link-container
+//-         a(href=`${link}`, class=`header__${class_name}-link`).header__link content
+//-         -if(expandable)
+//-             span.material-icons.header__link-arrow-icon expand_more
+//-             ul.header__inside-links-list
 
-header.header
-    .header-logo-container
-        img(src="assets/img/logo.svg")
-    .header-links-list-container
-        ul.header--links-list
-            li
-                div
-                    a(href="index.html") Index page
-            li
-                div UI kit
-                ul
-                    +header-item("ui-kit-colors.html", "UI kit Colors & Type")
-                    +header-item("ui-kit-form-elements.html", "UI kit Form Elements")
-                    +header-item("ui-kit-cards.html", "UI kit Cards")
-            li
-                div Website pages
+.header
+    .header__content
+        a(href="index.html").header__main-page-link
+            img(src="assets/img/header-logo.png").header__logo
+        .header__navigation
+            ul.header__links-list
+                li.header__link-container
+                    a(href="#").header__link.header__about-link О нас
+                li.header__link-container
+                    a(href="#").header__link.header__services-link Услуги
+                    span.material-icons.header__link-arrow-icon expand_more
+                    ul.header__inside-links-list
+                        li.header__link-container
+                            a(href="#").header__link Услуга 1
+                        li.header__link-container
+                            a(href="#").header__link Услуга 2
+                        li.header__link-container
+                            a(href="#").header__link Очень длинное наименование услуги 3
+                li.header__link-container
+                    a(href="#").header__link.header__jobs-link Вакансии
+                li.header__link-container
+                    a(href="#").header__link.header__news-link Новости
+                li.header__link-container
+                    a(href="#").header__link.header__aggreements-link Соглашения
+                    span.material-icons.header__link-arrow-icon expand_more
+                    ul.header__inside-links-list
+                        li.header__link-container
+                            a(href="#").header__link Соглашение 1
+                        li.header__link-container
+                            a(href="#").header__link Соглашение 2
+                        li.header__link-container
+                            a(href="#").header__link Очень длинное наименование соглашения 3

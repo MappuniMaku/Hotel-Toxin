@@ -1,0 +1,41 @@
+//- mixin utility-header-item(href, descr)
+//-     li.utility-header__item
+//-         a(href=href).utility-header__link=descr
+
+//- header.utility-header
+//-     .utility-header__logo-container
+//-         img(src="assets/img/logo.svg")
+//-     .utility-header__links-list-container
+//-         ul.utility-header__links-list
+//-             li
+//-                 a(href="index.html") Index page
+//-             li
+//-                 p UI kit
+//-                 ul
+//-                     +utility-header-item("ui-kit-colors.html", "UI kit Colors & Type")
+//-                     +utility-header-item("ui-kit-form-elements.html", "UI kit Form Elements")
+//-                     +utility-header-item("ui-kit-cards.html", "UI kit Cards")
+//-                     +utility-header-item("ui-kit-headers-footers.html", "UI kit Headers & Footers")
+//-             li
+//-                 p Website pages
+
+.utility-header
+    .utility-header__content
+        a(href="index.html").utility-header__main-page-link
+            img(src="assets/img/logo.svg").utility-header__logo
+        .utility-header__navigation
+            ul.utility-header__links-list
+                li.utility-header__link-container
+                    p.utility-header__link.utility-header__uikit-link UI kit
+                    span.material-icons.utility-header__link-arrow-icon expand_more
+                    ul.utility-header__inside-links-list
+                        li.utility-header__link-container
+                            a(href="ui-kit-colors.html").utility-header__link UI kit Colors & Type
+                        li.utility-header__link-container
+                            a(href="ui-kit-form-elements.html").utility-header__link UI kit Form Elements
+                        li.utility-header__link-container
+                            a(href="ui-kit-cards.html").utility-header__link UI kit Cards
+                        li.utility-header__link-container
+                            a(href="ui-kit-headers-footers.html").utility-header__link UI kit Headers & Footers
+                li.utility-header__link-container
+                    a(href="#").utility-header__link.utility-header__pages-link Страницы сайта
