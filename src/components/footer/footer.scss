@@ -108,4 +108,18 @@
     &__social-link:last-of-type {
         margin-right: 0;
     }
+
+    &__wrapper-small {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        height: 367px;
+
+        & .footer__copyright-text {
+            margin: 20px 0;
+        }
+    }
 }
