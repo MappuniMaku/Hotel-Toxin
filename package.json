@@ -40,6 +40,7 @@
     "webpack-merge": "^5.0.7"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "air-datepicker": "^2.2.3",
     "inputmask": "^5.0.3",
     "item-quantity-dropdown": "^2.1.0",
