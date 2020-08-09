@@ -1,0 +1,98 @@
+@import '~/theme/variables.scss';
+@import '../text-block/text-block.scss';
+
+.footer {
+    width: 100%;
+
+    &__main-body {
+        height: 372px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border: 1px solid black;
+    }
+
+    &__main-content-wrapper {
+        display: flex;
+        width: 1160px;
+        justify-content: space-between;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        // border: 1px solid black;
+    }
+
+    &__block-info {
+        width: 260px;
+    }
+
+    &__logo {
+        width: 106px;
+    }
+
+    &__hotel-text {
+        margin: 20px 0 0 0;
+    }
+
+    &__block-title {
+        margin: 0 0 1px 0;
+    }
+
+    &__link {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(31, 32, 65, 0.5);
+        margin-top: 20px;
+        width: fit-content;
+    }
+
+    &__link:hover {
+        color: $dark-shade-75;
+    }
+
+    &__block-subscription {
+        width: 260px;
+    }
+
+    & .subscription-text-field {
+        width: 260px;
+        margin-top: 20px;
+
+        &__submit-button {
+            left: 217px;
+        }
+    }
+
+    &__bottom {
+        height: 70px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        border-top: 1px solid $dark-shade-10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__bottom-content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1160px;
+    }
+
+    &__copyright-text {
+        margin: 0;
+    }
+
+    &__socials-icons {
+        display: flex;
+    }
+}

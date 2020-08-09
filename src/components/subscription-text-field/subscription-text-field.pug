@@ -1,9 +1,8 @@
 include ../element-name/element-name.pug
 include ../input-field/input-field.pug
 
-mixin subscription-text-field(desc, input_name, value)
+mixin subscription-text-field(input_name, input_value)
     form(method="post").subscription-text-field
         label
-            +element-name(desc)
-            +input-field("text", input_name, "Email", value)
+            +input-field("email", input_name, "Email", value=input_value)
             input(type="submit" value="arrow_forward").subscription-text-field__submit-button.material-icons
