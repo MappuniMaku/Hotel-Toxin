@@ -81,6 +81,27 @@
 
     & .link-button {
         margin-left: 20px;
+        height: 34px;
+        
+        &_color_white {
+            padding: 10px 10px;
+            min-width: unset;
+            width: 87px;
+        }
+
+        &_color_purple {
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+    }
+
+    & .ui-widget {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark-shade-50;
     }
 
     & .ui-state-active ~ &__link-arrow-icon {
@@ -108,7 +129,7 @@
     }
 
     & .ui-menu .ui-menu-item {
-        margin-right: 20px;
+        margin-right: 21px;
     }
 
     & .ui-menu > .ui-menu-item:last-of-type {
