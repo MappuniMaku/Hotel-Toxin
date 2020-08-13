@@ -180,6 +180,16 @@ module.exports = {
             filename: './landing-page.html',
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/landing-page-dates/landing-page-dates.pug`,
+            filename: './landing-page-dates.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/landing-page-guests/landing-page-guests.pug`,
+            filename: './landing-page-guests.html',
+            inject: true
+        }),
         // Used the ProvidePlugin constructor to inject jquery implicit globals
         new webpack.ProvidePlugin({
             $: "jquery",
