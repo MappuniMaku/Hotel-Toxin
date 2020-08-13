@@ -2,6 +2,7 @@ include ../element-name/element-name.pug
 include ../button/button.pug
 
 mixin guests-quantity-dropdown(desc, comment, expanded, adults, children, infants)
+    -if(!expanded) expanded = false;
     div(data-expanded=`${expanded}`).guests-quantity-dropdown
         +element-name(desc, comment)
         .iqdropdown

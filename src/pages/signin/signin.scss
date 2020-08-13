@@ -2,6 +2,9 @@
 
     & .content-wrapper {
         position: relative;
+        max-width: 1440px;
+        max-height: 772px;
+        overflow: hidden;
     }
     
     & .login-card {

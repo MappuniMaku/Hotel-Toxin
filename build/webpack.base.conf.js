@@ -175,6 +175,11 @@ module.exports = {
             filename: './signin.html',
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/landing-page/landing-page.pug`,
+            filename: './landing-page.html',
+            inject: true
+        }),
         // Used the ProvidePlugin constructor to inject jquery implicit globals
         new webpack.ProvidePlugin({
             $: "jquery",

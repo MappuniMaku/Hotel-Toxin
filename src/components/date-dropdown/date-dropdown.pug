@@ -1,8 +1,8 @@
 include ../element-name/element-name.pug
 include ../input-field/input-field.pug
 
-mixin date-dropdown(label1, label2, inputName1, inputName2, value1, value2, preselectedDates)
-    .date-dropdown
+mixin date-dropdown(label1, label2, inputName1, inputName2, value1, value2, preselectedDates, isOpen)
+    .date-dropdown(data-isopen=`${isOpen}`)
         label.date-dropdown__first-input
             -if(label1)
                 +element-name(label1)

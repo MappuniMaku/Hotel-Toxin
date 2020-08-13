@@ -1,0 +1,20 @@
+extends ../../components/pages-layout/pages-layout.pug
+include ../../components/header/header.pug
+include ../../components/footer/footer.pug
+include ../../components/room-search-card/room-search-card.pug
+
+block variables
+    -var title = 'Landing page'
+    -var description = 'Description for Webpack + Pug'
+    -var pageClass = 'landing-page'
+
+block header
+    +header()
+
+block content
+    img(src="assets/img/landing-bg.png").landing-page__background-image
+    +room-search-card(['2020-08-19','2020-08-23'], false, 2, 1, 0, guestsDropdownExpanded)
+    p.landing-page__description.text-block_text-style_body Лучшие номера для вашей работы, отдыха и просто вдохновения
+
+block footer
+    +footer(true)
