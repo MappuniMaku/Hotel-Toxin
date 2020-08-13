@@ -42,6 +42,6 @@ mixin header(userName)
                 -if(userName)
                     a(href="#").header__user-name=userName
                 -else
-                    +link-button("войти", "#", "white", false)
-                    +link-button("зарегистрироваться", "#", "purple", false)
+                    +link-button("войти", "signin.html", "white", false)
+                    +link-button("зарегистрироваться", "registration.html", "purple", false)
 

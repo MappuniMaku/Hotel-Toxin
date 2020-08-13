@@ -11,8 +11,9 @@ html(lang="ru")
     body(class=pageClass)
         .wrapper
             main.main
-                include ../utility-header/utility-header.pug
+                block header
                 .content-wrapper
                     block content
                 //- include ../footer/footer.pug
+                block footer
         block script

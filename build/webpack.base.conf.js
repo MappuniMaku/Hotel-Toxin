@@ -165,6 +165,16 @@ module.exports = {
             filename: './ui-kit-headers-footers.html',
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/registration/registration.pug`,
+            filename: './registration.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/signin/signin.pug`,
+            filename: './signin.html',
+            inject: true
+        }),
         // Used the ProvidePlugin constructor to inject jquery implicit globals
         new webpack.ProvidePlugin({
             $: "jquery",

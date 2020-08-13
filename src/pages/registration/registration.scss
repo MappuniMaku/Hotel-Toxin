@@ -1,0 +1,13 @@
+.registration-page {
+
+    & .content-wrapper {
+        position: relative;
+    }
+    
+    & .registration-card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
