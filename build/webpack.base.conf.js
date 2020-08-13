@@ -190,6 +190,11 @@ module.exports = {
             filename: './landing-page-guests.html',
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/search-room-filter/search-room-filter.pug`,
+            filename: './search-room-filter.html',
+            inject: true
+        }),
         // Used the ProvidePlugin constructor to inject jquery implicit globals
         new webpack.ProvidePlugin({
             $: "jquery",
