@@ -1,0 +1,87 @@
+@import '~/theme/variables.scss';
+@import '~/components/text-block/text-block.scss';
+
+.reviews-diagram {
+
+
+    &__diagram-container {
+        width: 121px;
+        height: 120px;
+        // border: 1px solid black;
+        margin-right: 26px;
+        position: relative;
+    }
+
+    &__title {
+        margin: 0 0 20px 0;
+    }
+
+    &__content {
+        height: 120px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__reviews-number {
+        margin: 0;
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: $font-quicksand-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $color-purple;
+    }
+
+    &__reviews-text {
+        margin: 0;
+        position: absolute;
+        top: 65px;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-purple;
+    }
+
+    & .bullet-list {
+        // border: 1px solid black;
+        margin-bottom: -3px;
+
+        &__item {
+            height: 24px;
+            margin-bottom: 0;
+
+            &::before {
+                left: -15px;
+            }
+
+            &:nth-of-type(1)::before {
+                background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+            }
+
+            &:nth-of-type(2)::before {
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            }
+
+            &:nth-of-type(3)::before {
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            }
+
+            &:nth-of-type(4)::before {
+                background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+            }
+        }
+    }
+}
