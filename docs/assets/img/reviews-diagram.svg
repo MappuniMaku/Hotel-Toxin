@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="121" height="120">
+<!-- <path d="M 62 2 A 58 58, 0, 0, 1, 119 59" stroke="purple" stroke-width="3.5" fill="transparent"/>
+<path d="M 119 61 A 58 58, 0, 0, 1, 62 118" stroke="green" stroke-width="3.5" fill="transparent"/>
+<path d="M 60 118 A 58 58, 0, 0, 1, 60 2" stroke="yellow" stroke-width="3.5" fill="transparent"/> -->
+<!-- <path d="M 2 60 A 58 58, 0, 0, 1, 59 2" stroke="yellow" stroke-width="3.5" fill="transparent"/> -->
+
+<path class="great-line" d="M 60 2 A 58 58, 0, 0, 0, 60 118" stroke-width="3.5" fill="transparent"/>
+<path class="good-line" d="M 62 118 A 58 58, 0, 0, 0, 119 61" stroke-width="3.5" fill="transparent"/>
+<path class="satisfactory-line" d="M 119 59 A 58 58, 0, 0, 0, 62 2" stroke-width="3.5" fill="transparent"/>
+<path class="disappointed-line" stroke-width="3.5" fill="transparent"/>
+
+<defs>
+    <linearGradient id="gradient-great" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#FFE39C"/>
+        <stop offset="100%" stop-color="#FFBA9C"/>
+    </linearGradient>
+
+    <linearGradient id="gradient-good" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#6FCF97"/>
+        <stop offset="100%" stop-color="#66D2EA"/>
+    </linearGradient>
+
+    <linearGradient id="gradient-satisfactory" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#BC9CFF"/>
+        <stop offset="100%" stop-color="#8BA4F9"/>
+    </linearGradient>
+
+    <linearGradient id="gradient-disappointed" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#919191"/>
+        <stop offset="100%" stop-color="#3D4975"/>
+    </linearGradient>
+    
+    <style type="text/css"><![CDATA[
+        .great-line { stroke: url(#gradient-great); }
+        .good-line { stroke: url(#gradient-good); }
+        .satisfactory-line { stroke: url(#gradient-satisfactory); }
+        .disappointed-line { stroke: url(#gradient-disappointed); }
+    ]]></style>
+</defs>
+</svg>
