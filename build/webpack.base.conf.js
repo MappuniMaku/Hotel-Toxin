@@ -195,6 +195,16 @@ module.exports = {
             filename: './search-room-filter.html',
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/search-room-filter-dropdown/search-room-filter-dropdown.pug`,
+            filename: './search-room-filter-dropdown.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/search-room-filter-checkbox/search-room-filter-checkbox.pug`,
+            filename: './search-room-filter-checkbox.html',
+            inject: true
+        }),
         // Used the ProvidePlugin constructor to inject jquery implicit globals
         new webpack.ProvidePlugin({
             $: "jquery",
