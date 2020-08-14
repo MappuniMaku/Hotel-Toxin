@@ -8,8 +8,12 @@ function priceToString(num) {
         let thousands = Math.floor(num/1000);
         let residue = num - Math.floor(num/1000) * 1000;
 
-        if(residue < 100) {
+        if(residue < 100 && residue >= 10) {
             residue = "0" + residue;
+        } else if (residue < 10 && residue > 0) {
+            residue = "00" + residue;
+        } else if (residue == 0) {
+            residue = "000";
         };
 
         return thousands + " " + residue + "₽";
