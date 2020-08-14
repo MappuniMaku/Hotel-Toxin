@@ -5,10 +5,11 @@
 
 
     &__diagram-container {
-        width: 120px;
+        width: 121px;
         height: 120px;
         // border: 1px solid black;
-        margin-right: 25px;
+        margin-right: 26px;
+        position: relative;
     }
 
     &__title {
@@ -21,8 +22,42 @@
         align-items: flex-end;
     }
 
+    &__reviews-number {
+        margin: 0;
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: $font-quicksand-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $color-purple;
+    }
+
+    &__reviews-text {
+        margin: 0;
+        position: absolute;
+        top: 65px;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: $font-montserrat-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-purple;
+    }
+
     & .bullet-list {
         // border: 1px solid black;
+        margin-bottom: -3px;
 
         &__item {
             height: 24px;
