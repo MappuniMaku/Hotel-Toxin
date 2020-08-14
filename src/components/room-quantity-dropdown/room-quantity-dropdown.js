@@ -279,21 +279,21 @@ $(document).ready(() => {
       setSelectionText: (itemCount, totalItems) => {
 
         if(itemCount.bedrooms == 0) {
-          $(elem).children(`.iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement`).css("opacity", "0.38");
+          $(elem).find(`.iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls .button-decrement`).css("opacity", "0.38");
         } else {
-          $(elem).children(`.iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls button.button-decrement`).css("opacity", "1");
+          $(elem).find(`.iqdropdown-menu-option:nth-of-type(1) .iqdropdown-item-controls .button-decrement`).css("opacity", "1");
         };
 
         if(itemCount.beds == 0) {
-          $(elem).children(`.iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls button.button-decrement`).css("opacity", "0.38");
+          $(elem).find(`.iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls .button-decrement`).css("opacity", "0.38");
         } else {
-          $(elem).children(`.iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls button.button-decrement`).css("opacity", "1");
+          $(elem).find(`.iqdropdown-menu-option:nth-of-type(2) .iqdropdown-item-controls .button-decrement`).css("opacity", "1");
         }
 
         if(itemCount.bathrooms == 0) {
-          $(elem).children(`.iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls button.button-decrement`).css("opacity", "0.38");
+          $(elem).find(`.iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls .button-decrement`).css("opacity", "0.38");
         } else {
-          $(elem).children(`.iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls button.button-decrement`).css("opacity", "1");
+          $(elem).find(`.iqdropdown-menu-option:nth-of-type(3) .iqdropdown-item-controls .button-decrement`).css("opacity", "1");
         }
 
         if (totalItems == 0) {

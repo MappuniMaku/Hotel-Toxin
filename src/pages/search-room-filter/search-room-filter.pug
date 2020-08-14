@@ -1,0 +1,48 @@
+extends ../../components/pages-layout/pages-layout.pug
+include ../../components/header/header.pug
+include ../../components/footer/footer.pug
+include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+include ../../components/guests-quantity-dropdown/guests-quantity-dropdown.pug
+include ../../components/range-slider/range-slider.pug
+include ../../components/checkbox-buttons/checkbox-buttons.pug
+include ../../components/room-quantity-dropdown/room-quantity-dropdown.pug
+include ../../components/pagination/pagination.pug
+include ../../components/room-card/room-card.pug
+
+block variables
+    -var title = 'Search room/Filter'
+    -var description = 'Description for Webpack + Pug'
+    -var pageClass = 'search-room-filter'
+
+block header
+    +header()
+
+block content
+    .search-room-filter__filter
+        +filter-date-dropdown("filter date dropdown", "date_range", ['2020-08-19','2020-08-23'])
+        +guests-quantity-dropdown("dropdown", "default", false, 2, 1, 1)
+        +range-slider("диапазон цены", [5000, 10000], 0, 15500, 500)
+        p.search-room-filter__slider-description Стоимость за сутки пребывания в номере
+        +checkbox-buttons("checkbox buttons", ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], ["smoking", "pets", "guests"], [false, true , true])
+        +checkbox-buttons("доступность", ["Широкий коридор", "Помощник для инвалидов"], ["wideHall", "disabledAssistant"], [false, false], false, false, ["Ширина коридоров в номере &nbsp; &nbsp; &nbsp; &nbsp; не менее 91 см.", "На 1 этаже вас встретит специалист и проводит до номера."])
+        +room-quantity-dropdown("удобства номера", "", false, 2, 2)
+        +checkbox-buttons("дополнительные удобства", ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"], ["breakfast", "worktable", "childchair", "childbed", "tv", "shampoo"], [false, true , true, true, false, false], true, false)
+    .search-room-filter__search-results
+        h1.search-room-filter__title.text-block_text-style_h1-title Номера, которые мы для вас подобрали
+        .search-room-filter__room-cards-container
+            +room-card(888, 9990, "люкс", 5, 145, ["room888.png", "room888.png", "room888.png", "room888.png"])
+            +room-card(840, 9900, "", 4, 65, ["room840.png", "room840.png", "room840.png", "room840.png"])
+            +room-card(980, 8500, "люкс", 3, 35, ["room980.png", "room980.png", "room980.png", "room980.png"])
+            +room-card(856, 7300, "", 5, 19, ["room856.png", "room856.png", "room856.png", "room856.png"])
+            +room-card(740, 6000, "", 4, 44, ["room740.png", "room740.png", "room740.png", "room740.png"])
+            +room-card(982, 5800, "", 3, 56, ["room982.png", "room982.png", "room982.png", "room982.png"])
+            +room-card(678, 5500, "", 5, 45, ["room678.png", "room678.png", "room678.png", "room678.png"])
+            +room-card(450, 5300, "", 4, 39, ["room450.png", "room450.png", "room450.png", "room450.png"])
+            +room-card(350, 5000, "", 3, 77, ["room350.png", "room350.png", "room350.png", "room350.png"])
+            +room-card(666, 5000, "", 5, 25, ["room666.png", "room666.png", "room666.png", "room666.png"])
+            +room-card(444, 5000, "", 3, 15, ["room444.png", "room444.png", "room444.png", "room444.png"])
+            +room-card(352, 5000, "", 3, 55, ["room352.png", "room352.png", "room352.png", "room352.png"])
+        +pagination(180, 15, 12, 1)
+
+block footer
+    +footer(true)

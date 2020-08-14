@@ -1,0 +1,23 @@
+.registration-page {
+
+    // &__background-image {
+    //     position: relative;
+    //     bottom: 10px;
+    //     // left: 10%;
+    //     // transform: translate(-50%, -50%);
+    // }
+
+    & .content-wrapper {
+        position: relative;
+        max-width: 1440px;
+        max-height: 753px;
+        overflow: hidden;
+    }
+    
+    & .registration-card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

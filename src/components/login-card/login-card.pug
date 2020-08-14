@@ -1,5 +1,6 @@
 include ../input-field/input-field.pug
 include ../../components/link-button/link-button.pug
+include ../../components/submit-button/submit-button.pug
 
 .login-card
     h1.login-card__title.text-block_text-style_h1-title Войти
@@ -9,4 +10,4 @@ include ../../components/link-button/link-button.pug
         +submit-button("войти")
     .signup-block
         p.signup-block__text Нет аккаунта на Toxin?
-        +link-button("создать", "#", "white", false)
+        +link-button("создать", "registration.html", "white", false)

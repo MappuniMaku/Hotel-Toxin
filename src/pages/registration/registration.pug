@@ -1,0 +1,18 @@
+extends ../../components/pages-layout/pages-layout.pug
+include ../../components/header/header.pug
+include ../../components/footer/footer.pug
+
+block variables
+    -var title = 'Registration'
+    -var description = 'Description for Webpack + Pug'
+    -var pageClass = 'registration-page'
+
+block header
+    +header()
+
+block content
+    img(src="assets/img/registration-bg.png").registration-page__background-image
+    include ../../components/registration-card/registration-card.pug
+
+block footer
+    +footer(true)

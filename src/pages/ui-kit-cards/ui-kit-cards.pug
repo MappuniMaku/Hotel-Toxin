@@ -2,6 +2,7 @@ extends ../../components/layout/layout.pug
 include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/booking-card/booking-card.pug
 include ../../components/room-card/room-card.pug
+include ../../components/room-search-card/room-search-card.pug
 
 block variables
     -var title = 'UI kit Cards'
@@ -10,7 +11,7 @@ block variables
 
 block content
     section.section.section1
-        include ../../components/room-search-card/room-search-card.pug
+        +room-search-card()
         include ../../components/registration-card/registration-card.pug
     section.section.section2
         +booking-card(888, "люкс", 9990, 2179, 300)

@@ -2,9 +2,10 @@ include ../date-dropdown/date-dropdown.pug
 include ../guests-quantity-dropdown/guests-quantity-dropdown.pug
 include ../submit-button/submit-button.pug
 
-.room-search-card
-    h1.room-search-card__title.text-block_text-style_h1-title Найдём номера под ваши пожелания
-    form(method="get").room-search-card__form
-        +date-dropdown("прибытие", "выезд", "arrival_date", "leaving_date")
-        +guests-quantity-dropdown("гости", "", false)
-        +submit-button("подобрать номер")
+mixin room-search-card(preselectedDates, calendarExpanded, adults, children, infants, guestsDropdownExpanded)
+    .room-search-card
+        h1.room-search-card__title.text-block_text-style_h1-title Найдём номера под ваши пожелания
+        form(method="get").room-search-card__form
+            +date-dropdown("прибытие", "выезд", "arrival_date", "leaving_date", "", "", preselectedDates, calendarExpanded)
+            +guests-quantity-dropdown("гости", "", guestsDropdownExpanded, adults, children, infants)
+            +submit-button("подобрать номер")

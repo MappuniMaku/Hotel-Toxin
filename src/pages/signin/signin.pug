@@ -1,0 +1,18 @@
+extends ../../components/pages-layout/pages-layout.pug
+include ../../components/header/header.pug
+include ../../components/footer/footer.pug
+
+block variables
+    -var title = 'Sign in'
+    -var description = 'Description for Webpack + Pug'
+    -var pageClass = 'signin-page'
+
+block header
+    +header()
+
+block content
+    img(src="assets/img/signin-bg.png").signin-page__background-image
+    include ../../components/login-card/login-card.pug
+
+block footer
+    +footer(true)

@@ -165,6 +165,46 @@ module.exports = {
             filename: './ui-kit-headers-footers.html',
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/registration/registration.pug`,
+            filename: './registration.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/signin/signin.pug`,
+            filename: './signin.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/landing-page/landing-page.pug`,
+            filename: './landing-page.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/landing-page-dates/landing-page-dates.pug`,
+            filename: './landing-page-dates.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/landing-page-guests/landing-page-guests.pug`,
+            filename: './landing-page-guests.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/search-room-filter/search-room-filter.pug`,
+            filename: './search-room-filter.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/search-room-filter-dropdown/search-room-filter-dropdown.pug`,
+            filename: './search-room-filter-dropdown.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/search-room-filter-checkbox/search-room-filter-checkbox.pug`,
+            filename: './search-room-filter-checkbox.html',
+            inject: true
+        }),
         // Used the ProvidePlugin constructor to inject jquery implicit globals
         new webpack.ProvidePlugin({
             $: "jquery",

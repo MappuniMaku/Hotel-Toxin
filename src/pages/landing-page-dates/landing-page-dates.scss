@@ -1,0 +1,34 @@
+@import '~/components/text-block/text-block.scss';
+
+.landing-page-dates {
+
+    &__description {
+        width: 297px;
+        margin: 0;
+        text-align: right;
+        position: absolute;
+        bottom: 18px;
+        right: 10%;
+    }
+
+    &__background-image {
+        position: relative;
+        bottom: 70px;
+        // left: 10%;
+        // transform: translate(-50%, -50%);
+    }
+
+    & .content-wrapper {
+        position: relative;
+        max-width: 1440px;
+        max-height: 830px;
+        overflow: hidden;
+    }
+    
+    & .room-search-card {
+        position: absolute;
+        top: 70px;
+        left: 10%;
+        // transform: translate(-50%, -50%);
+    }
+}

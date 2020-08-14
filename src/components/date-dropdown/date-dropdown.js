@@ -38,7 +38,7 @@ $(document).ready(function() {
                 $(secondInput).val(formattedDate.split(',')[1]);
                 $(elem).html(date);
             },
-            //inline: true,
+            // inline: (isOpen == true),
         });
   
 
@@ -69,5 +69,10 @@ $(document).ready(function() {
         $(".datepicker--buttons [data-action='today']").click(function() {
             datepicker.hide();
         });
+
+        let isOpen = $(elem).closest(".date-dropdown").data("isopen");
+        if (isOpen == true) {
+            datepicker.show();
+        };
     });
 });
