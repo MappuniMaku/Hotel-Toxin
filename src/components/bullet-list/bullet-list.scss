@@ -4,11 +4,13 @@
 .bullet-list {
     // border: 1px solid black;
     padding-left: 19px;
+    
     &__item {
         position: relative;
         // border: 1px solid black;
         max-width: 240px;
         height: fit-content;
+        margin-bottom: 10px;
 
         &::before {
             display: block;
@@ -17,9 +19,13 @@
             height: 10px;
             border-radius: 50%;
             background-color: $dark-shade-25;
-            position: relative;
+            position: absolute;
             left: -20px;
-            top: 17px;
+            top: 6.5px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
         }
     }
 

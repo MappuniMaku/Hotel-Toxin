@@ -66,6 +66,10 @@
     & .element-name {
         width: 256px;
         cursor: pointer;
+
+        &__title {
+            cursor: pointer;
+        }
     }
 
     & .checkbox-items-list {

@@ -1,0 +1,9 @@
+include ../../components/bullet-list/bullet-list.pug
+
+mixin reviews-diagram()
+    .reviews-diagram
+        p.reviews-diagram__title.text-block_text-style_item-title Впечатления от номера
+        .reviews-diagram__content
+            .reviews-diagram__diagram-container
+                img(src="assets/img/reviews-diagram.svg", alt="Диаграма отзывов")
+            +bullet-list(["Великолепно", "Хорошо", "Удовлетворительно", "Разочарован"])
