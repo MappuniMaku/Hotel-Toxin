@@ -3,7 +3,7 @@ include ../../components/rate-button/rate-button.pug
 mixin room-card(number, price, deluxe, rating, reviews, imagearr)
     .room-card
         .room-card__gallery
-            .room-card__gallery-images-container
+            a(href="room-details.html").room-card__gallery-images-container
                 -for(let i = 0; i < imagearr.length; i++)
                     img(src=`assets/img/${imagearr[i]}`, alt=`Фото номера ${number}`).room-card__gallery-image
             .room-card__gallery-left-margin
@@ -24,7 +24,7 @@ mixin room-card(number, price, deluxe, rating, reviews, imagearr)
                     input(type="radio", name=`navigation_toggle_room_${number}`).room-card__gallery-navigation-input.room-card__gallery-navigation-fourth-input
                     span.room-card__gallery-navigation-circle.room-card__gallery-navigation-forth-circle
         .room-card__body
-            .room-card__room-description
+            a(href="room-details.html").room-card__room-description
                 .room-card__room-info
                     p.room-card__room-number-sign №
                     p.room-card__room-number=number

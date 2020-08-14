@@ -1,0 +1,124 @@
+@import '~/theme/variables.scss';
+@import '~/components/text-block/text-block.scss';
+
+.room-details {
+
+    &__gallery {
+        display: flex;
+        margin-bottom: 70px;
+    }
+
+    &__main-image-container {
+        width: 981px;
+        height: 485px;
+    }
+
+    &__additional-images-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__additional-image-1-container {
+        height: 243px;
+    }
+
+    &__additional-image-2-container {
+        height: 242px;
+    }
+
+    &__main-content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 70px;
+    }
+
+    &__main-info-container {
+        margin-right: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__visuals-section {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__facilities-container {
+        display: flex;
+        flex-direction: column;
+        margin-right: 81px;
+    }
+
+    &__facilities-title {
+        margin: 0;
+    }
+
+    &__feedback-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    &__feedback-titles-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__feedback-title {
+        margin: 0;
+    }
+
+    &__reviews-number {
+        margin: 0;
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: right;
+        color: $dark-shade-50;
+    }
+
+    &__additional-info-section {
+        display: flex;
+    }
+
+    &__additional-info-container {
+        display: flex;
+        flex-direction: column;
+        margin-right: 100px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__rules-title {
+        margin: 0 0 20px 19px;
+    }
+
+    &__cancel-title {
+        margin: 0 0 20px 0;
+    }
+
+    &__cancel-text {
+        margin: 0;
+        width: 340px;
+    }
+
+    & .facilities-list__item:last-of-type {
+        border-bottom: none;
+    }
+
+    & .comment {
+        margin-bottom: 22px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

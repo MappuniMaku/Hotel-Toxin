@@ -1,0 +1,49 @@
+extends ../../components/pages-layout/pages-layout.pug
+include ../../components/header/header.pug
+include ../../components/footer/footer.pug
+include ../../components/booking-card/booking-card.pug
+include ../../components/facilities-list/facilities-list.pug
+include ../../components/reviews-diagram/reviews-diagram.pug
+include ../../components/comment/comment.pug
+include ../../components/bullet-list/bullet-list.pug
+
+block variables
+    -var title = 'Room details'
+    -var description = 'Description for Webpack + Pug'
+    -var pageClass = 'room-details'
+
+block header
+    +header()
+
+block content
+    .room-details__gallery
+        .room-details__main-image-container
+            img(src="assets/img/room-details-main.png").room-details__main-image
+        .room-details__additional-images-container
+            .room-details__additional-image-1-container
+                img(src="assets/img/room-details-1.png").room-details__additional-image
+            .room-details__additional-image-2-container
+                img(src="assets/img/room-details-2.png").room-details__additional-image
+    .room-details__main-content-wrapper
+        .room-details__main-info-container
+            .room-details__visuals-section
+                .room-details__facilities-container
+                    p.room-details__facilities-title.text-block_text-style_item-title Сведения о номере
+                    +facilities-list(["insert_emoticon", "location_city", "whatshot"], ["Комфорт", "Удобство", "Уют"], ["Шумопоглощающие стены", "Окно в каждой из спален", "Номер оснащён камином"])
+                +reviews-diagram(260)
+            .room-details__feedback-section
+                .room-details__feedback-titles-container
+                    p.room-details__feedback-title.text-block_text-style_item-title Отзывы посетителей номера
+                    p.room-details__reviews-number 2 отзыва
+                +comment("Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", 12, true, "murad_sarafanov.png")
+                +comment("Патрисия Стёклышкова", "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент", 2, false, "patrisia_steklyshkova.png")
+            .room-details__additional-info-section
+                .room-details__additional-info-container
+                    p.room-details__rules-title.text-block_text-style_item-title Правила
+                    +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
+                .room-details__additional-info-container
+                    p.room-details__cancel-title.text-block_text-style_item-title Отмена
+                    p.room-details__cancel-text.text-block_text-style_body Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+        +booking-card(888, "люкс", 9990, 2179, 300)
+block footer
+    +footer(true)
