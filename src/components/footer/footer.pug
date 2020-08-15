@@ -42,8 +42,18 @@ mixin footer(is_extended)
                             span.fab.fa-facebook-square.footer__icon
                         a(href="https://instagram.com/", target="_blank").footer__social-link
                             span.fab.fa-instagram.footer__icon
-        -else
             .footer__wrapper-small
+                img(src="assets/img/footer-logo.png", alt="Логотип отеля Toxin").footer__logo
+                p.footer__copyright-text Copyright © 2018 Toxin отель. Все права зачищены.
+                .footer__socials-icons
+                    a(href="https://twitter.com/", target="_blank").footer__social-link
+                        span.fab.fa-twitter.footer__icon
+                    a(href="https://facebook.com/", target="_blank").footer__social-link
+                        span.fab.fa-facebook-square.footer__icon
+                    a(href="https://instagram.com/", target="_blank").footer__social-link
+                        span.fab.fa-instagram.footer__icon
+        -else
+            .footer__wrapper-small-sample
                 img(src="assets/img/footer-logo.png", alt="Логотип отеля Toxin").footer__logo
                 p.footer__copyright-text Copyright © 2018 Toxin отель. Все права зачищены.
                 .footer__socials-icons
