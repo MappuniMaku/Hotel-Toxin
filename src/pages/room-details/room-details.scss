@@ -10,20 +10,43 @@
 
     &__main-image-container {
         width: 981px;
-        height: 485px;
+        max-height: 485px;
+    }
+
+    &__main-image {
+        width: 100%;
     }
 
     &__additional-images-container {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        height: fit-content;
+    }
+
+    &__additional-image-1 {
+        width: 100%;
+        // max-height: 243px;
+        display: block;
+        // vertical-align: bottom;
+        // object-fit: cover;
+    }
+
+    &__additional-image-2 {
+        width: 100%;
+        display: block;
     }
 
     &__additional-image-1-container {
-        height: 243px;
+        max-height: 243px;
+        height: fit-content;
+        display: block;
     }
 
     &__additional-image-2-container {
-        height: 242px;
+        max-height: 242px;
+        display: block;
+        height: fit-content;
     }
 
     &__main-content-wrapper {
