@@ -1,5 +1,25 @@
 @import '~/components/text-block/text-block.scss';
 
+@media (max-width: 900px) {
+    .landing-page-guests {
+        &__background-image {
+            width: unset;
+            height: 552px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .landing-page-guests {
+        & .room-search-card {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+}
+
 .landing-page-guests {
 
     &__description {
@@ -12,8 +32,9 @@
     }
 
     &__background-image {
-        position: relative;
-        bottom: 70px;
+        // position: relative;
+        width: 100%;
+        // bottom: 70px;
         // left: 10%;
         // transform: translate(-50%, -50%);
     }
@@ -23,6 +44,9 @@
         max-width: 1440px;
         max-height: 830px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
     
     & .room-search-card {
