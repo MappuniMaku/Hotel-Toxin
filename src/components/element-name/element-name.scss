@@ -1,6 +1,12 @@
 @import '~/theme/variables.scss';
 @import '~/components/text-block/text-block.scss';
 
+@media (max-width: 360px) {
+    .element-name {
+        max-width: 300px;
+    }
+}
+
 .element-name {
     // font-family: $font-montserrat-bold;
     // font-style: normal;

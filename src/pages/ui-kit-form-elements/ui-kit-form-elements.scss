@@ -1,3 +1,59 @@
+@media (max-width: 1420px) {
+    .ui-kit-form-elements {
+
+        & .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            // width: fit-content;
+            // margin: 0;
+            max-width: 950px;
+            // width: 950px;
+            grid-template-rows: unset;
+            grid-template-columns: unset;
+            height: fit-content;
+            min-height: unset;
+        }
+
+        // &__section {
+        //     float: left;
+            
+        //     // margin: 0 0 0 0;
+        // }
+    }
+}
+
+@media (max-width: 970px) {
+    .ui-kit-form-elements {
+
+        & .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            width: 303px;
+            // flex-wrap: unset;
+            // margin: 0;
+            // margin-right: 0;
+            height: fit-content;
+        }
+
+        &__section {
+            // float: left;
+            margin: 0 0 50px 0;
+
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+    }
+}
+
+// @media (max-width: 360px) {
+//     .ui-kit-form-elements {
+
+//     }
+// }
+
 .ui-kit-form-elements {
 
     & .content-wrapper {
@@ -17,6 +73,7 @@
         justify-content: flex-start;
         // align-items: center;
         margin-left: 120px;
+        min-height: 300px;
     }
 
     &__section > div,
@@ -31,7 +88,7 @@
         grid-row-end: 3;
     }
 
-     .section2 {
+    & .section2 {
         grid-column-start: 2;
         grid-row-start: 1;
         grid-column-end: 3;
@@ -101,20 +158,20 @@
         grid-row-end: 6;
     }
 
-    .buttons-container {
+    & .buttons-container {
         height: 195px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    .simple-buttons-container {
+    & .simple-buttons-container {
         width: 142px;
         display: flex;
         justify-content: space-between;
     }
 
-    .link-buttons-container {
+    & .link-buttons-container {
         width: 217px;
         display: flex;
         justify-content: space-between;

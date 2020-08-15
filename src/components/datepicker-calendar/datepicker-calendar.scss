@@ -1,5 +1,12 @@
 @import '~/theme/variables.scss';
 
+@media (max-width: 360px) {
+    .datepicker {
+        width: 300px;
+        padding: 15px 3px 23px;
+    }
+}
+
 .datepicker {
     width: 320px;
     // padding: 11px 11px 15px 11px;

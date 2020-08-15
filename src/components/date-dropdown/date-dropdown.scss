@@ -1,6 +1,17 @@
 @import '~/theme/variables.scss';
 @import '~/components/material-icons/material-icons.scss';
 
+@media (max-width: 360px) {
+    .date-dropdown {
+        width: 300px;
+
+        &__first-input,
+        &__second-input {
+            width: 145px;
+        }
+    }
+}
+
 .date-dropdown {
     //    border: 1px solid black;
         box-sizing: content-box;
@@ -17,7 +28,7 @@
         }
 
     & .input-field {
-        width: 150px;
+        // width: 150px;
 
         &__input {
             cursor: pointer;
