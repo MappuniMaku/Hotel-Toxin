@@ -1,7 +1,5 @@
-include ../element-name/element-name.pug
 include ../input-field/input-field.pug
 
-mixin text-field(desc, comment, input_name, value)
+mixin text-field(type, input_name, placeholder, value)
     label.text-field
-        +element-name(desc, comment)
-        +input-field("text", input_name, "Email", value)
+        +input-field(type, input_name, placeholder, value)

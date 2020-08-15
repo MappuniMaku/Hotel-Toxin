@@ -209,4 +209,8 @@
         display: flex;
         justify-content: space-between;
     }
+
+    &__section > .element-name {
+        margin-bottom: 0;
+    }
 }

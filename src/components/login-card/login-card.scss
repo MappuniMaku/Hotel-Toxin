@@ -1,6 +1,20 @@
 @import '~/theme/variables.scss';
 @import '~/components/text-block/text-block.scss';
 
+@media (max-width: 400px) {
+    .login-card {
+        padding: 40px 10px 30px 10px;
+        width: 340px;
+    }
+}
+
+@media (max-width: 360px) {
+    .login-card {
+        padding: 40px 3px 30px 3px;
+        width: 300px;
+    }
+}
+
 .login-card {
     // border: 1px solid black;
     padding: 40px 30px 30px 30px;
@@ -56,7 +70,7 @@
         }
     }
 
-    & .input-field {
+    & .text-field {
         margin-bottom: 10px;
     }
 

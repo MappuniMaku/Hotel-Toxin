@@ -1,10 +1,10 @@
 @media (max-width: 360px) {
     .text-field {
-        width: 300px;
+        width: 290px;
 
-        & .input-field {
-            width: 300px;
-        }
+        // & .input-field {
+        //     width: 300px;
+        // }
     }
 }
 
@@ -14,7 +14,7 @@
         height: fit-content;
         width: 320px;
 
-    & .input-field {
-        width: 320px;
-    }
+    // & .input-field {
+    //     width: 320px;
+    // }
 }

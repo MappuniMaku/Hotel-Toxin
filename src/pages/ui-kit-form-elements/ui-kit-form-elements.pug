@@ -28,14 +28,16 @@ block variables
 
 block content
     section.ui-kit-form-elements__section.section1
-        +text-field("text field", "default", "user_email")
-        +text-field("text field", "hover / focus", "user_email", "This is pretty awesome")
+        +element-name("text field", "default")
+        +text-field("text", "user_email", "Email")
+        +element-name("text field", "hover / focus")
+        +text-field("text", "user_email", "Email", "This is pretty awesome")
         +guests-quantity-dropdown("dropdown", "default", false)
         +date-picker("masked text field", "default", "birth_date")
         +date-dropdown("date dropdown", "date dropdown", "first_date", "second_date", "", "19.08.2019")
-        +filter-date-dropdown("filter date dropdown", "date_range", ['2020-08-19','2020-08-23'])
-        .name-container
-            +element-name("subscription text field")
+        +filter-date-dropdown("filter date dropdown", "date_range", ["2020-08-19","2020-08-23"])
+        //- .name-container
+        +element-name("subscription text field")
         +subscription-text-field("user_email")
     section.ui-kit-form-elements__section.section2
         +checkbox-buttons("checkbox buttons", ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], ["smoking", "pets", "guests"], [false, true , true])
