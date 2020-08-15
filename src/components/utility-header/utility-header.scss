@@ -53,20 +53,34 @@
 @import '~/theme/variables.scss';
 
 @media (max-width: 1200px) {
-    .utility-header__content {
-        width: 100%;
-        margin: 0 20px;
+    .utility-header {
+        max-width: 100%;
+
+        &__content {
+            max-width: 100%;
+            padding: 0 20px;
+        }
     }
 }
 
 @media (max-width: 450px) {
-    .utility-header__content {
-        // width: 100%;
-        margin: 0 10px;
-    }
+    .utility-header {
 
-    .utility-header__source-link {
-        display: none;
+        &__main-page-link {
+            margin-right: 10px;
+        }
+
+        &__content {
+            // width: 100%;
+            // margin: 0 10px;
+            padding-right: 0;
+            // margin: 0;
+            padding-left: 0;
+        }
+
+        &__source-link {
+            display: none;
+        }
     }
 }
 
