@@ -107,6 +107,7 @@
         width: 1160px;
         justify-content: flex-start;
         // border: 1px solid black;
+        padding-top: 1px;
     }
 
     &__block {
@@ -139,11 +140,19 @@
     }
 
     &__hotel-text {
-        margin: 18px 0 0 0;
+        margin: 13px 0 0 0;
+    }
+
+    &__subscription-text {
+        margin: 17px 0 0 0;
     }
 
     &__block-title {
         margin: 0 0 1px 0;
+
+        // &:last-of-type {
+        //     margin-bottom: ;
+        // }
     }
 
     &__link {
@@ -166,8 +175,12 @@
     }
 
     & .subscription-text-field {
-        width: 260px;
-        margin-top: 21px;
+        // width: 250px;
+        margin-top: 22px;
+
+        & .input-field {
+            width: 260px;
+        }
 
         &__submit-button {
             left: 220px;
@@ -246,7 +259,8 @@
         height: 367px;
 
         & .footer__copyright-text {
-            margin: 21px 0;
+            margin: 13px 0 21px 0;
+            line-height: 24px;
         }
     }
 }

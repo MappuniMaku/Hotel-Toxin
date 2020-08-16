@@ -1,19 +1,14 @@
 mixin checkbox-items-list(descArr, valueArr, checkedArr, richDescArr)
     .checkbox-items-list
         -for(let i = 0; i < descArr.length; i++)
-            label.checkbox-items-list__item
-                //- -if(checkedarr[i])
-                //-     input(type="checkbox", value=valuearr[i], checked).checkbox-items-list__checkbox-input
-                //-     p.checkbox-items-list__description= descarr[i]
-                //- -else
-                //-     input(type="checkbox", value=valuearr[i]).checkbox-items-list__checkbox-input
-                //-     p.checkbox-items-list__description= descarr[i]
-                -if(richDescArr && richDescArr[i])
+            -if(richDescArr && richDescArr[i])
+                label.checkbox-items-list__item.checkbox-items-list__item-rich
                     -var richDesc = richDescArr[i]
                     input(type="checkbox", value=valueArr[i], checked=checkedArr[i]).checkbox-items-list__checkbox-input
                     .checkbox-items-list__rich-text-container
                         p.checkbox-items-list__rich-title=descArr[i]
                         p.checkbox-items-list__rich-description !{richDesc}
-                -else
-                        input(type="checkbox", value=valueArr[i], checked=checkedArr[i]).checkbox-items-list__checkbox-input
-                        p.checkbox-items-list__description=descArr[i]
+            -else
+                label.checkbox-items-list__item
+                    input(type="checkbox", value=valueArr[i], checked=checkedArr[i]).checkbox-items-list__checkbox-input
+                    p.checkbox-items-list__description=descArr[i]

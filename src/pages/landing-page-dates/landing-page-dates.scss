@@ -6,6 +6,10 @@
             width: unset;
             height: 552px;
         }
+
+        &__description {
+            right: 5%;
+        }
     }
 }
 
@@ -27,8 +31,8 @@
         margin: 0;
         text-align: right;
         position: absolute;
-        bottom: 18px;
-        right: 10%;
+        bottom: 20px;
+        right: 135px;
     }
 
     &__background-image {
@@ -51,8 +55,8 @@
     
     & .room-search-card {
         position: absolute;
-        top: 70px;
-        left: 10%;
+        top: 69px;
+        left: 140px;
         // transform: translate(-50%, -50%);
     }
 }
