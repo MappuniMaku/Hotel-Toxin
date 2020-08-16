@@ -200,7 +200,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        margin-bottom: 70px;
+        margin-bottom: 74px;
     }
 
     &__main-info-container {
@@ -211,7 +211,7 @@
 
     &__visuals-section {
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: 13px;
     }
 
     &__facilities-container {
@@ -227,7 +227,7 @@
     &__feedback-section {
         display: flex;
         flex-direction: column;
-        margin-bottom: 30px;
+        margin-bottom: 34px;
     }
 
     &__feedback-titles-container {
@@ -260,7 +260,7 @@
     &__additional-info-container {
         display: flex;
         flex-direction: column;
-        margin-right: 100px;
+        margin-right: 101px;
 
         &:last-of-type {
             margin-right: 0;
@@ -268,11 +268,11 @@
     }
 
     &__rules-title {
-        margin: 0 0 20px 19px;
+        margin: 0 0 17px 19px;
     }
 
     &__cancel-title {
-        margin: 0 0 20px 0;
+        margin: 0 0 17px 0;
     }
 
     &__cancel-text {

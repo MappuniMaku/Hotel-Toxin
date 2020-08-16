@@ -9,12 +9,17 @@ $(document).ready(function() {
     let currentPage = $(".pagination__placeholder").data("currentpage");
     let paginationDescription = $(".pagination .pagination__description");
 
+    let displayedPages = 3;
+    if (document.documentElement.clientWidth < 400) {
+        displayedPages = 1;
+    };
+
     $(".pagination__placeholder").pagination({
         items: items,
         itemsOnPage: itemsOnPage,
         pages: pages,
         currentPage: currentPage,
-        displayedPages: 3,
+        displayedPages: displayedPages,
         edges: 1,
         prevText: "arrow_backward",
         nextText: "arrow_forward",

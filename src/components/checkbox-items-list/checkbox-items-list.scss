@@ -27,6 +27,14 @@
         max-width: 210px;
     }
 
+    &__item-rich {
+        margin-top: 7px;
+
+        &:first-of-type {
+            margin-top: 8px;
+        }
+    }
+
     &__rich-title {
         // border: 1px solid black;
         padding: 0;
@@ -36,7 +44,7 @@
         font-size: 14px;
         line-height: 18px;
         color: $dark-shade-75;
-        margin: 0 0 5px 0px;
+        margin: 0 0 6px 0px;
         display: inline-block;
         max-width: 230px;
         position: relative;
