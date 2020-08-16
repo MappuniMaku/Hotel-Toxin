@@ -19,8 +19,8 @@ block header
 
 block content
     .search-room-filter-dropdown__filter
-        +filter-date-dropdown("filter date dropdown", "date_range", ['2020-08-19','2020-08-23'])
-        +guests-quantity-dropdown("dropdown", "default", false, 2, 1, 1)
+        +filter-date-dropdown("Даты пребывания в отеле", "date_range", ['2020-08-19','2020-08-23'])
+        +guests-quantity-dropdown("Гости", "default", false, 2, 1, 1)
         +range-slider("диапазон цены", [5000, 10000], 0, 15500, 500)
         p.search-room-filter-dropdown__slider-description Стоимость за сутки пребывания в номере
         +checkbox-buttons("checkbox buttons", ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], ["smoking", "pets", "guests"], [false, true , true])

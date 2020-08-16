@@ -5,10 +5,10 @@ include ../../components/text-block/text-block.pug
 block variables
     -var title = 'UI kit Colors & Type'
     -var description = 'Description for Webpack + Pug'
-    -var pageClass = 'ui-kit-colors-and-type'
+    -var pageClass = 'ui-kit-colors'
 
 block content
-    .color-blocks-container
+    .ui-kit-colors__color-blocks-container
         +color-block('dark-shade-100', 'Dark Shade 100%', '#1F2041')
         +color-block('dark-shade-75', 'Dark Shade 75%', '#1F2041')
         +color-block('dark-shade-50', 'Dark Shade 50%', '#1F2041')
@@ -16,7 +16,7 @@ block content
         +color-block('dark-shade-5', 'Dark Shade 5%', '#1F2041')
         +color-block('purple', 'Purple', '#BC9CFF')
         +color-block('green', 'Green', '#6FCF97')
-    .text-blocks-container
+    .ui-kit-colors__text-blocks-container
         +text-block('h1-title', 'H1', 'This one is the sub-section or widget title')
         +text-block('item-title', 'H2', 'Next one is the item title inside widgets')
         +text-block('label', 'H3', 'This is a label or CTA text')

@@ -2,8 +2,20 @@
 @import '~/components/material-icons/material-icons.scss';
 // @import '~/components/text-block/text-block.scss';
 
+@media (max-width: 360px) {
+    .submit-button {
+        width: 290px;
+
+        &__input {
+            width: 290px;
+        }
+    }
+}
+
 .submit-button {
     height: 44px;
+    position: relative;
+    width: 320px;
     
     &__input {
         display: inline-block;
@@ -28,10 +40,10 @@
     }
 
     &__icon-arrow {
-        position: relative;
+        position: absolute;
         color: #FFFFFF;
-        left: 286px;
-        top: -34px;
+        right: -9px;
+        top: 11px;
         width: 44px;
         height: 44px;
         cursor: pointer;

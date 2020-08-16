@@ -1,6 +1,152 @@
 @import '~/theme/variables.scss';
 @import '~/components/text-block/text-block.scss';
 
+@media (max-width: 1455px) {
+    .room-details {
+
+
+        &__additional-image-2 {
+            margin-top: -1px;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .room-details {
+
+        & .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__gallery {
+            flex-direction: column;
+        }
+
+        &__main-image-container {
+            box-shadow: 0 0 25px rgba(0,0,0,.2);
+            border-radius: 4px;
+        }
+    
+        &__main-image {
+            // box-shadow: 0 0 25px rgba(0,0,0,.2);
+            border-radius: 4px;
+        }
+
+        &__additional-images-container {
+            flex-direction: row;
+            max-width: 100%;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        &__additional-image-1 {
+            max-height: 242px;
+            // box-shadow: 0 0 25px rgba(0,0,0,.2);
+            border-radius: 4px;
+        }
+
+        &__additional-image-2 {
+            margin-top: 0;
+            max-height: 241px;
+            // box-shadow: 0 0 25px rgba(0,0,0,.2);
+            border-radius: 4px;
+        }
+
+        &__additional-image-1-container {
+            box-shadow: 0 0 25px rgba(0,0,0,.2);
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        &__additional-image-2-container {
+            box-shadow: 0 0 25px rgba(0,0,0,.2);
+            border-radius: 4px;
+        }
+
+        &__main-content-wrapper {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__main-info-container {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+
+        &__reviews-number {
+            margin-left: 40px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .room-details {
+
+        &__additional-images-container {
+            margin-top: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__additional-image-1-container {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        
+        &__additional-image-1 {
+            max-height: 243px;
+        }
+
+        &__visuals-section {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        &__facilities-container {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
+        &__feedback-section {
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        &__additional-info-section {
+            flex-direction: column;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        &__additional-info-container {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .room-details {
+        &__feedback-titles-container {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        &__reviews-number {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        & .content-wrapper {
+            width: 300px;
+        }
+    }
+}
+
 .room-details {
 
     &__gallery {
@@ -9,21 +155,45 @@
     }
 
     &__main-image-container {
-        width: 981px;
-        height: 485px;
+        max-width: 981px;
+        max-height: 485px;
+    }
+
+    &__main-image {
+        max-width: 100%;
+        display: block;
     }
 
     &__additional-images-container {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        height: fit-content;
+    }
+
+    &__additional-image-1 {
+        max-width: 100%;
+        // max-height: 243px;
+        display: block;
+        // vertical-align: bottom;
+        // object-fit: cover;
+    }
+
+    &__additional-image-2 {
+        max-width: 100%;
+        display: block;
     }
 
     &__additional-image-1-container {
-        height: 243px;
+        max-height: 243px;
+        height: fit-content;
+        display: block;
     }
 
     &__additional-image-2-container {
-        height: 242px;
+        max-height: 242px;
+        display: block;
+        height: fit-content;
     }
 
     &__main-content-wrapper {
@@ -107,7 +277,7 @@
 
     &__cancel-text {
         margin: 0;
-        width: 340px;
+        max-width: 340px;
     }
 
     & .facilities-list__item:last-of-type {

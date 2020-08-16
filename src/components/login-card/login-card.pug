@@ -1,12 +1,12 @@
-include ../input-field/input-field.pug
+include ../../components/text-field/text-field.pug
 include ../../components/link-button/link-button.pug
 include ../../components/submit-button/submit-button.pug
 
 .login-card
     h1.login-card__title.text-block_text-style_h1-title Войти
     form(method="post").login-card__form
-        +input-field("email", "user_email", "Email")
-        +input-field("password", "user_password", "Пароль")
+        +text-field("email", "user_email", "Email")
+        +text-field("password", "user_password", "Пароль")
         +submit-button("войти")
     .signup-block
         p.signup-block__text Нет аккаунта на Toxin?

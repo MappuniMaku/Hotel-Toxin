@@ -1,3 +1,12 @@
+@media (max-width: 785px) {
+    .ui-kit-headers-footers {
+        & .footer-small {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
 .ui-kit-headers-footers {
     background: #F4F4F6;
 
@@ -11,6 +20,7 @@
 
     & .footer {
         margin-bottom: 40px;
+        border-top: none;
     }
 
     & .footer-small {

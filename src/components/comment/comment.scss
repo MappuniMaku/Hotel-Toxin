@@ -1,6 +1,36 @@
 @import '~/theme/variables.scss';
 @import '~/components/text-block/text-block.scss';
 
+@media (max-width: 970px) {
+    .comment {
+        // width: 300px;
+
+        &__text {
+            width: 360px;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .comment {
+        // width: 300px;
+
+        &__text {
+            width: 240px;
+        }
+    }
+}
+
+// @media (max-width: 360px) {
+//     .comment {
+//         // width: 300px;
+
+//         &__text {
+//             width: 240px;
+//         }
+//     }
+// }
+
 .comment {
     &__photo-container {
         width: 48px;

@@ -1,10 +1,20 @@
+@media (max-width: 360px) {
+    .text-field {
+        width: 290px;
+
+        // & .input-field {
+        //     width: 300px;
+        // }
+    }
+}
+
 .text-field {
     //    border: 1px solid black;
         box-sizing: content-box;
         height: fit-content;
         width: 320px;
-}
 
-.text-field .input-field {
-    width: 320px;
+    // & .input-field {
+    //     width: 320px;
+    // }
 }

@@ -1,6 +1,12 @@
 @import '~/theme/variables.scss';
 // @import '~/components/text-block/text-block.scss';
 
+@media (max-width: 360px) {
+        .guests-quantity-dropdown {
+                width: 290px;
+        }
+}
+
 .guests-quantity-dropdown {
         //border: 1px solid black;
         box-sizing: content-box;
