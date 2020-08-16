@@ -1,0 +1,16 @@
+@import '~/theme/variables.scss';
+@import '~/components/text-block/text-block.scss';
+
+.index-page {
+    & .content-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 50px;
+    }
+
+    &__text {
+        max-width: fit-content;
+        padding: 0 20px;
+    }
+}
