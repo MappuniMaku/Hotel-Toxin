@@ -9,7 +9,8 @@ mixin footer(is_extended)
             .footer__main-body
                 .footer__main-content-wrapper
                     .footer__block.footer__block-info
-                        img(src="assets/img/footer-logo.png", alt="Логотип отеля Toxin").footer__logo
+                        a(href="index.html")
+                            img(src="assets/img/footer-logo.png", alt="Логотип отеля Toxin").footer__logo
                         p.footer__hotel-text.text-block_text-style_body Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
                     .footer__block.footer__block-navigation
                         p.footer__block-title.text-block_text-style_label Навигация
@@ -43,7 +44,8 @@ mixin footer(is_extended)
                         a(href="https://instagram.com/", target="_blank").footer__social-link
                             span.fab.fa-instagram.footer__icon
             .footer__wrapper-small
-                img(src="assets/img/footer-logo.png", alt="Логотип отеля Toxin").footer__logo
+                a(href="index.html")
+                    img(src="assets/img/footer-logo.png", alt="Логотип отеля Toxin").footer__logo
                 p.footer__copyright-text Copyright © 2018 Toxin отель. Все права зачищены.
                 .footer__socials-icons
                     a(href="https://twitter.com/", target="_blank").footer__social-link
@@ -54,7 +56,8 @@ mixin footer(is_extended)
                         span.fab.fa-instagram.footer__icon
         -else
             .footer__wrapper-small-sample
-                img(src="assets/img/footer-logo.png", alt="Логотип отеля Toxin").footer__logo
+                a(href="index.html")
+                    img(src="assets/img/footer-logo.png", alt="Логотип отеля Toxin").footer__logo
                 p.footer__copyright-text Copyright © 2018 Toxin отель. Все права зачищены.
                 .footer__socials-icons
                     a(href="https://twitter.com/", target="_blank").footer__social-link
