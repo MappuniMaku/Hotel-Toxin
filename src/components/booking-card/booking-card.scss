@@ -16,7 +16,6 @@
 }
 
 .booking-card {
-    // border: 1px solid black;
     padding: 42px 32px 30px 28px;
     display: flex;
     flex-direction: column;
@@ -32,7 +31,6 @@
     &__room-description {
         display: flex;
         justify-content: space-between;
-        // border: 1px solid black;
         margin-bottom: 23px;
     }
 
@@ -103,7 +101,6 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        // height: 100%;
         font-family: $font-montserrat;
         font-style: normal;
         font-weight: normal;
@@ -190,7 +187,6 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-        // height: 24px;
         margin-bottom: 30px;
     }
 
@@ -249,7 +245,6 @@
     &__total {
         display: flex;
         justify-content: space-between;
-        // height: 24px;
         margin-bottom: 19px;
     }
 
@@ -267,8 +262,6 @@
 
     &__total-price {
         margin: 0 0 0 5px;
-        // height: 24px;
-        // width: fit-content;
         white-space: nowrap;
     }
 

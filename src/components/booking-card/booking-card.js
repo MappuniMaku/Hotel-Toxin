@@ -1,5 +1,4 @@
 import './booking-card.scss';
-// require("../priceToString/priceToString.js");4
 require("../date-dropdown/date-dropdown.js");
 
 function priceToString(num) {
@@ -28,8 +27,6 @@ $(document).ready(() => {
     priceField.html(priceToString(roomPrice));
 
     let datepicker = $(".booking-card .date-dropdown__first-input .input-field__input").data('datepicker');
-    // console.log(datepicker.selectedDates);
-    // console.log($(".booking-card .date-dropdown__first-input .input-field__input").val());
 
     let priceAndDaysExpression = $(".booking-card__price-and-days-expression");
     let intermediateResult = $(".booking-card__intermediate-result");
@@ -69,7 +66,6 @@ $(document).ready(() => {
         totalPriceField.html(priceToString(totalPrice));
 
         $(".booking-card .date-dropdown__first-input .input-field__input").bind('DOMSubtreeModified', function() {
-            // console.log(1);
             if(datepicker.selectedDates[1] && datepicker.selectedDates[0]) {
                 stayLengthDays = (datepicker.selectedDates[1] - datepicker.selectedDates[0]) / (1000 * 3600 * 24);
                 if(stayLengthDays == 1) {

@@ -34,7 +34,7 @@
     font-family: $font-material-icons;
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
+    font-size: 24px;
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -42,16 +42,9 @@
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-  
-    /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
     font-feature-settings: 'liga';
 }
 
@@ -109,13 +102,8 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    /* identical to box height */
-
     text-align: center;
     text-transform: uppercase;
-
-    /* Dark 100% */
-
     color: $dark-shade-100;
     padding: 0;
     height: 15px;

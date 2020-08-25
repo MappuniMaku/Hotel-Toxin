@@ -1,22 +1,10 @@
 @import '~/theme/variables.scss';
 @import '~/components/text-block/text-block.scss';
 
-// @media (max-width: 360px) {
-//     .input-field {
-//             width: 290px;
-//     }
-// }
-
 .input-field {
     position: relative;
-    // line-height: 44px;
     display: block;
-    // height: 44px;
-    // font-family: $font-montserrat;
-    // font-style: normal;
-    // font-weight: normal;
-    // font-size: 14px;
-    // line-height: 24px;
+
     &__input {
         height: 44px;
         background: #FFFFFF;
@@ -24,7 +12,6 @@
         box-sizing: border-box;
         border-radius: 4px;
         padding: 15px 15px 15px 14px;
-        // color: $dark-shade-75;
         box-sizing: border-box;
         width: 100%;
 
@@ -32,10 +19,8 @@
             color: $dark-shade-25;
         }
 
-        // &:hover,
         &:focus {
             border: 1px solid $dark-shade-50;
-            // color: $dark-shade-75;
         }
     }
 

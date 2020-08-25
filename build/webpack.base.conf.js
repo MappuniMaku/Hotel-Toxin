@@ -39,28 +39,6 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: '/node_modules/'
             },
-//            {
-//                test: /\.css$/,
-//                use: [
-//                    'style-loader',
-//                    {
-//                        loader: MiniCssExtractPlugin.loader,
-//                        options: {publicPath: '../../'},
-//                    },
-//                    {
-//                        loader: 'css-loader',
-//                        options: { sourceMap: true }
-//                    },
-//                    {
-//                        loader: 'postcss-loader',
-//                        options: { sourceMap: true, config: {path: `./postcss.config.js`}, },
-//                    },
-//                    {
-//                        loader: 'sass-loader',
-//                        options: { sourceMap: true }
-//                    },
-//                ],
-//            },
             {
                 test: /\.s?css$/,
                     use: [
@@ -127,19 +105,10 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-            //    {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
-                // {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
                 {from: `${PATHS.src}/theme/favicon.ico`, to: ''},
             ],
         }),
         new CleanWebpackPlugin(),
-//        ...PAGES.map(
-//            page =>
-//              new HtmlWebpackPlugin({
-//                template: `${PAGES_DIR}/${page}`,
-//                filename: `./${page.replace(/\.pug/,'.html')}`
-//              })
-//         ),
         new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/index/index.pug`,
             filename: './index.html',
@@ -214,14 +183,12 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
-            "window.jQuery": "jquery'",
+            "window.jQuery": "jquery",
             "window.$": "jquery",
         }),
     ],
     resolve: {
-		//extensions: [],
 		alias: {
-		//	'@styles': path.resolve(__dirname, `${PATHS.src}/styles`),
 			'~': PATHS.src,
 		}
 	},

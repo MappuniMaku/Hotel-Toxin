@@ -1,55 +1,3 @@
-// .utility-header {
-//     display: flex;
-//     justify-content: space-around;
-//     padding: 10px;
-
-//     &__links-list {
-//         display: flex;
-//         justify-content: space-around;
-//         height: 31px;
-//     }
-
-//     &__logo-container {
-//         flex-grow: 1;
-//     }
-
-//     &__logo-container img {
-//         width: 48px;
-//     }
-
-//     &__links-list-container {
-//         flex-grow: 30;
-//     }
-
-//     &__link {
-//         display: inline-block;
-//         width: 100%;
-//         box-sizing: content-box;
-//     }
-
-//     & .ui-menu {
-
-//         & .ui-menu-item {
-//             // vertical-align: middle;
-//             display: flex;
-//             align-items: center;
-//         }
-
-//         & .ui-menu-item-wrapper {
-//             padding: 4px 20px 4px 5px;
-//             box-sizing: border-box;
-//             height: 100%;
-//             // vertical-align: middle;
-//         }
-
-//         & .ui-menu-icon {
-//             // left: 0;
-//             right: 0px;
-//             left: unset;
-//         }
-//     }
-// }
-
 @import '~/theme/variables.scss';
 
 @media (max-width: 1200px) {
@@ -71,10 +19,7 @@
         }
 
         &__content {
-            // width: 100%;
-            // margin: 0 10px;
             padding-right: 0;
-            // margin: 0;
             padding-left: 0;
         }
 
@@ -98,17 +43,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // width: 100%;
         width: 1160px;
     }
 
     &__logo {
-        // width: 100%;
         vertical-align: middle;
     }
 
     &__navigation {
-        // width: 100%;
         height: 30px;
         display: flex;
         justify-content: flex-end;
@@ -166,8 +108,6 @@
         background: unset;
         color: $dark-shade-75;
         margin: 0;
-        // font-family: $font-montserrat-bold;
-        // font-weight: bold;
     }
 
     & .ui-widget-content .ui-icon {
@@ -176,7 +116,6 @@
 
     & .ui-menu .ui-menu-item-wrapper {
         padding: 0;
-        // margin-right: 20px;
         width: 100%;
     }
 
@@ -205,8 +144,4 @@
     & .ui-widget-content a {
         color: $dark-shade-50;
     }
-
-    // &__link {
-    //     // margin-right: 20px;
-    // }
 }

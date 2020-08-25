@@ -1,20 +1,11 @@
 @media (max-width: 360px) {
     .date-picker {
         width: 290px;
-
-        // & .input-field {
-        //     width: 300px;
-        // }
     }
 }
 
 .date-picker {
-    //    border: 1px solid black;
-        box-sizing: content-box;
-        height: fit-content;
-        width: 320px;
-
-    // & .input-field {
-    //     width: 320px;
-    // }
+    box-sizing: content-box;
+    height: fit-content;
+    width: 320px;
 }

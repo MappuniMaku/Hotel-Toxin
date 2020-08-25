@@ -1,16 +1,10 @@
 @import '~/theme/variables.scss';
 
 .room-quantity-dropdown {
-        //border: 1px solid black;
         box-sizing: content-box;
         height: 64.44px;
         width: 266px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        
+        justify-content: space-between;   
 }
-
-// .room-quantity-dropdown[data-id="1"] .iqdropdown {
-//         z-index: 1000000;
-// }

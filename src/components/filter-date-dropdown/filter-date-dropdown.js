@@ -38,12 +38,9 @@ $(document).ready(function() {
 
         let datepicker = $(elem).datepicker().data('datepicker');
 
-        // let inputField = document.getElementById("filter-date-dropdown");
-        // let preselectedDates = inputField.dataset.preselecteddates;
         let preselectedDates = $(elem).data("preselecteddates");
 
         if(preselectedDates) {
-            // datepicker.selectDate([new Date(preselectedDates.split(',')[0]), new Date(preselectedDates.split(',')[1])]);
             datepicker.selectDate([new Date(preselectedDates[0]), new Date(preselectedDates[1])]);
         }
 

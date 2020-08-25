@@ -2,7 +2,6 @@ import './range-slider.scss';
 
 require("jquery-ui/ui/widgets/slider");
 require("jquery-ui/themes/base/slider.css");
-// require("jquery-ui/themes/base/all.css");
 
 $(document).ready(function() {
     let presetRange= $(".range-slider__slider-object").data("presetrange");

@@ -4,26 +4,6 @@ $(document).ready(function() {
     $(".like-button__input:checked").parent().addClass("like-button_checked");
     $(".like-button_checked .like-button__like-icon").html("favorite");
 
-    // $(".like-button__item[data-id='item-1'] .like-button__input").click(function(){
-    //     $(this).parent().toggleClass("like-button__item-checked");
-
-    //     $(".like-button__item[data-id='item-1'] .like-button__like-icon").html("favorite_border");
-    //     $(".like-button__item[data-id='item-1'].like-button__item-checked .like-button__like-icon").html("favorite");
-
-    //     $(".like-button__item[data-id='item-1'] .like-button__likes-number").html(+$(".like-button__item[data-id='item-1'] .like-button__likes-number").html() - 1);
-    //     $(".like-button__item[data-id='item-1'].like-button__item-checked .like-button__likes-number").html(+$(".like-button__item[data-id='item-1'].like-button__item-checked .like-button__likes-number").html() + 2)
-    // })
-
-    // $(".like-button__item[data-id='item-2'] .like-button__input").click(function(){
-    //     $(this).parent().toggleClass("like-button__item-checked");
-
-    //     $(".like-button__item[data-id='item-2'] .like-button__like-icon").html("favorite_border");
-    //     $(".like-button__item[data-id='item-2'].like-button__item-checked .like-button__like-icon").html("favorite");
-
-    //     $(".like-button__item[data-id='item-2'] .like-button__likes-number").html(+$(".like-button__item[data-id='item-2'] .like-button__likes-number").html() - 1);
-    //     $(".like-button__item[data-id='item-2'].like-button__item-checked .like-button__likes-number").html(+$(".like-button__item[data-id='item-2'].like-button__item-checked .like-button__likes-number").html() + 2)
-    // })
-
     $(".like-button").each(function(i, elem) {
         $(elem).children(".like-button__input").on("change", function(){
             $(elem).toggleClass("like-button_checked");
@@ -37,11 +17,4 @@ $(document).ready(function() {
             };
         });
     });
-
-    // $(".asd").each(function(i, elem) {
-    //     $(elem).click(function() {
-    //         $(elem).html(+$(elem).html() + 1)
-    //     })
-
-    // });
 });
