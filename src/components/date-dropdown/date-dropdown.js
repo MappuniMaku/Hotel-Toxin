@@ -38,18 +38,10 @@ $(document).ready(function() {
                 $(secondInput).val(formattedDate.split(',')[1]);
                 $(elem).html(date);
             },
-            // inline: (isOpen == true),
         });
   
 
         let datepicker = $(elem).data('datepicker');
-
-        // let inputField = document.getElementById("date-dropdown-1");
-        // let preselectedDates = inputField.dataset.preselecteddates;
-
-        // if(preselectedDates) {
-        //     datepicker.selectDate([new Date(preselectedDates.split(',')[0]), new Date(preselectedDates.split(',')[1])]);
-        // };
 
         let preselectedDates = $(elem).data("preselecteddates");
 

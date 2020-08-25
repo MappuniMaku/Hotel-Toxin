@@ -32,8 +32,6 @@ $(document).ready(() => {
         let reviewsTextField = $(elem).find(".room-card__reviews-text");
         reviewsNumber = `${reviewsNumber}`;
         let reviewsLastSymbol = reviewsNumber[reviewsNumber.length - 1];
-        // console.log(reviewsLastSymbol);
-        // console.log(reviewsNumber);
 
         if(reviewsNumber == 0) {
             reviewsTextField.html("Отзывов");

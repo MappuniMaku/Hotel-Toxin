@@ -1,7 +1,6 @@
 import './header.scss';
 
 require("jquery-ui/ui/widgets/menu");
-// require("jquery-ui/themes/base/menu.css");
 require("jquery-ui/themes/base/all.css");
 
 $(document).ready(function() {

@@ -1,13 +1,10 @@
 import './reviews-diagram.scss';
 
 $(document).ready(() => {
-    // let reviewsNumber = $(".reviews-diagram__reviews-text").data("reviews");
     let reviewsTextField = $(".reviews-diagram__reviews-text");
     let reviewsNumber = reviewsTextField.data("reviews");
     reviewsNumber = `${reviewsNumber}`;
     let reviewsLastSymbol = reviewsNumber[reviewsNumber.length - 1];
-    // console.log(reviewsLastSymbol);
-    // console.log(reviewsNumber);
 
     if(reviewsNumber == 0) {
         reviewsTextField.html("голосов");

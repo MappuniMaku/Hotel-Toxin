@@ -1,17 +1,10 @@
 @import '~/theme/variables.scss';
 
 .text-block {
-//    border: 1px solid black;
     display: flex;
     flex-direction: row;
     justify-content: left;
     max-width: 500px;
-
-    // &__tag,
-    // &__description {
-    //     margin: 0;
-    //     padding: 0;
-    // }
 }
 
 @import "./_text-style/text-block_text-style_h1-title.scss";

@@ -1,16 +1,10 @@
 @import '~/theme/variables.scss';
 
 .checkbox-buttons {
-    // border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: fit-content;
-    // width: 240px;
-
-    // & .element-name {
-    //     margin-bottom: 1.5px;
-    // }
 
     & .checkbox-items-list {
         margin-top: 1.5px;

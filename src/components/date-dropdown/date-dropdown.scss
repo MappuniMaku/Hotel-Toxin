@@ -13,7 +13,6 @@
 }
 
 .date-dropdown {
-    //    border: 1px solid black;
         box-sizing: content-box;
         height: fit-content;
         display: flex;
@@ -24,15 +23,12 @@
         &__second-input {
             height: 65px;
             width: 150px;
-        //    border: 1px solid black;
         }
 
     & .input-field {
-        // width: 150px;
 
         &__input {
             cursor: pointer;
-            // line-height: 44px;
         }
 
         &__input::placeholder {
@@ -40,11 +36,9 @@
         }
 
         &__icon {
-            // right: 5px;
             cursor: pointer;
             width: 24px;
             font-size: 24px;
-            // top: 10px;
         }
     }
 }

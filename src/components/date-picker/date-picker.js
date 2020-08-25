@@ -1,6 +1,5 @@
 import './date-picker.scss';
 
-//var Inputmask = require('inputmask');
 import Inputmask from "inputmask";
 
 Inputmask.extendAliases({

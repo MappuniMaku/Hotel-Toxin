@@ -24,11 +24,6 @@ $smTableWidth            : 640px;
 $phoneWidth              : 480px;
 $smPhoneWidth            : 320px;
 
-/*
- All colors taken from:
- https://github.com/vedees/uimini
-*/
-
 // Main colors
 $dark-shade-100          : #1F2041;
 $dark-shade-75           : rgba(31, 32, 65, 0.75);
@@ -42,10 +37,3 @@ $color-green             : #6FCF97;
 // Gradients
 $gradient-purple: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 $gradient-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-
-
-// Border Color
-$border-base             : #DCDFE6;
-$border-light            : #E4E7ED;
-$border-lighter          : #EBEEF5;
-$border-lightex          : #F2F6FC;

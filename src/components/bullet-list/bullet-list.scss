@@ -2,12 +2,10 @@
 @import '~/components/text-block/text-block.scss';
 
 .bullet-list {
-    // border: 1px solid black;
     padding-left: 19px;
     
     &__item {
         position: relative;
-        // border: 1px solid black;
         max-width: 240px;
         height: fit-content;
         margin-bottom: 10px;
@@ -31,11 +29,5 @@
 
     &__text {
         margin: 0;
-        // font-family: $font-montserrat;
-        // font-style: normal;
-        // font-weight: normal;
-        // font-size: 14px;
-        // line-height: 24px;
-        // color: $dark-shade-75;
     }
 }

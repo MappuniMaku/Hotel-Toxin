@@ -4,11 +4,9 @@ include ../checkbox-items-list/checkbox-items-list.pug
 mixin checkbox-buttons(name, descArr, valueArr, checkedArr, expandable, expanded, richDescArr)
     -if(expandable)
         div(data-expanded=`${expanded}`).checkbox-buttons.checkbox-buttons_expandable
-            //- .checkbox-buttons_expandable__backdrop
             +element-name(name, "expand_more")
             +checkbox-items-list(descArr, valueArr, checkedArr)
     -else
         div.checkbox-buttons
             +element-name(name)
-            //- -if(!richDescArr) richDescArr = []
             +checkbox-items-list(descArr, valueArr, checkedArr, richDescArr)

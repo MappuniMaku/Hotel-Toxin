@@ -30,7 +30,6 @@
         }
     
         &__main-image {
-            // box-shadow: 0 0 25px rgba(0,0,0,.2);
             border-radius: 4px;
         }
 
@@ -43,14 +42,12 @@
 
         &__additional-image-1 {
             max-height: 242px;
-            // box-shadow: 0 0 25px rgba(0,0,0,.2);
             border-radius: 4px;
         }
 
         &__additional-image-2 {
             margin-top: 0;
             max-height: 241px;
-            // box-shadow: 0 0 25px rgba(0,0,0,.2);
             border-radius: 4px;
         }
 
@@ -173,10 +170,7 @@
 
     &__additional-image-1 {
         max-width: 100%;
-        // max-height: 243px;
         display: block;
-        // vertical-align: bottom;
-        // object-fit: cover;
     }
 
     &__additional-image-2 {

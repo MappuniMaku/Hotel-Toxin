@@ -3,44 +3,14 @@
 
 @import '~/theme/variables.scss';
 
-// html {
-  // line-height: $mainLineHeight;
-  // font-size: $mainFontSize;
-  // color: $mainFontColor;
-  // height: 100%;
-  // @media screen and (max-width: $desktopWidth) {
-  //   font-size: 16px;
-  // }
-  // @media screen and (max-width: $tableWidth) {
-  //   font-size: 15px;
-  // }
-  // @media screen and (max-width: $phoneWidth) {
-  //   font-size: 14px;
-  // }
-// }
-
 body {
   margin: 0;
   padding: 0;
   font-family: $mainFont;
   font-size: $mainFontSize;
- // font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-// p {
-//     margin-block-start: 0;
-//     margin-block-end: 0;
-//     margin-inline-start: 0;
-//     margin-inline-end: 0;
-// }
-
-//*,
-//*:before,
-//*:after {
-//  box-sizing: border-box;
-//}
 
 h1,
 h2,
@@ -65,80 +35,16 @@ li {
 section,
 .section {
   position: relative;
-  // padding: 40px 0;
-  // @media screen and (max-width: $smDesktopWidth) {
-  //   padding: 36px 0;
-  // }
-  // @media screen and (max-width: $tableWidth) {
-  //   padding: 28px 0;
-  // }
-  // @media screen and (max-width: $phoneWidth) {
-  //   padding: 20px 0;
-  // }
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  // max-width: 100%;
-  // margin: 0 auto;
-  // min-height: 100vh;
-  // min-width: 100vh;
 }
 
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  // min-height: 80vh;
-  // padding: 20px 0;
   max-width: 1440px;
   margin: 0 auto;
 }
-
-// .container {
-//   width: 100%;
-//   flex: 0 0 auto;
-//   position: relative;
-//   margin: 0 auto;
-//   max-width: $desktopWidth;
-//   @media screen and (max-width: $smDesktopWidth) {
-//     max-width: $tableWidth;
-//   }
-//   @media screen and (max-width: $tableWidth) {
-//     max-width: $phoneWidth;
-//   }
-//   @media screen and (max-width: $phoneWidth) {
-//     max-width: $smPhoneWidth;
-//   }
-// }
-
-// .utility-header, .footer {
-//   max-width: 1440px;
-//   margin: 0 auto;
-// }
-
-// .material-icons {
-//   font-family: $font-material-icons;
-//   font-weight: normal;
-//   font-style: normal;
-//   font-size: 24px;  /* Preferred icon size */
-//   display: inline-block;
-//   line-height: 1;
-//   text-transform: none;
-//   letter-spacing: normal;
-//   word-wrap: normal;
-//   white-space: nowrap;
-//   direction: ltr;
-
-//   /* Support for all WebKit browsers. */
-//   -webkit-font-smoothing: antialiased;
-//   /* Support for Safari and Chrome. */
-//   text-rendering: optimizeLegibility;
-
-//   /* Support for Firefox. */
-//   -moz-osx-font-smoothing: grayscale;
-
-//   /* Support for IE. */
-//   font-feature-settings: 'liga';
-//   width: 24px;
-// }

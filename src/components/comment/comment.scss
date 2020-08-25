@@ -3,7 +3,6 @@
 
 @media (max-width: 970px) {
     .comment {
-        // width: 300px;
 
         &__text {
             width: 360px;
@@ -13,7 +12,6 @@
 
 @media (max-width: 560px) {
     .comment {
-        // width: 300px;
 
         &__text {
             width: 240px;
@@ -21,24 +19,12 @@
     }
 }
 
-// @media (max-width: 360px) {
-//     .comment {
-//         // width: 300px;
-
-//         &__text {
-//             width: 240px;
-//         }
-//     }
-// }
-
 .comment {
     &__photo-container {
         width: 48px;
         height: 48px;
         box-sizing: border-box;
         overflow: hidden;
-        // border: 1px solid black;
-        // filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
         border-radius: 32px;
     }
 
@@ -60,22 +46,14 @@
 
     &__date,
     &__text {
-        // font-family: $font-montserrat;
-        // font-style: normal;
-        // font-weight: normal;
-        // font-size: 14px;
-        // line-height: 24px;
-        // color: $dark-shade-75;
         margin: 0;
     }
 
     &__profile {
         display: flex;
         justify-content: flex-start;
-        // padding: 20px 0;
         vertical-align: middle;
         width: fit-content;
-        // border: 1px solid black;
     }
 
     &__info {
@@ -85,10 +63,8 @@
     &__body {
         display: flex;
         justify-content: flex-start;
-        // padding: 20px 0;
         vertical-align: middle;
         width: fit-content;
-        // border: 1px solid black;
         margin-top: 10px;
         padding-left: 4px;
     }
@@ -99,8 +75,6 @@
 
     &__text {
         margin-left: 13.7px;
-        // max-width: 670px;
-        // width: fit-content;
         width: 655px;
     }
 }
